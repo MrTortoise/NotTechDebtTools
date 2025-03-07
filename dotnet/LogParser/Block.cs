@@ -1,6 +1,6 @@
 namespace LogParser;
 
-internal class Block
+public class Block
 {
     public void Parse(string line)
     {
@@ -9,9 +9,9 @@ internal class Block
         {
             var parts = line.Split("--");
             var date = DateTime.Parse(parts[2]);
-            var author = parts[3];
+            var committer = parts[3];
             
-            Authors.Add(author);
+            Committers.Add(committer);
             if (OldestDate > date)
             {
                 OldestDate = date;
@@ -26,6 +26,6 @@ internal class Block
 
     public DateTime OldestDate { get; private set; } = DateTime.Today;
 
-    public List<string> Authors { get; } = [];
+    public List<string> Committers { get; } = [];
     public List<File> Files { get; } = [];
 }

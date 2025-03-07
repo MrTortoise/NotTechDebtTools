@@ -3,14 +3,11 @@
 public class ArgumentParserTest
 {
     [Fact]
-    public void ErrorsIfArgumentNotInValidFormat()
+    public void Fails()
     {
         Assert.Fail();
     }
 
-    [Fact]
-    public void PassIfArgumentNotInValidFormat()
-    {
-        Assert.Fail();
-    }
+ 
 }
+

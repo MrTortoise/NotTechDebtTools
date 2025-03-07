@@ -1,6 +1,6 @@
 namespace LogParser;
 
-internal class File(int linesAdded, int linesRemoved, string fileName)
+public class File(int linesAdded, int linesRemoved, string fileName)
 {
     public int LinesAdded { get; } = linesAdded;
     public int LinesRemoved { get; } = linesRemoved;

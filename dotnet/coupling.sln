@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouplingCli", "CouplingCli\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouplingCli.Test", "CouplingCli.Test\CouplingCli.Test.csproj", "{5E252093-0334-49BD-84D0-3E0E0FDEA5D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogParser", "LogParser\LogParser.csproj", "{F34F6EA2-1D15-41C0-BAEA-14FBDF3009E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogParser.Test", "LogParser.Test\LogParser.Test.csproj", "{46F41359-8033-4016-B333-563880ACCF6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{5E252093-0334-49BD-84D0-3E0E0FDEA5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E252093-0334-49BD-84D0-3E0E0FDEA5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E252093-0334-49BD-84D0-3E0E0FDEA5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34F6EA2-1D15-41C0-BAEA-14FBDF3009E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34F6EA2-1D15-41C0-BAEA-14FBDF3009E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34F6EA2-1D15-41C0-BAEA-14FBDF3009E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34F6EA2-1D15-41C0-BAEA-14FBDF3009E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F41359-8033-4016-B333-563880ACCF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F41359-8033-4016-B333-563880ACCF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F41359-8033-4016-B333-563880ACCF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F41359-8033-4016-B333-563880ACCF6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,7 +2,7 @@ namespace LogParser;
 
 public class BlockParser
 {
-    private List<Block> GetBlocks(string input)
+    public static List<Block> GetBlocks(string input)
     {
         input = input.Trim();
         var blocks = new List<Block>();
@@ -12,7 +12,7 @@ public class BlockParser
             // end of block
             if (string.IsNullOrWhiteSpace(line))
             {
-                if (block.Authors.Count > 0)
+                if (block.Committers.Count > 0)
                 {
                     blocks.Add(block);
                 }
@@ -23,7 +23,7 @@ public class BlockParser
             
             block.Parse(line);
         }
-        if (block.Authors.Count > 0)
+        if (block.Committers.Count > 0)
         {
             blocks.Add(block);
         }
