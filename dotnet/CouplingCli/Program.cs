@@ -1,9 +1,35 @@
 ﻿using System.Diagnostics;
 
 // See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-RunBashScript("run_maat.sh \"~/g/tech_debt/repos/di-account-management-frontend\" 2022-01-01 \"./analysis\"");
+Console.WriteLine("Extracting logfiles and running analysis");
+if (args.Length != 3)
+    throw new ArgumentException(
+        "need to pass a path to a git repo as first argument. Second is YYYY-MM-DD format, third is output folder");
+
+var path = ExpandPath(args[0]);
+var date = args[1];
+var output = ExpandPath(args[2]);
+
+var script = $"run_maat.sh {path} {date} {output}";
+RunBashScript(script);
+
 return 0;
+
+static string ExpandPath(string path)
+{
+    if (string.IsNullOrWhiteSpace(path))
+    {
+        throw new ArgumentException("Path cannot be null or empty.", nameof(path));
+    }
+
+    if (path.StartsWith("~"))
+    {
+        string homePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        return Path.Combine(homePath, path.TrimStart('~', Path.DirectorySeparatorChar));
+    }
+
+    return Path.GetFullPath(path);
+} 
 
 static void RunBashScript(string scriptPath)
 {
