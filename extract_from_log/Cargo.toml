@@ -1,6 +1,0 @@
-[package]
-name = "extract_from_log"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
