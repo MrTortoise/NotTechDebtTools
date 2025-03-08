@@ -53,9 +53,9 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
     {
         var sb = new StringBuilder();
         sb.AppendLine("author,added,deleted,commits");
-        foreach (var entry in AuthorChurnEntries)
+        foreach (var entry in AuthorChurnEntries.Values.OrderByDescending(i=>i.Added+i.Deleted))
         {
-            sb.AppendLine($"{entry.Key},{entry.Value.Added},{entry.Value.Deleted},{entry.Value.TotalCommits}");
+            sb.AppendLine($"{entry.Author},{entry.Added},{entry.Deleted},{entry.TotalCommits}");
         }
 
         return sb.ToString();

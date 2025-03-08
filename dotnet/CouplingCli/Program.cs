@@ -18,9 +18,15 @@ RunBashScript(script);
 var gitLog = System.IO.File.ReadAllText($"{output}/logfile.log");
 
 var blocks = BlockParser.GetBlocks(gitLog);
-var ages = ActiveFileIdentificationAnalysis.Analyse(blocks, new GetTodayAdapter());
 
+var ages = ActiveFileIdentificationAnalysis.Analyse(blocks, new GetTodayAdapter());
 System.IO.File.WriteAllText($"{output}/age.csv", ages.ToCsv());
+
+var authorChurn = AuthorChurn.Analyse(blocks);
+System.IO.File.WriteAllText($"{output}/author-churn.csv", authorChurn.ToCsv());
+
+var entityChurn = EntityChurn.Analyse(blocks);
+System.IO.File.WriteAllText($"{output}/entity-churn.csv", entityChurn.ToCsv());
 
 return 0;
 

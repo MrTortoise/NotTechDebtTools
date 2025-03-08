@@ -42,65 +42,48 @@ public class EntityChurnTest
     [Fact]
     public void Has8Entities()
     {
-        var entitys = EntityChurn.Analyse(_blocks);
-        Assert.Equal(8, entitys.ChurnedEntities.Count);
+        var entities = EntityChurn.Analyse(_blocks);
+        Assert.Equal(8, entities.ChurnedEntities.Count);
     }
     
     [Fact]
     public void EnTranslationHas8Commits()
     {
-        var entitys = EntityChurn.Analyse(_blocks);
-        Assert.Equal(8, entitys.ChurnedEntities["src/locales/en/translation.json"].Commits);
+        var entities = EntityChurn.Analyse(_blocks);
+        Assert.Equal(8, entities.ChurnedEntities["src/locales/en/translation.json"].TotalCommits);
     }
     
     [Fact]
     public void EnTranslationHas83Additions()
     {
-        var entitys = EntityChurn.Analyse(_blocks);
-        Assert.Equal(83, entitys.ChurnedEntities["src/locales/en/translation.json"].Added);
+        var entities = EntityChurn.Analyse(_blocks);
+        Assert.Equal(83, entities.ChurnedEntities["src/locales/en/translation.json"].Added);
     }
     
     [Fact]
-    public void EnTranslationHas13Delettions()
+    public void EnTranslationHas13Deletions()
     {
-        var entitys = EntityChurn.Analyse(_blocks);
-        Assert.Equal(13, entitys.ChurnedEntities["src/locales/en/translation.json"].Deleted);
+        var entities = EntityChurn.Analyse(_blocks);
+        Assert.Equal(13, entities.ChurnedEntities["src/locales/en/translation.json"].Deleted);
     }
-}
 
-public class EntityChurn(Dictionary<string, EntityEntry> churnedEntities)
-{
-    public Dictionary<string, EntityEntry> ChurnedEntities { get; } = churnedEntities;
-
-    public static EntityChurn Analyse(List<Block> blocks)
+    [Fact]
+    public void ToCsvTest()
     {
-        var churnedEntities = new Dictionary<string, EntityEntry>();
-        foreach (var block in blocks)
-        {
-            var commits = block.Committers.Count;
-            foreach (var file in block.Files)
-            {
-                if (!churnedEntities.ContainsKey(file.FileName))
-                {
-                    churnedEntities.Add(file.FileName, new EntityEntry(file.FileName,0,0,0));
-                }
-                
-                var existing = churnedEntities[file.FileName];
-                churnedEntities[file.FileName] = new EntityEntry(
-                    file.FileName, 
-                    file.LinesAdded + existing.Added,
-                    file.LinesDeleted + existing.Deleted, 
-                    existing.Commits + commits);
-            }
-        }
-        return new EntityChurn(churnedEntities);
+        var entities = EntityChurn.Analyse(_blocks);
+        var csv = entities.ToCsv();
+        var expectedCsv = """
+                          entity,added,deleted,commits
+                          src/locales/en/translation.json,83,13,8
+                          src/locales/cy/translation.json,42,6,4
+                          src/components/activity-history/activity-history-controller.ts,9,0,2
+                          src/config.ts,8,0,3
+                          package-lock.json,4,3,1
+                          src/components/activity-history/index.njk,3,3,2
+                          src/components/activity-history/tests/activity-history-controller.test.ts,3,1,2
+                          localstack/provision.sh,1,1,2
+                          
+                          """;
+        Assert.Equal(expectedCsv, csv);
     }
-}
-
-public class EntityEntry(string fileName, int added, int deleted, int commits)
-{
-    public string FileName { get; } = fileName;
-    public int Added { get; } = added;
-    public int Deleted { get; } = deleted;
-    public int Commits { get; } = commits;
 }

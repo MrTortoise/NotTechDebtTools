@@ -81,13 +81,14 @@ public class AuthorChurnTest
         var result = authors.ToCsv();
         var expected = """
                        author,added,deleted,commits
-                       Latif,390,182,6
-                       danacotoran,18,28,1
                        Dana Cotoran,18,28,1
+                       danacotoran,18,28,1
                        di-aholme,3,279,2
+                       Latif,390,182,6
                        peterfajemisincabinetoffice,3,279,1
 
                        """;
+        
         Assert.Equal(expected,result);
     }
 }
