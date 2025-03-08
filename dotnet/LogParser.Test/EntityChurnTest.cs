@@ -76,12 +76,12 @@ public class EntityChurnTest
                           entity,added,deleted,commits
                           src/locales/en/translation.json,83,13,8
                           src/locales/cy/translation.json,42,6,4
-                          src/components/activity-history/activity-history-controller.ts,9,0,2
                           src/config.ts,8,0,3
-                          package-lock.json,4,3,1
-                          src/components/activity-history/index.njk,3,3,2
                           src/components/activity-history/tests/activity-history-controller.test.ts,3,1,2
                           localstack/provision.sh,1,1,2
+                          src/components/activity-history/activity-history-controller.ts,9,0,2
+                          src/components/activity-history/index.njk,3,3,2
+                          package-lock.json,4,3,1
                           
                           """;
         Assert.Equal(expectedCsv, csv);

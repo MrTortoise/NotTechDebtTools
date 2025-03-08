@@ -34,7 +34,7 @@ public class EntityChurn(Dictionary<string, EntityEntry> churnedEntities)
     {
         var sb = new StringBuilder();
         sb.AppendLine("entity,added,deleted,commits");
-        foreach (var entry in ChurnedEntities.Values.OrderByDescending(i=>i.Added+i.Deleted))
+        foreach (var entry in ChurnedEntities.Values.OrderByDescending(i=>i.TotalCommits))
         {
             sb.AppendLine($"{entry.FileName},{entry.Added},{entry.Deleted},{entry.TotalCommits}");
         }
