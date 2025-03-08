@@ -1,4 +1,7 @@
 ﻿using System.Diagnostics;
+using CouplingCli;
+using LogParser;
+using File = LogParser.File;
 
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Extracting logfiles and running analysis");
@@ -12,6 +15,12 @@ var output = ExpandPath(args[2]);
 
 var script = $"run_maat.sh {path} {date} {output}";
 RunBashScript(script);
+var gitLog = System.IO.File.ReadAllText($"{output}/logfile.log");
+
+var blocks = BlockParser.GetBlocks(gitLog);
+var ages = ActiveFileIdentificationAnalysis.Analyse(blocks, new GetTodayAdapter());
+
+System.IO.File.WriteAllText($"{output}/age.csv", ages.ToCsv());
 
 return 0;
 

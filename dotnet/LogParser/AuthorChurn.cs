@@ -15,7 +15,7 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
             var deleted = block.Files.Sum(f => f.LinesRemoved);
 
             var committersSeenThisBlock = new HashSet<string>();
-            foreach (var committer in block.Committers)
+            foreach (var committer in block.Committers.Select(c=>c.Committer))
             {
                 if (!authors.ContainsKey(committer))
                 {
@@ -26,6 +26,7 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
                     var existing = authors[committer];
                     if (committersSeenThisBlock.Contains(committer))
                     {
+                        // We dont want to double count adds when multiple commits by same person in a block
                         authors[committer] = new AuthorChurnEntry(
                             committer, 
                             existing.Added, 

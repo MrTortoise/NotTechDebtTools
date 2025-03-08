@@ -3,11 +3,11 @@ namespace LogParser.Test;
 public class AuthorChurnTest
 {
     private const string ExampleData = """
-                                       --6262d303--2025-02-10--Latif
-                                       --55f31920--2025-02-06--danacotoran
-                                       --57a5bfc9--2025-02-06--Latif
-                                       --3a511c4b--2025-02-06--Latif
-                                       --6d65223c--2025-01-31--Dana Cotoran
+                                       --6262d303--2025-02-10--Latif--Merge branch 'main' into OLH-2317-update-to-express-version-5
+                                       --55f31920--2025-02-06--danacotoran--Merge pull request #1958 from govuk-one-login/BAU-sonar-tweaks
+                                       --57a5bfc9--2025-02-06--Latif--Merge branch 'main' into OLH-2317-update-to-express-version-5
+                                       --3a511c4b--2025-02-06--Latif--Merge pull request #1953 from govuk-one-login/OLH-2423-update-signed-in-state-url-for-apply-for-teacher-training
+                                       --6d65223c--2025-01-31--Dana Cotoran--BAU: some sonar fixes
                                        1	2	src/components/activity-history/activity-history-controller.ts
                                        1	1	src/components/report-suspicious-activity/report-suspicious-activity-controller.ts
                                        1	1	src/components/your-services/your-services-controller.ts
@@ -18,21 +18,21 @@ public class AuthorChurnTest
                                        2	4	src/utils/redact.ts
                                        1	3	src/utils/referenceCode.ts
                                        2	5	src/utils/types.ts
-
-                                       --6e99c581--2025-02-03--Latif
+                                       
+                                       --6e99c581--2025-02-03--Latif--updated santize request middlewre wildcard to /*splat
                                        1	1	src/app.ts
-
-                                       --0f56a9ee--2025-02-03--Latif
+                                       
+                                       --0f56a9ee--2025-02-03--Latif--Update express package to v5.0.1
                                        356	138	package-lock.json
                                        1	1	package.json
-
-                                       --57a1ef24--2025-02-03--Latif
+                                       
+                                       --57a1ef24--2025-02-03--Latif--Updated signed-in state
                                        7	7	src/locales/cy/translation.json
                                        7	7	src/locales/en/translation.json
-
-                                       --7a1dfdbc--2025-01-31--di-aholme
-                                       --ea0f575b--2025-01-31--peterfajemisincabinetoffice
-                                       --8d0b48f8--2025-01-30--di-aholme
+                                       
+                                       --7a1dfdbc--2025-01-31--di-aholme--Merge branch 'main' into dfc-711_remove-ua-code
+                                       --ea0f575b--2025-01-31--peterfajemisincabinetoffice--Merge pull request #1947 from govuk-one-login/OLH-2389
+                                       --8d0b48f8--2025-01-30--di-aholme--[DFC-711]: Remove UA code
                                        0	3	.env.sample
                                        0	27	deploy/template.yaml
                                        2	4	package.json

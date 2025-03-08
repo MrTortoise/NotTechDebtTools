@@ -2,28 +2,28 @@ using System.Text;
 
 namespace LogParser;
 
-public class AgeAnalysis(Dictionary<string, int> agedFiles)
+public class ActiveFileIdentificationAnalysis(Dictionary<string, int> agedFiles)
 {
     public Dictionary<string, int> AgedFiles { get; } = agedFiles;
 
-    public static AgeAnalysis Analyse(List<Block> blocks, IGetToday getToday)
+    public static ActiveFileIdentificationAnalysis Analyse(List<Block> blocks, IGetToday getToday)
     {
-        var agedFiles = new Dictionary<string, int>();
+        var revisedFiles = new Dictionary<string, int>();
         foreach (var block in blocks)
         {
-            var age = GetMonthDifference(block.OldestDate, getToday);
+            var monthsSinceLastRevision = GetMonthDifference(block.DateOfLastRevision, getToday);
             foreach (var file in block.Files.Select(f=>f.FileName))
             {
-                if (!agedFiles.TryAdd(file, age))
+                if (!revisedFiles.TryAdd(file, monthsSinceLastRevision))
                 {
-                    if (agedFiles[file] < age)
+                    if (revisedFiles[file] > monthsSinceLastRevision)
                     {
-                        agedFiles[file] = age;
+                        revisedFiles[file] = monthsSinceLastRevision;
                     }
                 }
             }
         }
-        return new AgeAnalysis(agedFiles);
+        return new ActiveFileIdentificationAnalysis(revisedFiles);
     }
     
     private static int GetMonthDifference(DateTime startDate, IGetToday today)
@@ -32,7 +32,7 @@ public class AgeAnalysis(Dictionary<string, int> agedFiles)
         return Math.Abs((endDate.Year - startDate.Year) * 12 + endDate.Month - startDate.Month);
     }
 
-    public string ToCSV()
+    public string ToCsv()
     {
         var sb = new StringBuilder();
         sb.AppendLine("entity,age-months");
