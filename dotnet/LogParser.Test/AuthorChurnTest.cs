@@ -81,11 +81,11 @@ public class AuthorChurnTest
         var result = authors.ToCsv();
         var expected = """
                        author,added,deleted,commits
-                       Dana Cotoran,18,28,1
-                       danacotoran,18,28,1
-                       di-aholme,3,279,2
                        Latif,390,182,6
+                       di-aholme,3,279,2
                        peterfajemisincabinetoffice,3,279,1
+                       danacotoran,18,28,1
+                       Dana Cotoran,18,28,1
 
                        """;
         
