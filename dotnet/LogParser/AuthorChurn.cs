@@ -12,7 +12,7 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
         foreach (var block in blocks)
         {
             var added = block.Files.Sum(f => f.LinesAdded);
-            var deleted = block.Files.Sum(f => f.LinesRemoved);
+            var deleted = block.Files.Sum(f => f.LinesDeleted);
 
             var committersSeenThisBlock = new HashSet<string>();
             foreach (var committer in block.Committers.Select(c=>c.Committer))

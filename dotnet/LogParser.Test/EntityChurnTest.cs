@@ -40,28 +40,67 @@ public class EntityChurnTest
     private readonly List<Block> _blocks = BlockParser.GetBlocks(ExampleData);
     
     [Fact]
-    public void Has7Entities()
+    public void Has8Entities()
     {
         var entitys = EntityChurn.Analyse(_blocks);
-        Assert.Equal(7, entitys.EntityEntries.Count);
+        Assert.Equal(8, entitys.ChurnedEntities.Count);
+    }
+    
+    [Fact]
+    public void EnTranslationHas8Commits()
+    {
+        var entitys = EntityChurn.Analyse(_blocks);
+        Assert.Equal(8, entitys.ChurnedEntities["src/locales/en/translation.json"].Commits);
+    }
+    
+    [Fact]
+    public void EnTranslationHas83Additions()
+    {
+        var entitys = EntityChurn.Analyse(_blocks);
+        Assert.Equal(83, entitys.ChurnedEntities["src/locales/en/translation.json"].Added);
+    }
+    
+    [Fact]
+    public void EnTranslationHas13Delettions()
+    {
+        var entitys = EntityChurn.Analyse(_blocks);
+        Assert.Equal(13, entitys.ChurnedEntities["src/locales/en/translation.json"].Deleted);
     }
 }
 
-public class EntityChurn
+public class EntityChurn(Dictionary<string, EntityEntry> churnedEntities)
 {
+    public Dictionary<string, EntityEntry> ChurnedEntities { get; } = churnedEntities;
+
     public static EntityChurn Analyse(List<Block> blocks)
     {
-        var report = new Dictionary<string, EntityChurn>();
+        var churnedEntities = new Dictionary<string, EntityEntry>();
         foreach (var block in blocks)
         {
-            
+            var commits = block.Committers.Count;
+            foreach (var file in block.Files)
+            {
+                if (!churnedEntities.ContainsKey(file.FileName))
+                {
+                    churnedEntities.Add(file.FileName, new EntityEntry(file.FileName,0,0,0));
+                }
+                
+                var existing = churnedEntities[file.FileName];
+                churnedEntities[file.FileName] = new EntityEntry(
+                    file.FileName, 
+                    file.LinesAdded + existing.Added,
+                    file.LinesDeleted + existing.Deleted, 
+                    existing.Commits + commits);
+            }
         }
-        throw new NotImplementedException();
+        return new EntityChurn(churnedEntities);
     }
-
-    public Dictionary<string, EntityEntry> EntityEntries { get; set; }
 }
 
-public class EntityEntry
+public class EntityEntry(string fileName, int added, int deleted, int commits)
 {
+    public string FileName { get; } = fileName;
+    public int Added { get; } = added;
+    public int Deleted { get; } = deleted;
+    public int Commits { get; } = commits;
 }
