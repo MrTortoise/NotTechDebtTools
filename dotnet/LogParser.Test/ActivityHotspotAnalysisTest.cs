@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace LogParser.Test;
 
 public class HotspotAnalysisTest
@@ -42,7 +40,7 @@ public class HotspotAnalysisTest
     [Fact]
     public void Has10Entities()
     {
-        var hotSpotAnalysis = HotSpotAnalysis.Analyse(_blocks);
+        var hotSpotAnalysis = ActivityHotSpotAnalysis.Analyse(_blocks);
         Assert.Equal(10, hotSpotAnalysis.HotSpots.Count);
     }
     
@@ -50,7 +48,7 @@ public class HotspotAnalysisTest
     public void PackageHas2Authors()
     {
         var file = "package.json";
-        var hotSpotAnalysis = HotSpotAnalysis.Analyse(_blocks);
+        var hotSpotAnalysis = ActivityHotSpotAnalysis.Analyse(_blocks);
         Assert.Equal(2, hotSpotAnalysis.HotSpots[file].NumberOfAuthors);
     }
     
@@ -58,14 +56,14 @@ public class HotspotAnalysisTest
     public void PackageHas4Revisions()
     {
         var file = "package.json";
-        var hotSpotAnalysis = HotSpotAnalysis.Analyse(_blocks);
+        var hotSpotAnalysis = ActivityHotSpotAnalysis.Analyse(_blocks);
         Assert.Equal(4, hotSpotAnalysis.HotSpots[file].NumberOfRevisions);
     }
     
     [Fact]
     public void ToCsvTest()
     {
-        var hotSpotAnalysis = HotSpotAnalysis.Analyse(_blocks);
+        var hotSpotAnalysis = ActivityHotSpotAnalysis.Analyse(_blocks);
         var csv = hotSpotAnalysis.ToCsv();
         var expectedCsv = """
                           entity,numberOfAuthors,numberOfRevisions
@@ -82,69 +80,5 @@ public class HotspotAnalysisTest
 
                           """;
         Assert.Equal(expectedCsv, csv);
-    }
-    
-}
-
-public class HotSpotAnalysis(Dictionary<string, HotSpot> hotSpots)
-{
-    public Dictionary<string, HotSpot> HotSpots { get; } = hotSpots;
-
-    public static HotSpotAnalysis Analyse(List<Block> blocks)
-    {
-        var entities = new Dictionary<string, HotSpot>(); 
-        foreach (var block in blocks)
-        {
-            var revisions = block.Committers.Count;
-            foreach (var file in block.Files)
-            {
-                var fileName = file.FileName;
-                if (!entities.ContainsKey(fileName))
-                {
-                    entities[fileName] = new HotSpot(fileName);
-                }
-
-                var existing = entities[fileName];
-                entities[fileName] = existing.Update(block.Committers.Select(c => c.Committer), revisions);
-            }
-        }
-        
-        return new HotSpotAnalysis(entities);
-    }
-
-    public string ToCsv()
-    {
-        var sb = new StringBuilder();
-        sb.AppendLine("entity,numberOfAuthors,numberOfRevisions");
-        foreach (var entry in HotSpots.Values.OrderByDescending(i=>i.NumberOfAuthors+i.NumberOfRevisions))
-        {
-            sb.AppendLine($"{entry.FileName},{entry.NumberOfAuthors},{entry.NumberOfRevisions}");
-        }
-
-        return sb.ToString();
-    }
-}
-
-public class HotSpot(string fileName, IEnumerable<string> authors, int numberOfRevisions)
-{
-    public HotSpot(string fileName)
-    :this(fileName, [], 0)
-    {
-      
-    }
-
-    public string FileName { get; } = fileName;
-    private HashSet<string> Authors { get; } = [..authors];
-    public int NumberOfAuthors => Authors.Count;
-    public int NumberOfRevisions { get; } = numberOfRevisions;
-    
-    public HotSpot Update(IEnumerable<string> authors, int revisions)
-    {
-        var newAuthors = new HashSet<string>(authors);
-        newAuthors.UnionWith(Authors);
-        return new HotSpot(
-            FileName, 
-            newAuthors,
-            NumberOfRevisions + revisions);
     }
 }
