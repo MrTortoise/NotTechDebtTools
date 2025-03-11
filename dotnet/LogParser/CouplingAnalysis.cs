@@ -31,13 +31,17 @@ public class CouplingAnalysis(Dictionary<string, CouplingSource> couplingSources
     {
         var sb = new StringBuilder();
         sb.AppendLine("source,target,frequency,probability");
+        var reverse = new HashSet<string>();
         foreach (var couplingData in CouplingSources.Values
                      .SelectMany(couplingSource => couplingSource)
                      .OrderByDescending(c=>c.Probability)
                      .Where(i=>i.Probability >= minimumProbability)
                      .Where(i=>i.Frequency >= minimumFrequency))
         {
+            if (reverse.Contains($"{couplingData.Target},{couplingData.Source}")) continue;
+            
             sb.AppendLine($"{couplingData.Source},{couplingData.Target},{couplingData.Frequency},{couplingData.Probability}");
+            reverse.Add($"{couplingData.Source},{couplingData.Target}");
         }
 
         return sb.ToString();
