@@ -44,34 +44,34 @@ public class AuthorChurnTest
                                        0	4	src/middleware/set-local-vars-middleware.ts
                                        """;
     
-    private readonly List<Block> _blocks = BlockParser.GetBlocks(ExampleData);
+    private readonly List<CommitBlock> _blocks = BlockParser.GetBlocks(ExampleData);
     
     [Fact]
-    public void Has5Authors()
+    public void Has3Authors()
     {
         var authors = AuthorChurn.Analyse(_blocks);
-        Assert.Equal(5, authors.AuthorChurnEntries.Count);
+        Assert.Equal(3, authors.AuthorChurnEntries.Count);
     }
 
     [Fact]
-    public void LatiffHas6Commits()
+    public void LatiffHas3Commits()
     {
         var authors = AuthorChurn.Analyse(_blocks);
-        Assert.Equal(6, authors.AuthorChurnEntries["Latif"].TotalCommits);
+        Assert.Equal(3, authors.AuthorChurnEntries["Latif"].TotalCommits);
     }
     
     [Fact]
-    public void LatiffHas390Adds()
+    public void LatiffHas372Adds()
     {
         var authors = AuthorChurn.Analyse(_blocks);
-        Assert.Equal(390, authors.AuthorChurnEntries["Latif"].Added);
+        Assert.Equal(372, authors.AuthorChurnEntries["Latif"].Added);
     }
     
     [Fact]
-    public void LatiffHas182Deletes()
+    public void LatiffHas154Deletes()
     {
         var authors = AuthorChurn.Analyse(_blocks);
-        Assert.Equal(182, authors.AuthorChurnEntries["Latif"].Deleted);
+        Assert.Equal(154, authors.AuthorChurnEntries["Latif"].Deleted);
     }
     
     [Fact]
@@ -81,12 +81,10 @@ public class AuthorChurnTest
         var result = authors.ToCsv();
         var expected = """
                        author,added,deleted,commits
-                       Latif,390,182,6
-                       di-aholme,3,279,2
-                       peterfajemisincabinetoffice,3,279,1
-                       danacotoran,18,28,1
+                       Latif,372,154,3
+                       di-aholme,3,279,1
                        Dana Cotoran,18,28,1
-
+                       
                        """;
         
         Assert.Equal(expected,result);

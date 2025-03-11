@@ -6,12 +6,12 @@ public class EntityChurn(Dictionary<string, EntityEntry> churnedEntities)
 {
     public Dictionary<string, EntityEntry> ChurnedEntities { get; } = churnedEntities;
 
-    public static EntityChurn Analyse(List<Block> blocks)
+    public static EntityChurn Analyse(List<CommitBlock> blocks)
     {
         var churnedEntities = new Dictionary<string, EntityEntry>();
         foreach (var block in blocks)
         {
-            var commits = block.Committers.Count;
+            var commits = block.CommitEntries.Count;
             foreach (var file in block.Files)
             {
                 if (!churnedEntities.ContainsKey(file.FileName))

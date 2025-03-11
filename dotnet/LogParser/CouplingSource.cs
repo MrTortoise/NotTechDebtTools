@@ -13,6 +13,7 @@ public class CouplingSource(string fileName) : IEnumerable<CouplingData>
         _numberOfCouplings += 1;
         foreach (var name in fileNames)
         {
+            if(name == FileName) continue;
             if (!CoupledTo.TryAdd(name, 1))
             {
                 CoupledTo[name]++;

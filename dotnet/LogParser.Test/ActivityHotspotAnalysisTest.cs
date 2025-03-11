@@ -1,6 +1,6 @@
 namespace LogParser.Test;
 
-public class HotspotAnalysisTest
+public class ActivityHotspotAnalysisTest
 {
     private const string ExampleData = """
                                --5335f9d6--2025-02-07--Dana Cotoran--FIX content problems on activity log
@@ -35,7 +35,7 @@ public class HotspotAnalysisTest
                                10	10	package.json
                                """;
     
-    private readonly List<Block> _blocks = BlockParser.GetBlocks(ExampleData);
+    private readonly List<CommitBlock> _blocks = BlockParser.GetBlocks(ExampleData);
     
     [Fact]
     public void Has10Entities()
@@ -53,11 +53,11 @@ public class HotspotAnalysisTest
     }
     
     [Fact]
-    public void PackageHas4Revisions()
+    public void PackageHas3Revisions()
     {
         var file = "package.json";
         var hotSpotAnalysis = ActivityHotSpotAnalysis.Analyse(_blocks);
-        Assert.Equal(4, hotSpotAnalysis.HotSpots[file].NumberOfRevisions);
+        Assert.Equal(3, hotSpotAnalysis.HotSpots[file].NumberOfRevisions);
     }
     
     [Fact]
@@ -65,17 +65,17 @@ public class HotspotAnalysisTest
     {
         var hotSpotAnalysis = ActivityHotSpotAnalysis.Analyse(_blocks);
         var csv = hotSpotAnalysis.ToCsv();
-        var expectedCsv = """
+        var expectedCsv = """ 
                           entity,numberOfAuthors,numberOfRevisions
-                          package-lock.json,2,4
-                          package.json,2,4
+                          package-lock.json,2,3
+                          package.json,2,3
                           src/locales/en/translation.json,2,2
-                          Dockerfile,2,2
-                          local.Dockerfile,2,2
-                          src/app.ts,1,2
                           src/components/activity-history/index.njk,1,1
                           src/components/activity-history/tests/activity-history-controller.test.ts,1,1
+                          src/app.ts,1,1
                           src/locales/cy/translation.json,1,1
+                          Dockerfile,1,1
+                          local.Dockerfile,1,1
                           post-deploy-tests/Dockerfile,1,1
 
                           """;

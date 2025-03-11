@@ -1,6 +1,6 @@
 namespace LogParser;
 
-public class Block
+public class CommitBlock
 {
     public void Parse(string line)
     {
@@ -27,18 +27,26 @@ public class Block
         }
         
         Comitter = CommitEntries.Last().Committer;
-        Mergers = CommitEntries.Take(CommitEntries.Count - 1).ToList();
+        Mergers = CommitEntries.Take(CommitEntries.Count - 1).Select(i=>i.Committer).ToList();
+            
+            
     }
 
-    public List<CommitEntry> Mergers { get; private set; }
+    /// <summary>
+    /// In a block there are sometimes multiple commits, all except the last are related to merges
+    /// </summary>
+    public List<string> Mergers { get; private set; } = [];
 
     public DateTime DateOfLastRevision { get; private set; } = DateTime.MinValue;
 
     public List<CommitEntry> CommitEntries { get; } = [];
     public List<File> Files { get; } = [];
-    
-    public string Comitter { get; private set; }
-    
+
+    /// <summary>
+    /// A commit block has a single comitter, in the log this is the lowest entry, the rest are mergers 
+    /// </summary>
+    public string Comitter { get; private set; } = string.Empty;
+
 }
 
 public class CommitEntry(string committer, string subject)

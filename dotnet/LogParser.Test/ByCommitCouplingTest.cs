@@ -1,17 +1,17 @@
 namespace LogParser.Test;
 
-public class CouplingTest
+public class ByCommitCouplingTest
 {
     private const string ExampleData = """
-                                       --d2b76e90--2023-02-08--chiarapascucci-gds
+                                       --d2b76e90--2023-02-08--chiarapascucci-gds--atb-2017
                                        16	10	src/components/check-your-phone/check-your-phone-controller.ts
                                        10	16	src/components/check-your-phone/check-your-phone-service.ts
                                        11	3	src/components/check-your-phone/tests/check-your-phone-service.test.ts
                                        4	8	src/components/check-your-phone/types.ts
                                        14	0	src/utils/types.ts
                                        
-                                       --6c95dd7d--2022-09-06--dbes-gds
-                                       --9df61c97--2022-09-06--dbes-gds
+                                       --6c95dd7d--2022-09-06--dbes-gds--Merge pull request #595 from alphagov/AUT-639/pass-lng-notification
+                                       --9df61c97--2022-09-06--dbes-gds--AUT-639: Pass User-Language header to services sending notifications.
                                        3	1	src/components/change-email/change-email-controller.ts
                                        4	2	src/components/change-email/change-email-service.ts
                                        2	1	src/components/change-email/tests/change-email-controller.test.ts
@@ -37,8 +37,8 @@ public class CouplingTest
                                        1	1	src/components/manage-your-account/tests/manage-your-account-controller.test.ts
                                        6	1	src/utils/http.ts
                                        
-                                       --9764df5e--2024-05-07--peterfajemisincabinetoffice
-                                       --9b7d4162--2024-04-26--Peter Fajemisin
+                                       --9764df5e--2024-05-07--peterfajemisincabinetoffice--Merge pull request #1343 from govuk-one-login/OLH-1744
+                                       --9b7d4162--2024-04-26--Peter Fajemisin--OLH-1744 - Call the method management API to update a user's phone number
                                        1	0	src/app.constants.ts
                                        22	4	src/components/check-your-phone/check-your-phone-controller.ts
                                        2	0	src/components/check-your-phone/check-your-phone-routes.ts
@@ -53,9 +53,9 @@ public class CouplingTest
                                        178	9	src/utils/test/mfa-test.ts
                                        2	0	src/utils/types.ts
                                        
-                                       --cf179aa4--2024-06-25--Saral Kaushik
-                                       --d2100399--2024-06-25--Alfonso Enciso
-                                       --a521ddac--2024-06-20--Alfonso Patino
+                                       --cf179aa4--2024-06-25--Saral Kaushik--Merge branch 'main' into olh-1825-update-api
+                                       --d2100399--2024-06-25--Alfonso Enciso--Merge pull request #1461 from govuk-one-login/OLH-1849-Call-the-new-API-when-a-user-adds-a-phone-number-as-a-backup-MFA-method
+                                       --a521ddac--2024-06-20--Alfonso Patino--OLH-1849 Call the new API when a user adds a phone number as a backup MFA method
                                        1	1	deploy/template.yaml
                                        1	1	docker-compose.yml
                                        1	1	local.Dockerfile
@@ -75,20 +75,102 @@ public class CouplingTest
                                        1	0	src/utils/types.ts
                                        """;
     
-    private readonly List<Block> _blocks = BlockParser.GetBlocks(ExampleData);
+    private readonly List<CommitBlock> _blocks = BlockParser.GetBlocks(ExampleData);
 
     [Fact]
-    public void Has8Entries()
+    public void Has43Entries()
     {
+        // var entities = EntityChurn.Analyse(_blocks);
         var couplingAnalysisResults = CouplingAnalysis.Analyse(_blocks);
+        Assert.Equal(43, couplingAnalysisResults.CouplingSources.Count);
         
     }
-}
 
-public class CouplingAnalysis
-{
-    public static CouplingAnalysis Analyse(List<Block> blocks)
+    [Fact]
+    public void CheckYourPhoneServiceAndControllerAreCoupledAllTheTime()
     {
-        throw new NotImplementedException();
+        var couplingAnalysisResults = CouplingAnalysis.Analyse(_blocks);
+        var entry = couplingAnalysisResults.CouplingSources[
+            "src/components/check-your-phone/check-your-phone-service.ts"];
+        var couplingData = entry["src/components/check-your-phone/check-your-phone-controller.ts"];
+        Assert.Equal(100, couplingData.Probability);
     }
+    
+    [Fact]
+    public void CheckYourPhoneServiceAndControllerAreCoupled4Times()
+    {
+        var couplingAnalysisResults = CouplingAnalysis.Analyse(_blocks);
+        var entry = couplingAnalysisResults.CouplingSources[
+            "src/components/check-your-phone/check-your-phone-service.ts"];
+        var couplingData = entry["src/components/check-your-phone/check-your-phone-controller.ts"];
+        Assert.Equal(4, couplingData.Frequency);
+    }
+    
+    [Fact]
+    public void ToCsv()
+    {
+        var couplingAnalysis = CouplingAnalysis.Analyse(_blocks);
+        var result = couplingAnalysis.ToCsv(2,33);
+        
+        Assert.Equal(ToCsvExpected,result);
+    }
+    
+    private const string ToCsvExpected = """
+                                         source,target,frequency,probability
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/components/check-your-phone/check-your-phone-controller.ts,4,100
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/components/check-your-phone/check-your-phone-service.ts,4,100
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/components/check-your-phone/types.ts,4,100
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/components/check-your-phone/check-your-phone-controller.ts,4,100
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/components/check-your-phone/check-your-phone-service.ts,4,100
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/components/check-your-phone/types.ts,4,100
+                                         src/components/check-your-phone/tests/check-your-phone-service.test.ts,src/components/check-your-phone/check-your-phone-controller.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-service.test.ts,src/components/check-your-phone/check-your-phone-service.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-service.test.ts,src/components/check-your-phone/tests/check-your-phone-service.test.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-service.test.ts,src/components/check-your-phone/types.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-service.test.ts,src/utils/types.ts,2,100
+                                         src/components/check-your-phone/types.ts,src/components/check-your-phone/check-your-phone-controller.ts,4,100
+                                         src/components/check-your-phone/types.ts,src/components/check-your-phone/check-your-phone-service.ts,4,100
+                                         src/components/check-your-phone/types.ts,src/components/check-your-phone/types.ts,4,100
+                                         src/utils/types.ts,src/components/check-your-phone/check-your-phone-controller.ts,3,100
+                                         src/utils/types.ts,src/components/check-your-phone/check-your-phone-service.ts,3,100
+                                         src/utils/types.ts,src/components/check-your-phone/types.ts,3,100
+                                         src/utils/types.ts,src/utils/types.ts,3,100
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/components/check-your-phone/check-your-phone-controller.ts,3,100
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/components/check-your-phone/check-your-phone-service.ts,3,100
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,3,100
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/components/check-your-phone/types.ts,3,100
+                                         src/components/check-your-phone/tests/check-your-phone-integration.test.ts,src/components/check-your-phone/check-your-phone-controller.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-integration.test.ts,src/components/check-your-phone/check-your-phone-service.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-integration.test.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-integration.test.ts,src/components/check-your-phone/tests/check-your-phone-integration.test.ts,2,100
+                                         src/components/check-your-phone/tests/check-your-phone-integration.test.ts,src/components/check-your-phone/types.ts,2,100
+                                         src/utils/mfa/index.ts,src/components/check-your-phone/check-your-phone-controller.ts,2,100
+                                         src/utils/mfa/index.ts,src/components/check-your-phone/check-your-phone-service.ts,2,100
+                                         src/utils/mfa/index.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,2,100
+                                         src/utils/mfa/index.ts,src/components/check-your-phone/types.ts,2,100
+                                         src/utils/mfa/index.ts,src/utils/mfa/index.ts,2,100
+                                         src/utils/mfa/index.ts,src/utils/types.ts,2,100
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/utils/types.ts,3,75
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,3,75
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/utils/types.ts,3,75
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,3,75
+                                         src/components/check-your-phone/types.ts,src/utils/types.ts,3,75
+                                         src/components/check-your-phone/types.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,3,75
+                                         src/utils/types.ts,src/components/check-your-phone/tests/check-your-phone-service.test.ts,2,67
+                                         src/utils/types.ts,src/components/check-your-phone/tests/check-your-phone-controller.test.ts,2,67
+                                         src/utils/types.ts,src/utils/mfa/index.ts,2,67
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/components/check-your-phone/tests/check-your-phone-integration.test.ts,2,67
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/utils/mfa/index.ts,2,67
+                                         src/components/check-your-phone/tests/check-your-phone-controller.test.ts,src/utils/types.ts,2,67
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/components/check-your-phone/tests/check-your-phone-service.test.ts,2,50
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/components/check-your-phone/tests/check-your-phone-integration.test.ts,2,50
+                                         src/components/check-your-phone/check-your-phone-controller.ts,src/utils/mfa/index.ts,2,50
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/components/check-your-phone/tests/check-your-phone-service.test.ts,2,50
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/components/check-your-phone/tests/check-your-phone-integration.test.ts,2,50
+                                         src/components/check-your-phone/check-your-phone-service.ts,src/utils/mfa/index.ts,2,50
+                                         src/components/check-your-phone/types.ts,src/components/check-your-phone/tests/check-your-phone-service.test.ts,2,50
+                                         src/components/check-your-phone/types.ts,src/components/check-your-phone/tests/check-your-phone-integration.test.ts,2,50
+                                         src/components/check-your-phone/types.ts,src/utils/mfa/index.ts,2,50
+                                         
+                                         """;
 }

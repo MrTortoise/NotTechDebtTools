@@ -2,16 +2,15 @@ using System.Text;
 
 namespace LogParser;
 
-public class HotSpotAnalysis(Dictionary<string, HotSpot> hotSpots)
+public class ActivityHotSpotAnalysis(Dictionary<string, HotSpot> hotSpots)
 {
     public Dictionary<string, HotSpot> HotSpots { get; } = hotSpots;
 
-    public static HotSpotAnalysis Analyse(List<Block> blocks)
+    public static ActivityHotSpotAnalysis Analyse(List<CommitBlock> blocks)
     {
         var entities = new Dictionary<string, HotSpot>(); 
         foreach (var block in blocks)
         {
-            var revisions = block.Committers.Count;
             foreach (var file in block.Files)
             {
                 var fileName = file.FileName;
@@ -21,11 +20,11 @@ public class HotSpotAnalysis(Dictionary<string, HotSpot> hotSpots)
                 }
 
                 var existing = entities[fileName];
-                entities[fileName] = existing.Update(block.Committers.Select(c => c.Committer), revisions);
+                entities[fileName] = existing.AddAuthor(block.Comitter);
             }
         }
         
-        return new HotSpotAnalysis(entities);
+        return new ActivityHotSpotAnalysis(entities);
     }
 
     public string ToCsv()

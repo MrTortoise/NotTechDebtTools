@@ -6,43 +6,26 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
 {
     public Dictionary<string, AuthorChurnEntry> AuthorChurnEntries { get; } = authorChurnEntries;
 
-    public static AuthorChurn Analyse(List<Block> blocks)
+    public static AuthorChurn Analyse(List<CommitBlock> blocks)
     {
         var authors = new Dictionary<string, AuthorChurnEntry>();
         foreach (var block in blocks)
         {
             var added = block.Files.Sum(f => f.LinesAdded);
             var deleted = block.Files.Sum(f => f.LinesDeleted);
-
-            var committersSeenThisBlock = new HashSet<string>();
-            foreach (var committer in block.Committers.Select(c=>c.Committer))
+            var committer = block.Comitter;
+            if (!authors.ContainsKey(committer))
             {
-                if (!authors.ContainsKey(committer))
-                {
-                    authors[committer] = new AuthorChurnEntry(committer, added, deleted, 1);
-                }
-                else
-                {
-                    var existing = authors[committer];
-                    if (committersSeenThisBlock.Contains(committer))
-                    {
-                        // We dont want to double count adds when multiple commits by same person in a block
-                        authors[committer] = new AuthorChurnEntry(
-                            committer, 
-                            existing.Added, 
-                            existing.Deleted,
-                            existing.TotalCommits + 1);
-                    }
-                    else
-                    {
-                        authors[committer] = new AuthorChurnEntry(
-                            committer, 
-                            existing.Added + added, 
-                            existing.Deleted + deleted,
-                            existing.TotalCommits + 1);
-                    }
-                }
-                committersSeenThisBlock.Add(committer);
+                authors[committer] = new AuthorChurnEntry(committer, added, deleted, 1);
+            }
+            else
+            {
+                var existing = authors[committer];
+                authors[committer] = new AuthorChurnEntry(
+                    committer,
+                    existing.Added + added,
+                    existing.Deleted + deleted,
+                    existing.TotalCommits + 1);
             }
         }
 
@@ -53,7 +36,7 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
     {
         var sb = new StringBuilder();
         sb.AppendLine("author,added,deleted,commits");
-        foreach (var entry in AuthorChurnEntries.Values.OrderByDescending(i=>i.Added+i.Deleted))
+        foreach (var entry in AuthorChurnEntries.Values.OrderByDescending(i => i.Added + i.Deleted))
         {
             sb.AppendLine($"{entry.Author},{entry.Added},{entry.Deleted},{entry.TotalCommits}");
         }

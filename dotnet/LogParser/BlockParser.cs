@@ -2,28 +2,28 @@ namespace LogParser;
 
 public class BlockParser
 {
-    public static List<Block> GetBlocks(string input)
+    public static List<CommitBlock> GetBlocks(string input)
     {
         input = input.Trim();
-        var blocks = new List<Block>();
-        var block = new Block();
+        var blocks = new List<CommitBlock>();
+        var block = new CommitBlock();
         foreach (var line in input.Split('\n'))
         {
             // end of block
             if (string.IsNullOrWhiteSpace(line))
             {
-                if (block.Committers.Count > 0)
+                if (block.CommitEntries.Count > 0)
                 {
                     blocks.Add(block);
                 }
                 
-                block = new Block();
+                block = new CommitBlock();
                 continue;
             }
             
             block.Parse(line);
         }
-        if (block.Committers.Count > 0)
+        if (block.CommitEntries.Count > 0)
         {
             blocks.Add(block);
         }

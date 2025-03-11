@@ -37,7 +37,7 @@ public class EntityChurnTest
 
                                                     """;
     
-    private readonly List<Block> _blocks = BlockParser.GetBlocks(ExampleData);
+    private readonly List<CommitBlock> _blocks = BlockParser.GetBlocks(ExampleData);
     
     [Fact]
     public void Has8Entities()

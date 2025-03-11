@@ -13,13 +13,12 @@ public class HotSpot(string fileName, IEnumerable<string> authors, int numberOfR
     public int NumberOfAuthors => Authors.Count;
     public int NumberOfRevisions { get; } = numberOfRevisions;
     
-    public HotSpot Update(IEnumerable<string> authors, int revisions)
+    public HotSpot AddAuthor(string author)
     {
-        var newAuthors = new HashSet<string>(authors);
-        newAuthors.UnionWith(Authors);
+        var newAuthors = new HashSet<string>(authors) { author };
         return new HotSpot(
             FileName, 
             newAuthors,
-            NumberOfRevisions + revisions);
+            NumberOfRevisions+1);
     }
 }

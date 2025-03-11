@@ -6,7 +6,7 @@ public class ActiveFileIdentificationAnalysis(Dictionary<string, int> agedFiles)
 {
     public Dictionary<string, int> AgedFiles { get; } = agedFiles;
 
-    public static ActiveFileIdentificationAnalysis Analyse(List<Block> blocks, IGetToday getToday)
+    public static ActiveFileIdentificationAnalysis Analyse(List<CommitBlock> blocks, IGetToday getToday)
     {
         var revisedFiles = new Dictionary<string, int>();
         foreach (var block in blocks)

@@ -28,6 +28,11 @@ System.IO.File.WriteAllText($"{output}/author-churn.csv", authorChurn.ToCsv());
 var entityChurn = EntityChurn.Analyse(blocks);
 System.IO.File.WriteAllText($"{output}/entity-churn.csv", entityChurn.ToCsv());
 
+var hotSpots = ActivityHotSpotAnalysis.Analyse(blocks);
+System.IO.File.WriteAllText($"{output}/hotspot.csv", hotSpots.ToCsv());
+
+var coupling = CouplingAnalysis.Analyse(blocks);
+System.IO.File.WriteAllText($"{output}/new_coupling.csv", coupling.ToCsv(10,33));
 return 0;
 
 static string ExpandPath(string path)
