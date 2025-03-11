@@ -8,13 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="run_maat.sh" />
-    <Content Include="run_maat.sh">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Remove="analysis\README.MD" />
     <Content Include="analysis\README.MD">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="build_git_log.sh" />
+    <Content Include="build_git_log.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="build_file_list.sh" />
+    <Content Include="build_file_list.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

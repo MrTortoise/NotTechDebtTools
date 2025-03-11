@@ -13,8 +13,19 @@ var path = ExpandPath(args[0]);
 var date = args[1];
 var output = ExpandPath(args[2]);
 
-var script = $"run_maat.sh {path} {date} {output}";
-RunBashScript(script);
+Console.WriteLine(path);
+Console.WriteLine(date);
+Console.WriteLine(output);
+
+var gitLogScript =$"build_git_log.sh {path} {date} {output}";
+RunBashScript(gitLogScript);
+
+var gitFileListScript =$"build_file_list.sh {path} {output}";
+RunBashScript(gitFileListScript);
+
+// var script = $"run_maat.sh {path} {date} {output}";
+// RunBashScript(script);
+
 var gitLog = System.IO.File.ReadAllText($"{output}/logfile.log");
 
 var blocks = BlockParser.GetBlocks(gitLog);
@@ -49,7 +60,7 @@ static string ExpandPath(string path)
     }
 
     return Path.GetFullPath(path);
-} 
+}
 
 static void RunBashScript(string scriptPath)
 {
