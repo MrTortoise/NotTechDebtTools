@@ -14,3 +14,5 @@ This will help people identify the parts that are actual opportunities for impro
 If we can identify them empirically then we can also track and cost improvement
 
 Technical Debt is dead, long live data driven reasoning.
+
+look at https://fast-endpoints.com/docs/get-started#add-a-request-dto
