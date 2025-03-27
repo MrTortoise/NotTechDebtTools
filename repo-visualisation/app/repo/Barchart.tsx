@@ -43,9 +43,11 @@ export default function Barchart() {
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end");
 
-          // Add Y axis
-          var y = d3.scaleLinear().domain([0, 13000]).range([height, 0]);
-          svg.append("g").call(d3.axisLeft(y));
+            // Add Y axis
+            var y = d3.scaleLinear()
+            .domain([0, Math.ceil((d3.max(data, (d) => +d.Value) ?? 0) / 1000) * 1000])
+            .range([height, 0]);
+            svg.append("g").call(d3.axisLeft(y));
 
           // Bars
           svg

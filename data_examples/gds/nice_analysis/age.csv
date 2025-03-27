@@ -1,4 +1,4 @@
-entity,age-months
+entity,ageMonths
 post-deploy-tests/package-lock.json,0
 post-deploy-tests/package.json,0
 package-lock.json,0

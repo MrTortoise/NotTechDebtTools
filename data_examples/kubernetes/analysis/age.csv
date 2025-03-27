@@ -1,4 +1,4 @@
-entity,age-months
+entity,ageMonths
 test/e2e/dra/dra.go,0
 test/e2e/dra/kind.yaml,0
 api/discovery/aggregated_v2.json,0
