@@ -41,7 +41,7 @@ var hotSpots = ActivityHotSpotAnalysis.Analyse(blocks);
 System.IO.File.WriteAllText($"{output}/hotspot.csv", hotSpots.ToCsv());
 
 var coupling = CouplingAnalysis.Analyse(blocks);
-System.IO.File.WriteAllText($"{output}/new_coupling.csv", coupling.ToCsv(10,33));
+System.IO.File.WriteAllText($"{output}/coupling.csv", coupling.ToCsv(10,33));
 return 0;
 
 static string ExpandPath(string path)
