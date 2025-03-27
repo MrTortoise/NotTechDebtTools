@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogParser", "LogParser\LogP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogParser.Test", "LogParser.Test\LogParser.Test.csproj", "{46F41359-8033-4016-B333-563880ACCF6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouplingApi", "CouplingApi\CouplingApi.csproj", "{6F8911A7-7765-4A93-BD59-BE0D3469297D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{46F41359-8033-4016-B333-563880ACCF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46F41359-8033-4016-B333-563880ACCF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46F41359-8033-4016-B333-563880ACCF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8911A7-7765-4A93-BD59-BE0D3469297D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8911A7-7765-4A93-BD59-BE0D3469297D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8911A7-7765-4A93-BD59-BE0D3469297D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8911A7-7765-4A93-BD59-BE0D3469297D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
