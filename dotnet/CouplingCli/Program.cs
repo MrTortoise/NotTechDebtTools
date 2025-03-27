@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
 using CouplingCli;
 using LogParser;
-using File = LogParser.File;
+using LogParser.Git;
+using File = LogParser.Git.File;
 
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Extracting logfiles and running analysis");
@@ -22,9 +23,6 @@ RunBashScript(gitLogScript);
 
 var gitFileListScript =$"build_file_list.sh {path} {output}";
 RunBashScript(gitFileListScript);
-
-// var script = $"run_maat.sh {path} {date} {output}";
-// RunBashScript(script);
 
 var gitLog = System.IO.File.ReadAllText($"{output}/logfile.log");
 

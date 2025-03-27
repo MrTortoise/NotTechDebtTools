@@ -1,4 +1,5 @@
 using LogParser;
+using LogParser.Git;
 
 namespace CouplingCli;
 
