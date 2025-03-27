@@ -4,6 +4,7 @@ import { useState } from "react";
 import DataProvider, { CouplingData } from "./DataProvider";
 import HotSpots, { HotSpot, parseHotSpotCsv } from "./HotSpots";
 import Ages, { Age, parseAgeCsv } from "./Ages";
+import Coupling, { parseCouplingCsv } from "./Coupling";
 
 
 
@@ -13,9 +14,15 @@ export default function Home() {
   const [hotSpotErrors, setHotSpotErrors] = useState<string>("");
   const [ages, setAges] = useState<Age[]>([]);
   const [ageErrors, setAgeErrors] = useState<string>("");
+  const [couplingData, setCouplingData] = useState<CouplingItem[]>([]);
+  const [couplingErrors, setCouplingErrors] = useState<string>("");
 
   function parseHotSpotData(data: CouplingData) {
     const hotspotData = data["hotspot.csv"];
+    if (!hotspotData) {
+      console.error("No hotspot data found");
+      return;
+    }
     const parsedHotSpotData = parseHotSpotCsv(hotspotData);
 
     if (!parsedHotSpotData.success) {
@@ -46,9 +53,29 @@ export default function Home() {
     console.log("Parsed Age Data:", parsedAgeData);
   }
 
+  
+function parseCouplingData(data: CouplingData) {
+  const couplingData = data["coupling.csv"];
+  if (!couplingData) {
+    console.error("No coupling data found");
+    return;
+  }
+  const parsedCouplingData = parseCouplingCsv(couplingData);
+
+  if (!parsedCouplingData.success) {
+    setCouplingErrors(JSON.stringify(parsedCouplingData.errors, null, 2));
+  } else {
+    setCouplingData(parsedCouplingData.validRows);
+  }
+
+  // setHotSpotData(parsedHotSpotData);
+  console.log("Parsed Coupling Data:", parsedCouplingData);
+}
+
   const parseData = (data: CouplingData) => {
     parseHotSpotData(data);
     parseAgeData(data);
+    parseCouplingData(data)
   }
   const Errors = ({errorType, errors }: {errorType:string, errors: string }) => {
     if (errors == "" || errors == null) {
@@ -67,15 +94,20 @@ export default function Home() {
         parseData(incomingData);
       }} />
       <Errors errorType="Age"  errors={ageErrors} />
+      <Errors errorType="Hotspot"  errors={hotSpotErrors} />
+      <Errors errorType="Coupling"  errors={couplingErrors} />
       <Ages ages={ages} />
 
-      <Errors errorType="Hotspot"  errors={hotSpotErrors} />
+      
       <HotSpots hotSpots={hotSpots} ages={ages}/>
       {/* <pre>{JSON.stringify(data, null, 2).slice(0, 1000)}</pre>  */}
 
+      
+      <Coupling couplingData={couplingData}/>
 
     </div>
   );
 
 
 }
+

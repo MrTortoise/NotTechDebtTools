@@ -3,8 +3,6 @@ import { z } from "zod";
 import { parseCSVContent } from "zod-csv";
 import { PathName, toPathName } from "./file";
 import { Age } from "./Ages";
-import { rootCertificates } from "tls";
-import { Children } from "react";
 
 export const hotSpotSchema = z.object({
   entity: z.string(),
