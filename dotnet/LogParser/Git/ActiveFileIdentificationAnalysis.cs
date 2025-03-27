@@ -35,7 +35,7 @@ public class ActiveFileIdentificationAnalysis(Dictionary<string, int> agedFiles)
     public string ToCsv()
     {
         var sb = new StringBuilder();
-        sb.AppendLine("entity,age-months");
+        sb.AppendLine("entity,ageMonths");
         foreach (var age in AgedFiles)
         {
             sb.AppendLine($"{age.Key},{age.Value}");

@@ -49,7 +49,7 @@ namespace LogParser.Test.Git
             var ages = ActiveFileIdentificationAnalysis.Analyse(_blocks, new MockToday());
             var result = ages.ToCsv();
             var expected = """
-                           entity,age-months
+                           entity,ageMonths
                            package-lock.json,1
                            package.json,1
                            src/components/activity-history/index.njk,1
