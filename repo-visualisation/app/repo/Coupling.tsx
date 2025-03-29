@@ -33,8 +33,8 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
   const colorin = '#00f';
 	const colorout = '#f00';
 	const colornone = '#ccc';
-	const width = 2000;
-  const height = 2000;
+	const width = 1000;
+  const height = 1000;
 	const radius = width / 2;
 	const fontSize = 2;
 

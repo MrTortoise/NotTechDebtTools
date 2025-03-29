@@ -3,6 +3,7 @@ import { z } from "zod";
 import { parseCSVContent } from "zod-csv";
 import { PathName, toPathName } from "./file";
 import { Age } from "./Ages";
+import { useEffect, useRef } from "react";
 
 export const hotSpotSchema = z.object({
   entity: z.string(),
@@ -80,7 +81,7 @@ const mapHotSpotToTree = (hotSpots: HotSpot[], complexityItems: ComplexityItem[]
 
 }
 
-export default function HotSpots({ hotSpots = [], ages = [] }: { hotSpots: HotSpot[], ages: Age[] }) {
+export default function HotHotSpots({ hotSpots = [], ages = [] }: { hotSpots: HotSpot[], ages: Age[] }) {
 
   // we are defining a hotspot as number of authors * number of revisions
   // we do this because we have hypothesising that code thats changed a lot will have problems
@@ -115,34 +116,38 @@ export default function HotSpots({ hotSpots = [], ages = [] }: { hotSpots: HotSp
 }
 
 function HotSpotsDiagram({ treeData }: { treeData: Tree }) {
-  const height = 1000;
-  const width = 1000;
+  const height = 10000;
+  const width = 10000;
 
-  let padding = 3; // seperation between circles
-  let margin = 1;
+  let padding = 3; // separation between circles
+  let margin = 0;
   let marginTop = margin;
   let marginBottom = margin;
   let marginLeft = margin;
   let marginRight = margin;
   let opacityScale;
-  let stroke = '#bbb'; 
-	let minRadiusText = 5;
-  let strokeWidth = 0.5;
+  let stroke = "#bbb";
+  let minRadiusText = 5;
+  let strokeWidth = 5;
+  let fontSize = 10;
 
-  let root = d3.hierarchy<Node>(treeData, undefined)
+  let root = d3.hierarchy<Node>(treeData, undefined);
   console.log("Root:", root);
 
-  root = root.sum((d) => 'heat' in d ? Math.max(0, d.heat) : 0);
+  root = root.sum((d) => ("heat" in d ? Math.max(0, d.heat) : 0));
 
-  d3
-    .pack<Node>()
+  d3.pack<Node>()
     .size([width - marginLeft - marginRight, height - marginTop - marginBottom])
     .padding(padding)(root);
 
   const descendants = root.descendants();
-  const leaves: d3.HierarchyNode<Leaf>[] = descendants.filter((d) => !d.children && !isNaN('complexity' in d.data ? d.data.complexity : NaN));
+  const leaves: d3.HierarchyNode<Leaf>[] = descendants.filter(
+    (d) =>
+      !d.children &&
+      !isNaN("complexity" in d.data ? d.data.complexity : NaN)
+  );
   const maxComplexity = leaves
-    .map((d) => 'complexity' in d.data ? d.data.complexity : 0)
+    .map((d) => ("complexity" in d.data ? d.data.complexity : 0))
     .reduce((p, c) => Math.max(p, c));
 
   opacityScale = d3.scaleLinear().domain([0, maxComplexity]);
@@ -151,64 +156,83 @@ function HotSpotsDiagram({ treeData }: { treeData: Tree }) {
     return name.replace(/([a-z])([A-Z])/g, "$1 $2");
   }
 
+  // Ref for the SVG element
+  const svgRef = useRef<SVGSVGElement>(null);
+
+  useEffect(() => {
+    if (!svgRef.current) return;
+
+    const svg = d3.select(svgRef.current);
+    const zoomGroup = svg.select("#zoom-group");
+
+    // Define the zoom behavior
+    const zoom = d3.zoom()
+      .scaleExtent([0.5, 10]) // Set the zoom scale range
+      .on("zoom", (event) => {
+        zoomGroup.attr("transform", event.transform); // Apply the zoom transform
+      });
+
+    // Attach the zoom behavior to the SVG
+    svg.call(zoom);
+  }, []);
+
   return (
     <svg
-      //viewBox={`${-marginLeft} ${-marginTop} ${width} ${height}`}
+      ref={svgRef}
+      id="hotspots-svg"
+      viewBox={`${-marginLeft} ${-marginTop} ${width} ${height}`}
       width={width}
       height={height}
       style={{ maxWidth: "100%", height: "auto" }}
       fontFamily="sans-serif"
-      fontSize="4"
+      fontSize={fontSize}
       textAnchor="middle"
-      
     >
-      <defs>
-        {descendants.map((d, i) =>
-          !d.children && d.r > minRadiusText ? (
-            <clipPath key={`clip-${i}`} id={`leaf${i}`}>
-              <circle cx={d.x} cy={d.y} r={d.r} />
-            </clipPath>
-          ) : null
-        )}
-      </defs>
+      <g id="zoom-group">
+        <defs>
+          {descendants.map((d, i) =>
+            !d.children && d.r > minRadiusText ? (
+              <clipPath key={`clip-${i}`} id={`leaf${i}`}>
+                <circle cx={d.x} cy={d.y} r={d.r} />
+              </clipPath>
+            ) : null
+          )}
+        </defs>
 
-      {descendants.map((d, i) =>
-        !d.children ? (
-          <g key={`leaf-group-${i}`}>
+        {descendants.map((d, i) =>
+          !d.children ? (
+            <g key={`leaf-group-${i}`}>
+              <circle
+                cx={d.x}
+                cy={d.y}
+                r={d.r}
+                strokeWidth={strokeWidth}
+                fill="red"
+                fillOpacity={1 - opacityScale(d.data.complexity)}
+              >
+                <title>{CamelToSpaces(d.data.name)}</title>
+              </circle>
+              {d.r > minRadiusText && (
+                <text x={d.x} y={d.y} clipPath={`url(#leaf${i})`}>
+                  {CamelToSpaces(d.data.name)}
+                </text>
+              )}
+            </g>
+          ) : (
             <circle
+              key={`circle-${i}`}
               cx={d.x}
               cy={d.y}
               r={d.r}
+              fillOpacity="0"
+              stroke={stroke}
               strokeWidth={strokeWidth}
-              fill="red"
-              fillOpacity={1 - opacityScale(d.data.complexity)}
             >
               <title>{CamelToSpaces(d.data.name)}</title>
             </circle>
-            {d.r > minRadiusText && (
-              <text
-                x={d.x}
-                y={d.y}
-                clipPath={`url(#leaf${i})`}
-              >
-                {CamelToSpaces(d.data.name)}
-              </text>
-            )}
-          </g>
-        ) : (
-          <circle
-            key={`circle-${i}`}
-            cx={d.x}
-            cy={d.y}
-            r={d.r}
-            fillOpacity="0"
-            stroke={stroke}
-            strokeWidth={strokeWidth}
-          >
-            <title>{CamelToSpaces(d.data.name)}</title>
-          </circle>
-        )
-      )}
+          )
+        )}
+      </g>
     </svg>
   );
 }
