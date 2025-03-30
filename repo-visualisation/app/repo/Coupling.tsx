@@ -8,37 +8,37 @@ import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 
 export const couplingSchema = z.object({
-  source: z.string(),
-  target: z.string(),
-  frequency: z.coerce.number(),
-  probability: z.coerce.number()
+	source: z.string(),
+	target: z.string(),
+	frequency: z.coerce.number(),
+	probability: z.coerce.number()
 });
 
 export type CouplingData = z.infer<typeof couplingSchema>;
 
 export const parseCouplingCsv = (content: string) => {
-  return parseCSVContent(content, couplingSchema);
+	return parseCSVContent(content, couplingSchema);
 }
 
 export default function Coupling({ couplingData }: { couplingData: CouplingData[] }) {
-  if (couplingData.length == 0) {
-    return (
-      <div>
-        No Coupling Data
-      </div>)
-  }
+	if (couplingData.length == 0) {
+		return (
+			<div>
+				No Coupling Data
+			</div>)
+	}
 
-  const diagramRef = useRef<SVGSVGElement | null>(null);
+	const diagramRef = useRef<SVGSVGElement | null>(null);
 
-  const colorin = '#00f';
+	const colorin = '#00f';
 	const colorout = '#f00';
 	const colornone = '#ccc';
 	const width = 1000;
-  const height = 1000;
+	const height = 1000;
 	const radius = width / 2;
 	const fontSize = 2;
 
-  let node;
+	let node;
 	let leaves;
 	let over;
 
@@ -46,15 +46,15 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 
 	let el;
 	let thing;
-  
 
-  useEffect(() => {
-    if (diagramRef.current) {
-      chart();
-    }
-  }, [couplingData]);
 
-function createPath(node: { children?: any[]; }, path: any[]) {
+	useEffect(() => {
+		if (diagramRef.current) {
+			chart();
+		}
+	}, [couplingData]);
+
+	function createPath(node: { children?: any[]; }, path: any[]) {
 		if (path.length == 0) return node;
 
 		if (!node.children) {
@@ -71,7 +71,7 @@ function createPath(node: { children?: any[]; }, path: any[]) {
 		return createPath(nextNode, path);
 	}
 
-  function ToTree(node: { children?: any[]; }, toAddList: any[]) {
+	function ToTree(node: { children?: any[]; }, toAddList: any[]) {
 		toAddList.forEach((current) => {
 			const pathName = toPathName(current.fullPath);
 			const file = pathName.name;
@@ -85,7 +85,7 @@ function createPath(node: { children?: any[]; }, path: any[]) {
 		return node;
 	}
 
-  function linkLeaves(leaves) {
+	function linkLeaves(leaves) {
 		const lookup = new Map(leaves.map((l) => [l.data.fullPath, l]));
 		console.log({ lookup, leaves });
 		leaves.forEach((leaf) => {
@@ -102,16 +102,18 @@ function createPath(node: { children?: any[]; }, path: any[]) {
 		console.log({ leavesLinked: leaves });
 	}
 
-  const chart = () => {
+	const chart = () => {
 		console.log("data set in use effect:", couplingData);
 
-    const rows = couplingData.map((d) => {return{
-      fullPath: d.source,
-      coupledToFullPath: d.target,
-      degree: d.probability,
-      revisions: d.frequency
-    }});
-    console.log({ rows });
+		const rows = couplingData.map((d) => {
+			return {
+				fullPath: d.source,
+				coupledToFullPath: d.target,
+				degree: d.probability,
+				revisions: d.frequency
+			}
+		});
+		console.log({ rows });
 
 
 
@@ -183,7 +185,7 @@ function createPath(node: { children?: any[]; }, path: any[]) {
 		const tree = d3.cluster().size([2 * Math.PI, radius - 125]);
 		leaves = tree(h).leaves();
 		console.log({ leaves });
-
+		linkLeaves(leaves);
 		const linkedTree = linkLeaves(leaves);
 		const svg = d3.select(diagramRef.current).attr('viewBox', [-width / 2, -width / 2, width, width]);
 
@@ -271,11 +273,11 @@ function createPath(node: { children?: any[]; }, path: any[]) {
 		return svg.node();
 	};
 
-  return (
-    <div>
-      <h1>Coupling</h1>
-      <svg ref={diagramRef} width={width} height={height}></svg>
-      {/* <pre>{JSON.stringify(couplingData, null, 2)}</pre>  */}
-    </div>
-  );
+	return (
+		<div>
+			<h1>Coupling</h1>
+			<svg ref={diagramRef} width={width} height={height}></svg>
+			{/* <pre>{JSON.stringify(couplingData, null, 2)}</pre>  */}
+		</div>
+	);
 }
