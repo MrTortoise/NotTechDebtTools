@@ -18,5 +18,5 @@ They are also the kinds of problems that I believe will have an order of magnitu
 
 ## Projects
 
-the dotnet project is a set of tools designed to analyse a git log to extract data
-the front end is a set of visualisation tools - these tools will need parameters tweaking and the layout algorithms are not very well optomised (and so redraw on very large graphs will be slow - seconds)
+- the dotnet project is a set of tools designed to analyse a git log to extract data
+- the front end is a set of visualisation tools - these tools will need parameters tweaking and the layout algorithms are not very well optomised (and so redraw on very large graphs will be slow - seconds)
