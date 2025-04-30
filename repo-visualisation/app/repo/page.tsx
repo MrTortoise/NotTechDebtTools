@@ -99,7 +99,7 @@ function parseCouplingData(data: CouplingData) {
       <Ages ages={ages} />
 
       
-      {/* <HotSpots hotSpots={hotSpots} ages={ages}/> */}
+      <HotSpots hotSpots={hotSpots} ages={ages}/>
       {/* <pre>{JSON.stringify(data, null, 2).slice(0, 1000)}</pre>  */}
 
       

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { z } from "zod";
 import { parseCSVContent } from "zod-csv";
 
@@ -40,9 +40,36 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
             }
         }, [couplingData]);
 
+        interface CoupledFile {
+            fullPath: string;
+            coupledFiles: {
+                fullPath: string,
+                probability: number,
+                frequency: number
+            }[];
+        }
 
-        const chart = () =>{
-            
+        function createCoupledFileDictionary(couplingData: CouplingData[]) {
+            const coupledFileDictionary: Record<string, CoupledFile[]> = {};
+            couplingData.forEach((item) => {
+                const source = item.source;
+                const target = item.target;
+                if (!coupledFileDictionary[source]) {
+                    coupledFileDictionary[source] = { fullPath: source, coupledFiles: [] };
+                }
+                if (!coupledFileDictionary[target]) {
+                    coupledFileDictionary[target] = [];
+                }
+                coupledFileDictionary[source].push({ fulltarget);
+                coupledFileDictionary[target].push(source);
+            });
+            return coupledFileDictionary;
+        }
+
+        const chart = () => {
+            console.log("coupling data set in use effect:", couplingData);
+
+
         }
 
         return (

@@ -7,6 +7,16 @@ import { v4 as uuidv4 } from 'uuid';
 import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 
+/*
+The input file is in format of {source, target, probability, frequency}
+this is a list of connections - this list therefor can map onto the connections
+The connections are a set of paths that connect the nodes that will be organised radially
+
+From the connections we need to extract a list of unique filenames ... 
+can take a hashset of source and then add all target to it.
+
+
+*/
 export const couplingSchema = z.object({
 	source: z.string(),
 	target: z.string(),
