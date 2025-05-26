@@ -5,6 +5,7 @@ import DataProvider, { CouplingData } from "./DataProvider";
 import HotSpots, { HotSpot, parseHotSpotCsv } from "./HotSpots";
 import Ages, { Age, parseAgeCsv } from "./Ages";
 import Coupling, { parseCouplingCsv } from "./Coupling";
+import FileActivityHistogram from "./FileActivityHistogram";
 
 
 
@@ -96,7 +97,8 @@ function parseCouplingData(data: CouplingData) {
       <Errors errorType="Age"  errors={ageErrors} />
       <Errors errorType="Hotspot"  errors={hotSpotErrors} />
       <Errors errorType="Coupling"  errors={couplingErrors} />
-      <Ages ages={ages} />
+      
+      <FileActivityHistogram ages={ages}/>
 
       
       <HotSpots hotSpots={hotSpots} ages={ages}/>
