@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using CouplingCli;
 using LogParser;
 using LogParser.Git;
 using File = LogParser.Git.File;

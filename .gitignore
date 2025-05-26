@@ -1,2 +1,4 @@
 repos
 **/target
+
+.DS_Store

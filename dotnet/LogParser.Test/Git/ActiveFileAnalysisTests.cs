@@ -39,7 +39,7 @@ namespace LogParser.Test.Git
             var years = (DateTime.Now.Year - expectedDate.Year)*12;
             var months = DateTime.Now.Month - expectedDate.Month;
             var total = years + months;
-            var ages = ActiveFileIdentificationAnalysis.Analyse(_blocks, new MockToday());
+            var ages = ActiveFileIdentificationAnalysis.Analyse(_blocks, new GetTodayAdapter());
             Assert.Equal(total, ages.AgedFiles["src/locales/en/translation.json"]);
         }
 

@@ -23,6 +23,7 @@ public class ActiveFileIdentificationAnalysis(Dictionary<string, int> agedFiles)
                 }
             }
         }
+        
         return new ActiveFileIdentificationAnalysis(revisedFiles);
     }
     
@@ -31,14 +32,19 @@ public class ActiveFileIdentificationAnalysis(Dictionary<string, int> agedFiles)
         DateTime endDate = today.Today;
         return Math.Abs((endDate.Year - startDate.Year) * 12 + endDate.Month - startDate.Month);
     }
-
+    
     public string ToCsv()
     {
         var sb = new StringBuilder();
         sb.AppendLine("entity,ageMonths");
-        foreach (var age in AgedFiles)
+        Dictionary<int,List<string>> byAge = AgedFiles.GroupBy(i=>i.Value).ToDictionary(i=>i.Key, i=>i.Select(j=>j.Key).ToList());
+        foreach (var age in  byAge.Keys.Order())
         {
-            sb.AppendLine($"{age.Key},{age.Value}");
+            foreach (var fileName in byAge[age])
+            {
+                sb.AppendLine($"{fileName},{age}");
+            }
+            
         }
 
         return sb.ToString();

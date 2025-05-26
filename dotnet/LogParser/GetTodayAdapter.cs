@@ -1,7 +1,6 @@
-using LogParser;
 using LogParser.Git;
 
-namespace CouplingCli;
+namespace LogParser;
 
 public class GetTodayAdapter : IGetToday
 {
