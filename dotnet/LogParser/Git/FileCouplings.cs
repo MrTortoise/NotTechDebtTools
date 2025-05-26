@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace LogParser.Git;
 
-public class CouplingSource(string fileName) : IEnumerable<CouplingData>
+public class FileCouplings(string fileName) : IEnumerable<CouplingData>
 {
     private string FileName { get; } = fileName;
     private int _numberOfCouplings = 0;

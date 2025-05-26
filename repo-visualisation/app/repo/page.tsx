@@ -21,7 +21,7 @@ export default function Home() {
   function parseHotSpotData(data: CouplingData) {
     const hotspotData = data["hotspot.csv"];
     if (!hotspotData) {
-      console.error("No hotspot data found");
+      console.warn("No hotspot data found");
       return;
     }
     const parsedHotSpotData = parseHotSpotCsv(hotspotData);
@@ -39,7 +39,7 @@ export default function Home() {
   function parseAgeData(data: CouplingData){
     const ageData = data["age.csv"];
     if (!ageData) {
-      console.error("No age data found");
+      console.warn("No age data found");
       return;
     }
     const parsedAgeData = parseAgeCsv(ageData);
@@ -58,7 +58,7 @@ export default function Home() {
 function parseCouplingData(data: CouplingData) {
   const couplingData = data["coupling.csv"];
   if (!couplingData) {
-    console.error("No coupling data found");
+    console.warn("No coupling data found");
     return;
   }
   const parsedCouplingData = parseCouplingCsv(couplingData);

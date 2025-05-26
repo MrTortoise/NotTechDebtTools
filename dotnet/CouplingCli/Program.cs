@@ -12,7 +12,7 @@ if (args.Length < 3)
 var path = ExpandPath(args[0]);
 var date = args[1];
 var output = ExpandPath(args[2]);
-var ignoreMask = args[3];
+var ignoreMask = args.Length > 3 ? args[3] : "" ;
 
 Console.WriteLine(path);
 Console.WriteLine(date);
@@ -42,7 +42,7 @@ var hotSpots = ActivityHotSpotAnalysis.Analyse(blocks);
 System.IO.File.WriteAllText($"{output}/hotspot.csv", hotSpots.ToCsv());
 
 var coupling = CouplingAnalysis.Analyse(blocks);
-System.IO.File.WriteAllText($"{output}/coupling.csv", coupling.ToCsv(1,33));
+System.IO.File.WriteAllText($"{output}/coupling.csv", coupling.ToCsv(5,70));
 return 0;
 
 static string ExpandPath(string path)

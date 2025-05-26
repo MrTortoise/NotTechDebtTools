@@ -46,7 +46,7 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 	const width = 1000;
 	const height = 1000;
 	const radius = width / 2;
-	const fontSize = 2;
+	const fontSize = 10;
 
 	let node;
 	let leaves;
@@ -99,14 +99,14 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 		const lookup = new Map(leaves.map((l) => [l.data.fullPath, l]));
 		console.log({ lookup, leaves });
 		leaves.forEach((leaf) => {
-			leaf.coupledFrom = [];
+			// leaf.coupledFrom = [];
 			leaf.coupledTo = [];
 			if (leaf.data.coupledTo) {
-				leaf.coupledTo = leaf.data.coupledTo.map((ct) => [leaf, lookup.get(ct.fullPath)]);
+				leaf.coupledTo = leaf.data.coupledTo.map((ct) => [leaf, lookup.get(ct.path)]);
 			}
-			if (leaf.data.coupledFrom) {
-				leaf.coupledFrom = leaf.data.coupledFrom.map((cf) => [leaf, lookup.get(cf.fullPath)]);
-			}
+			// if (leaf.data.coupledFrom) {
+			// 	leaf.coupledFrom = leaf.data.coupledFrom.map((cf) => [leaf, lookup.get(cf.path)]);
+			// }
 		});
 
 		console.log({ leavesLinked: leaves });
@@ -117,13 +117,19 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 
 		const rows = couplingData.map((d) => {
 			return {
-				fullPath: d.source,
-				coupledToFullPath: d.target,
+				sourcePath: d.source,
+				targetPath: d.target,
 				degree: d.probability,
 				revisions: d.frequency
 			}
 		});
 		console.log({ rows });
+
+		const uniquePaths = new Set(rows.map((r) => r.sourcePath));
+		const uniqueCoupledToPaths = new Set(rows.map((r) => r.targetPath));
+		const allPaths = [uniquePaths.union(uniqueCoupledToPaths)];
+
+		console.log("distinct files:", allPaths.length, allPaths);
 
 
 
@@ -134,14 +140,26 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 		// this will show the risk of breaking something else
 		const coupledToCollatedMap = {};
 		rows.forEach((r) => {
-			const leaf = { fullPath: r.coupledToFullPath, degree: r.degree, revisions: r.revisions };
-			if (!coupledToCollatedMap[r.fullPath]) {
-				coupledToCollatedMap[r.fullPath] = {
-					fullPath: r.fullPath,
+			const leaf = { path: r.targetPath, degree: r.degree, revisions: r.revisions };
+			// if entry doesnt exist create it for current row
+			if (!coupledToCollatedMap[r.sourcePath]) {
+				coupledToCollatedMap[r.sourcePath] = {
+					fullPath: r.sourcePath,
 					coupledTo: [leaf]
 				};
 			} else {
-				coupledToCollatedMap[r.fullPath].coupledTo.push(leaf);
+				coupledToCollatedMap[r.sourcePath].coupledTo.push(leaf);
+			}
+
+			// do it the other way around too
+			const reverseLeaf = { path: r.sourcePath, degree: r.degree, revisions: r.revisions };
+			if(!coupledToCollatedMap[r.targetPath]) {
+				coupledToCollatedMap[r.targetPath] = {
+					fullPath: r.targetPath,
+					coupledTo: [reverseLeaf]
+				};
+			}else{
+				coupledToCollatedMap[r.targetPath].coupledTo.push(reverseLeaf);
 			}
 		});
 		console.log({ coupledToCollatedMap });
@@ -150,36 +168,43 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 		// // this will be used to show reverse coupling (ie the risk of a suprise - ie being broken by something else)
 		const keys = Object.keys(coupledToCollatedMap);
 		const coupledFromCollated = { ...coupledToCollatedMap };
-		keys.forEach((k) => {
-			const current = coupledToCollatedMap[k];
-			// take each thing we are coupled to
-			current.coupledTo.forEach((coupledTo) => {
-				// if that item exists already (then it has both from and to coupling)
-				const coupledFrom = coupledFromCollated[coupledTo];
-				if (!coupledFrom) {
-					coupledFromCollated[coupledTo.fullPath] = {
-						fullPath: coupledTo.fullPath,
-						coupledFrom: [
-							{
-								fullPath: current.fullPath,
-								degree: coupledTo.degree,
-								revisions: coupledTo.revisions
-							}
-						]
-					};
-					if (coupledTo.coupledTo)
-						coupledFromCollated[coupledTo.fullPath].coupledTo = coupledTo.coupledTo;
-				} else {
-					coupledFromCollated[coupledTo.fullPath].coupledFrom.push({
-						fullPath: current.fullPath,
-						degree: coupledTo.degree,
-						revisions: coupledTo.revisions
-					});
-				}
-			});
-		});
+		// keys.forEach((k) => {
+		// 	const current = coupledToCollatedMap[k];
+		// 	// take each thing we are coupled to
+		// 	current.coupledTo.forEach((coupledTo) => {
+		// 		// if that item exists already (then it has both from and to coupling)
+		// 		const coupledFrom = coupledFromCollated[coupledTo];
+		// 		if (!coupledFrom) {
+		// 			coupledFromCollated[coupledTo.fullPath] = {
+		// 				fullPath: coupledTo.fullPath,
+		// 				coupledFrom: [
+		// 					{
+		// 						fullPath: current.fullPath,
+		// 						degree: coupledTo.degree,
+		// 						revisions: coupledTo.revisions
+		// 					}
+		// 				]
+		// 			};
+		// 			if (coupledTo.coupledTo)
+		// 				coupledFromCollated[coupledTo.fullPath].coupledTo = coupledTo.coupledTo;
+		// 		} else {
+		// 			coupledFromCollated[coupledTo.fullPath].coupledFrom.push({
+		// 				fullPath: current.fullPath,
+		// 				degree: coupledTo.degree,
+		// 				revisions: coupledTo.revisions
+		// 			});
+		// 		}
+		// 	});
+		// });
 
 		console.log({ coupledFromCollated });
+		console.log("coupledFromCollated length", Object.keys(coupledFromCollated).length);
+
+		allPaths.forEach((p) => {
+			if (!coupledFromCollated[p]) {
+				console.warn(`No coupling found for ${p}`);
+			}}
+		);
 
 		// const collatedValues = Object.values(coupledFromCollated);
 		// const couplingTree = ToTree({}, collatedValues);
@@ -220,25 +245,26 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 			.on('mouseout', outed)
 			.call((text) =>
 				text.append('title').text(
-					(d) => `${d.data.name}
-		${d.coupledTo.length} coupledTo
-		${d.coupledFrom.length} coupledFrom`
+					(d) => `${d.data.id}
+		${d.coupledTo.length} coupledTo`
 				)
 			);
 
 		const coupledToLeaves = leaves.flatMap((leaf) => leaf.coupledTo);
-		const coupledFromLeaves = leaves.flatMap((leaf) => leaf.coupledFrom);
-		const coupledLEaves = [...coupledFromLeaves, ...coupledToLeaves];
+		// const coupledFromLeaves = leaves.flatMap((leaf) => leaf.coupledFrom);
+		// const coupledLEaves = [...coupledFromLeaves, ...coupledToLeaves];
+
+		const coupledLEaves = [ ...coupledToLeaves];
 
 		function overed(event, d) {
 			link.style('mix-blend-mode', null);
 			d3.select(this).attr('font-weight', 'bold');
-			d3.selectAll(d.coupledFrom.map((d) => d.path))
-				.attr('stroke', colorin)
-				.raise();
-			d3.selectAll(d.coupledFrom.map(([d]) => d.text))
-				.attr('fill', colorin)
-				.attr('font-weight', 'bold');
+			// d3.selectAll(d.coupledFrom.map((d) => d.path))
+			// 	.attr('stroke', colorin)
+			// 	.raise();
+			// d3.selectAll(d.coupledFrom.map(([d]) => d.text))
+			// 	.attr('fill', colorin)
+			// 	.attr('font-weight', 'bold');
 			d3.selectAll(d.coupledTo.map((d) => d.path))
 				.attr('stroke', colorout)
 				.raise();
@@ -250,10 +276,10 @@ export default function Coupling({ couplingData }: { couplingData: CouplingData[
 		function outed(_event, d) {
 			link.style('mix-blend-mode', 'multiply');
 			d3.select(this).attr('font-weight', null);
-			d3.selectAll(d.coupledFrom.map((d) => d.path)).attr('stroke', null);
-			d3.selectAll(d.coupledFrom.map(([d]) => d.text))
-				.attr('fill', null)
-				.attr('font-weight', null);
+			// d3.selectAll(d.coupledFrom.map((d) => d.path)).attr('stroke', null);
+			// d3.selectAll(d.coupledFrom.map(([d]) => d.text))
+			// 	.attr('fill', null)
+			// 	.attr('font-weight', null);
 			d3.selectAll(d.coupledTo.map((d) => d.path)).attr('stroke', null);
 			d3.selectAll(d.coupledTo.map(([, d]) => d.text))
 				.attr('fill', null)

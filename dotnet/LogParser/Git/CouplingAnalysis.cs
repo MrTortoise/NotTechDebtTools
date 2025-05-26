@@ -2,21 +2,22 @@ using System.Text;
 
 namespace LogParser.Git;
 
-public class CouplingAnalysis(Dictionary<string, CouplingSource> couplingSources)
+public class CouplingAnalysis(Dictionary<string, FileCouplings> couplingSources)
 {
-    public Dictionary<string, CouplingSource> CouplingSources { get; } = couplingSources;
+    public Dictionary<string, FileCouplings> CouplingSources { get; } = couplingSources;
 
     public static CouplingAnalysis Analyse(List<CommitBlock> blocks)
     {
-        var coupledFiles = new Dictionary<string, CouplingSource>();
+        var coupledFiles = new Dictionary<string, FileCouplings>();
         foreach (var block in blocks)
         {
             foreach (var file in block.Files)
             {
+                //for each file in each block add a coupling entry to it from every other file in the block
                 var fileName = file.FileName;
                 if (!coupledFiles.ContainsKey(fileName))
                 {
-                    coupledFiles[fileName] = new CouplingSource(fileName);
+                    coupledFiles[fileName] = new FileCouplings(fileName);
                 }
                 
                 var entry = coupledFiles[fileName];
