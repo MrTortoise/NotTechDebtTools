@@ -11,8 +11,8 @@ public class AuthorChurn(Dictionary<string, AuthorChurnEntry> authorChurnEntries
         var authors = new Dictionary<string, AuthorChurnEntry>();
         foreach (var block in blocks)
         {
-            var added = block.Files.Sum(f => f.LinesAdded);
-            var deleted = block.Files.Sum(f => f.LinesDeleted);
+            var added = block.Files.Sum(f => f.AddedLines);
+            var deleted = block.Files.Sum(f => f.DeletedLines);
             var committer = block.Comitter;
             if (!authors.ContainsKey(committer))
             {

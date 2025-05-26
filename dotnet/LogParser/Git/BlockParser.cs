@@ -2,11 +2,12 @@ namespace LogParser.Git;
 
 public class BlockParser
 {
-    public static List<CommitBlock> GetBlocks(string input)
+    public static List<CommitBlock> GetBlocks(string input, string ignoreMask = "")
     {
         input = input.Trim();
         var blocks = new List<CommitBlock>();
         var block = new CommitBlock();
+        
         foreach (var line in input.Split('\n'))
         {
             // end of block
@@ -21,7 +22,7 @@ public class BlockParser
                 continue;
             }
             
-            block.Parse(line);
+            block.Parse(line, ignoreMask);
         }
         if (block.CommitEntries.Count > 0)
         {

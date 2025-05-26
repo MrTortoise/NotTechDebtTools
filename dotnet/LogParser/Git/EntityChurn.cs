@@ -22,8 +22,8 @@ public class EntityChurn(Dictionary<string, EntityEntry> churnedEntities)
                 var existing = churnedEntities[file.FileName];
                 churnedEntities[file.FileName] = new EntityEntry(
                     file.FileName, 
-                    file.LinesAdded + existing.Added,
-                    file.LinesDeleted + existing.Deleted, 
+                    file.AddedLines + existing.Added,
+                    file.DeletedLines + existing.Deleted, 
                     existing.TotalCommits + commits);
             }
         }

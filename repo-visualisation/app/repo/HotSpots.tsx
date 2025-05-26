@@ -71,7 +71,7 @@ const mapHotSpotToTree = (hotSpots: HotSpot[], complexityItems: ComplexityItem[]
   heatItems.forEach((item) => {
     const complexity = complexityItems.find((complexityItem) => complexityItem.fullPath === item.fullPath) ?? { fullPath: item.fullPath, complexity: averageComplexity }
     const complexityValue = complexity.complexity
-    const leaf = { name: item.pathName.name, heat: item.heat, complexity: complexityValue };
+    const leaf = { name: item.pathName.name, heat: item.heat, complexity: complexityValue, fullPath: item.fullPath };
 
     addLeafToTree(tree, item.pathName.path, leaf);
   })
@@ -103,6 +103,8 @@ export default function HotHotSpots({ hotSpots = [], ages = [] }: { hotSpots: Ho
     ages.map((age) => ({ fullPath: age.entity, complexity: maxAge - age.ageMonths })
     ))
 
+    console.log("max Age:", maxAge);
+    console.log("Tree Data:", treeData);
 
   return (
     <div>
@@ -208,9 +210,9 @@ function HotSpotsDiagram({ treeData }: { treeData: Tree }) {
                 r={d.r}
                 strokeWidth={strokeWidth}
                 fill="red"
-                fillOpacity={1 - opacityScale(d.data.complexity)}
+                fillOpacity={opacityScale(d.data.complexity)}
               >
-                <title>{CamelToSpaces(d.data.name)}</title>
+                <title>{d.data.fullPath}</title>
               </circle>
               {d.r > minRadiusText && (
                 <text x={d.x} y={d.y} clipPath={`url(#leaf${i})`}>

@@ -1,0 +1,2681 @@
+--ed666da--2025-02-07--KALIBRATE\McInnesA--changes
+4	3	Dockerfile
+17	4	KSS.PriceNet.Batch.Import/app.config
+1	1	KSS.PriceNet.Batch.Service/App.config
+6	1	Makefile
+3	3	docker-compose.yml
+27	0	run-app.ps1
+
+--210b782--2025-02-07--KALIBRATE\McInnesA--just run the exe f the service
+1	14	Dockerfile
+1	1	docker-compose.yml
+
+--bdf95e2--2025-02-07--KALIBRATE\McInnesA--stuff
+8	5	Dockerfile
+1	1	docker-compose.yml
+
+--1c39302--2025-02-07--KALIBRATE\McInnesA--d
+1	1	docker-compose.yml
+
+--30d8dbb--2025-02-07--KALIBRATE\McInnesA--add ref
+3	0	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+1	0	KSS.PriceNet.Shared.Common/packages.config
+
+--04cc24f--2025-02-07--KALIBRATE\McInnesA--tweaks
+1	0	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+0	1	docker-compose.ports.yml
+1	1	docker-compose.yml
+
+--e525e80--2025-02-07--KALIBRATE\McInnesA--ff
+1	1	azure-pipelines.yml
+
+--43e4c38--2025-02-07--KALIBRATE\McInnesA--c
+4	5	Dockerfile
+
+--43bd839--2025-02-07--KALIBRATE\McInnesA--s
+6	21	Dockerfile
+
+--535cef7--2025-02-06--KALIBRATE\McInnesA--d
+9	0	Dockerfile
+1	1	docker-compose.yml
+
+--48b4752--2025-02-06--KALIBRATE\McInnesA--fdc
+7	14	Dockerfile
+
+--fb98c90--2025-02-06--KALIBRATE\McInnesA--t5
+16	14	Dockerfile
+1	1	Makefile
+1	1	docker-compose.yml
+1	1	pricenet-alerts
+
+--35828c8--2025-02-06--KALIBRATE\McInnesA--x
+15	8	Dockerfile
+
+--16b8b53--2025-02-06--KALIBRATE\McInnesA--different install method
+10	5	Dockerfile
+
+--a0c734c--2025-02-06--KALIBRATE\McInnesA--update docker to have net8 and set connection string env var for dockercompose
+6	0	Dockerfile
+3	2	Makefile
+23	8	docker-compose.yml
+
+--9a8d5d5--2025-01-24--andyr-kalibrate--KPR-698: Updated pipeline to use stages
+1	1	Dockerfile
+274	284	azure-pipelines.yml
+
+--5cf89e8--2025-01-23--andyr-kalibrate--KPR-698: back to latest image
+4	7	azure-pipelines.yml
+
+--da52e95--2025-01-23--andyr-kalibrate--KPR-698: try again
+6	0	azure-pipelines.yml
+
+--0aaf7fd--2025-01-23--andyr-kalibrate--KPR-698: 2019 image test
+2	2	azure-pipelines.yml
+
+--15a7841--2025-01-22--andyr-kalibrate--KPR-698: Update build pipeline
+24	2	azure-pipelines.yml
+
+--7b092a9--2025-01-17--andyr-kalibrate--KPR-698: Now running as a web service under IIS Express (with some warnings and errors)
+0	1	KSS.PriceNet.BatchAppLibrary/KSS.PriceNet.BatchAppLibrary.csproj
+6	6	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+3	3	KSS.PriceNet.Shared.Common/packages.config
+
+--9a03285--2025-01-07--andyr-kalibrate--KPR-698: consolidate package versions (windows service works - app doesn't)
+1	1	DisasterAndRecoveryCSV/app.config
+1	1	DisasterAndRecoveryXml/app.config
+1	1	KSS.PriceNet.ArchiveTruncate/app.config
+1	1	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+1	1	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+1	1	KSS.PriceNet.Batch.ConsoleApplication/App.config
+1	1	KSS.PriceNet.Batch.CostAggregation/app.config
+1	1	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+1	1	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+1	1	KSS.PriceNet.Batch.Download/app.config
+1	1	KSS.PriceNet.Batch.EntityModel/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/app.config
+1	1	KSS.PriceNet.Batch.Export.Formatter/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+1	1	KSS.PriceNet.Batch.Export.Notes/app.config
+1	1	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+1	1	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+1	1	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+1	1	KSS.PriceNet.Batch.Export.Transform/app.config
+1	1	KSS.PriceNet.Batch.ExportEntity/app.config
+1	1	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+1	1	KSS.PriceNet.Batch.GPCUpdates/app.config
+1	1	KSS.PriceNet.Batch.IDAL/app.config
+5	1	KSS.PriceNet.Batch.Import/app.config
+1	1	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+1	1	KSS.PriceNet.Batch.Licensing/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Batch.PRDEventProcess/app.config
+1	1	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+1	1	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+1	1	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+1	1	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+1	1	KSS.PriceNet.Batch.Refinement/app.config
+1	1	KSS.PriceNet.Batch.Rescaling/app.config
+1	1	KSS.PriceNet.Batch.SQLServerDAL/app.config
+9	1	KSS.PriceNet.Batch.Service/App.config
+9	6	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+4	3	KSS.PriceNet.Batch.Service/packages.config
+1	1	KSS.PriceNet.Batch.StrategyInitialise/app.config
+1	1	KSS.PriceNet.Batch.TimeZones/app.config
+1	1	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+1	1	KSS.PriceNet.Batch.Transports.EMail/app.config
+1	1	KSS.PriceNet.Batch.Transports.FTP/app.config
+1	1	KSS.PriceNet.Batch.Transports.Fax/app.config
+1	1	KSS.PriceNet.Batch.Transports.File/app.config
+1	1	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+1	1	KSS.PriceNet.Batch.Transports.SMS/app.config
+1	1	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+1	1	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+1	1	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+9	6	KSS.PriceNet.Batch/KSS.PriceNet.Batch.csproj
+1	1	KSS.PriceNet.Batch/app.config
+4	3	KSS.PriceNet.Batch/packages.config
+2	2	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+23	5	KSS.PriceNet.BatchApp/web.config
+1	0	KSS.PriceNet.BatchAppLibrary/KSS.PriceNet.BatchAppLibrary.csproj
+1	1	KSS.PriceNet.ExportUtility/app.config
+1	1	KSS.PriceNet.Optimisation/app.config
+1	1	KSS.PriceNet.Parameterisation.BLL/app.config
+1	1	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+1	1	KSS.PriceNet.PriceGeneration.BLL/app.config
+1	1	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+1	1	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+1	1	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+1	1	KSS.PriceNet.PriceGeneration.IDAL/app.config
+1	1	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+1	1	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+1	1	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+1	1	KSS.PriceNet.ProcessMonitor.BLL/app.config
+1	1	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.Authentication/app.config
+8	8	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+1	1	KSS.PriceNet.Shared.Common/app.config
+4	4	KSS.PriceNet.Shared.Common/packages.config
+1	1	KSS.PriceNet.Shared.Contracts.Aral/app.config
+1	1	KSS.PriceNet.Shared.Contracts.COCO/app.config
+1	1	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+1	1	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+1	1	KSS.PriceNet.Shared.Contracts.CPG/app.config
+1	1	KSS.PriceNet.Shared.Contracts.DTW/app.config
+1	1	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+1	1	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+1	1	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+1	1	KSS.PriceNet.Shared.Contracts.SOE/app.config
+1	1	KSS.PriceNet.Shared.Contracts.Utils/app.config
+6	6	KSS.PriceNet.Shared.DALFactory/KSS.PriceNet.Shared.DALFactory.csproj
+1	1	KSS.PriceNet.Shared.DALFactory/app.config
+3	3	KSS.PriceNet.Shared.DALFactory/packages.config
+1	1	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+1	1	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.EntityModel/app.config
+1	1	KSS.PriceNet.Shared.Interfaces/app.config
+1	1	KSS.PriceNet.SqlConnection/app.config
+1	1	Kalibrate.ExtractRuleAudit.Tests/app.config
+1	1	Kalibrate.ExtractRuleAudit/app.config
+1	1	Kalibrate.ModelUpdate/app.config
+1	1	ModelUpdateTestHarness/App.config
+1	1	OptimisationTest/App.config
+1	1	Parameterisation Test Harness/App.config
+1	1	PetesTestHarness/App.config
+1	1	Test Harness/App.config
+1	1	Test Harness2/App.config
+
+--8e5576b--2024-12-24--andyr-kalibrate--KPR-698: Rename projects - tidy up
+30	30	Batch.sln
+53	0	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+20	0	KSS.PriceNet.Batch.Service/packages.config
+52	0	KSS.PriceNet.Batch/KSS.PriceNet.Batch.csproj
+17	0	KSS.PriceNet.Batch/packages.config
+0	116	KSS.PriceNet.BatchApp/App.config
+14	15	KSS.PriceNet.BatchApp/BatchWorker.cs
+9	221	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+-	-	KSS.PriceNet.BatchApp/PriceNet.snk
+18	15	KSS.PriceNet.BatchApp/Program.cs
+0	34	KSS.PriceNet.BatchApp/Properties/AssemblyInfo.cs
+39	0	KSS.PriceNet.BatchApp/Properties/launchSettings.json
+0	20	KSS.PriceNet.BatchApp/Startup.cs
+19	0	KSS.PriceNet.BatchApp/appsettings.json
+15	0	KSS.PriceNet.BatchApp/web.config
+1	0	KSS.PriceNet.BatchAppLibrary/KSS.PriceNet.BatchAppLibrary.csproj
+116	0	KSS.PriceNet.BatchAppOld/App.config
+44	0	KSS.PriceNet.BatchAppOld/BatchWorker.cs
+228	0	KSS.PriceNet.BatchAppOld/KSS.PriceNet.BatchAppOld.csproj
+-	-	KSS.PriceNet.BatchAppOld/PriceNet.snk
+17	0	KSS.PriceNet.BatchAppOld/Program.cs
+34	0	KSS.PriceNet.BatchAppOld/Properties/AssemblyInfo.cs
+20	0	KSS.PriceNet.BatchAppOld/Startup.cs
+0	43	KSS.PriceNet.BatchAppWeb/BatchWorker.cs
+0	16	KSS.PriceNet.BatchAppWeb/KSS.PriceNet.BatchAppWeb.csproj
+0	6	KSS.PriceNet.BatchAppWeb/KSS.PriceNet.BatchAppWeb.http
+0	20	KSS.PriceNet.BatchAppWeb/Program.cs
+0	39	KSS.PriceNet.BatchAppWeb/Properties/launchSettings.json
+0	19	KSS.PriceNet.BatchAppWeb/appsettings.json
+0	15	KSS.PriceNet.BatchAppWeb/web.config
+52	0	KSS.PriceNet.Shared.DALFactory/KSS.PriceNet.Shared.DALFactory.csproj
+17	0	KSS.PriceNet.Shared.DALFactory/packages.config
+
+--c7228d5--2024-12-24--andyr-kalibrate--KPR-698: Running in .net8 web context :)
+2	4	KSS.PriceNet.BatchAppLibrary/BatchWrapper.cs
+6	91	KSS.PriceNet.BatchAppLibrary/KSS.PriceNet.BatchAppLibrary.csproj
+0	114	KSS.PriceNet.BatchAppWeb/KSS.PriceNet.BatchAppWeb.csproj
+0	8	KSS.PriceNet.BatchAppWeb/appsettings.Development.json
+16	6	KSS.PriceNet.BatchAppWeb/appsettings.json
+0	12	KSS.PriceNet.BatchAppWeb/web.config
+20	4	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+1	1	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+4	0	KSS.PriceNet.Shared.Common/app.config
+5	2	KSS.PriceNet.Shared.Common/packages.config
+
+--171c127--2024-12-23--andyr-kalibrate--KPR-698: BatchApp web wrapper (net8 upgrade). Not working :(
+2	2	DisasterAndRecoveryCSV/DisasterAndRecoveryCSV.csproj
+4	0	DisasterAndRecoveryCSV/app.config
+1	1	DisasterAndRecoveryCSV/packages.config
+2	2	DisasterAndRecoveryXml/DisasterAndRecoveryXml.csproj
+4	0	DisasterAndRecoveryXml/app.config
+1	1	DisasterAndRecoveryXml/packages.config
+59	0	InstallBatchServiceLocal.ps1
+4	0	KSS.PriceNet.ArchiveTruncate/app.config
+4	0	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+4	0	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+4	0	KSS.PriceNet.Batch.ConsoleApplication/App.config
+4	0	KSS.PriceNet.Batch.CostAggregation/app.config
+4	0	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+4	0	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+4	0	KSS.PriceNet.Batch.Download/app.config
+4	0	KSS.PriceNet.Batch.EntityModel/app.config
+2	2	KSS.PriceNet.Batch.Export.Auditing/KSS.PriceNet.Batch.Export.Auditing.csproj
+4	0	KSS.PriceNet.Batch.Export.Auditing/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/packages.config
+27	3	KSS.PriceNet.Batch.Export.Formatter/KSS.PriceNet.Batch.Export.Formatter.csproj
+4	0	KSS.PriceNet.Batch.Export.Formatter/app.config
+1	1	KSS.PriceNet.Batch.Export.Formatter/packages.config
+4	0	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+2	2	KSS.PriceNet.Batch.Export.ModelSummaryRequester/KSS.PriceNet.Batch.Export.ModelSummaryRequester.csproj
+4	0	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/packages.config
+4	0	KSS.PriceNet.Batch.Export.Notes/app.config
+4	0	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+4	0	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+4	0	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+4	0	KSS.PriceNet.Batch.Export.Transform/app.config
+2	2	KSS.PriceNet.Batch.ExportEntity/KSS.PriceNet.Batch.ExportEntity.csproj
+4	0	KSS.PriceNet.Batch.ExportEntity/app.config
+1	1	KSS.PriceNet.Batch.ExportEntity/packages.config
+4	0	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+4	0	KSS.PriceNet.Batch.GPCUpdates/app.config
+4	0	KSS.PriceNet.Batch.IDAL/app.config
+2	2	KSS.PriceNet.Batch.Import/KSS.PriceNet.Batch.Import.csproj
+1	1	KSS.PriceNet.Batch.Import/packages.config
+4	0	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+4	0	KSS.PriceNet.Batch.Licensing/app.config
+4	0	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+4	0	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+4	0	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+4	0	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+4	0	KSS.PriceNet.Batch.PRDEventProcess/app.config
+2	2	KSS.PriceNet.Batch.PriceGenerationControl/KSS.PriceNet.Batch.PriceGenerationControl.csproj
+4	0	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+1	1	KSS.PriceNet.Batch.PriceGenerationControl/packages.config
+4	0	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+4	0	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+4	0	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+4	0	KSS.PriceNet.Batch.Refinement/app.config
+4	0	KSS.PriceNet.Batch.Rescaling/app.config
+4	0	KSS.PriceNet.Batch.SQLServerDAL/app.config
+4	0	KSS.PriceNet.Batch.StrategyInitialise/app.config
+4	0	KSS.PriceNet.Batch.TimeZones/app.config
+4	0	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+4	0	KSS.PriceNet.Batch.Transports.EMail/app.config
+4	0	KSS.PriceNet.Batch.Transports.FTP/app.config
+4	0	KSS.PriceNet.Batch.Transports.Fax/app.config
+4	0	KSS.PriceNet.Batch.Transports.File/app.config
+4	0	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+4	0	KSS.PriceNet.Batch.Transports.SMS/app.config
+4	0	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+2	2	KSS.PriceNet.Batch.Transports.WebAPI/KSS.PriceNet.Batch.Transports.WebAPI.csproj
+4	0	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+1	1	KSS.PriceNet.Batch.Transports.WebAPI/packages.config
+4	0	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	2	KSS.PriceNet.Batch/KSS.PriceNet.Batch.csproj
+4	0	KSS.PriceNet.Batch/app.config
+1	1	KSS.PriceNet.Batch/packages.config
+226	226	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+32	0	KSS.PriceNet.BatchAppLibrary/BatchWrapper.cs
+150	0	KSS.PriceNet.BatchAppLibrary/KSS.PriceNet.BatchAppLibrary.csproj
+34	2	KSS.PriceNet.BatchAppWeb/BatchWorker.cs
+124	11	KSS.PriceNet.BatchAppWeb/KSS.PriceNet.BatchAppWeb.csproj
+4	0	KSS.PriceNet.BatchAppWeb/Program.cs
+2	4	KSS.PriceNet.BatchAppWeb/Properties/launchSettings.json
+27	0	KSS.PriceNet.BatchAppWeb/web.config
+2	2	KSS.PriceNet.ExportUtility/KSS.PriceNet.ExportUtility.csproj
+4	0	KSS.PriceNet.ExportUtility/app.config
+1	1	KSS.PriceNet.ExportUtility/packages.config
+4	0	KSS.PriceNet.Optimisation/app.config
+4	0	KSS.PriceNet.Parameterisation.BLL/app.config
+4	0	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+4	0	KSS.PriceNet.PriceGeneration.BLL/app.config
+4	0	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+4	0	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+4	0	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+4	0	KSS.PriceNet.PriceGeneration.IDAL/app.config
+4	0	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+4	0	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+4	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+4	0	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	2	KSS.PriceNet.ProcessMonitor.BLL/KSS.PriceNet.ProcessMonitor.BLL.csproj
+4	0	KSS.PriceNet.ProcessMonitor.BLL/app.config
+1	1	KSS.PriceNet.ProcessMonitor.BLL/packages.config
+4	0	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+2	2	KSS.PriceNet.Shared.Authentication/KSS.PriceNet.Shared.Authentication.csproj
+4	0	KSS.PriceNet.Shared.Authentication/app.config
+1	1	KSS.PriceNet.Shared.Authentication/packages.config
+2	2	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+4	0	KSS.PriceNet.Shared.Common/app.config
+1	1	KSS.PriceNet.Shared.Common/packages.config
+4	0	KSS.PriceNet.Shared.Contracts.Aral/app.config
+4	0	KSS.PriceNet.Shared.Contracts.COCO/app.config
+4	0	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+4	0	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+4	0	KSS.PriceNet.Shared.Contracts.CPG/app.config
+4	0	KSS.PriceNet.Shared.Contracts.DTW/app.config
+4	0	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+4	0	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+4	0	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+4	0	KSS.PriceNet.Shared.Contracts.SOE/app.config
+4	0	KSS.PriceNet.Shared.Contracts.Utils/app.config
+2	2	KSS.PriceNet.Shared.DALFactory/KSS.PriceNet.Shared.DALFactory.csproj
+4	0	KSS.PriceNet.Shared.DALFactory/app.config
+1	1	KSS.PriceNet.Shared.DALFactory/packages.config
+4	0	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+4	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+4	0	KSS.PriceNet.Shared.EntityModel/app.config
+4	0	KSS.PriceNet.Shared.Interfaces/app.config
+2	2	KSS.PriceNet.SqlConnection/KSS.PriceNet.SqlConnectionService.csproj
+4	0	KSS.PriceNet.SqlConnection/app.config
+1	1	KSS.PriceNet.SqlConnection/packages.config
+2	2	Kalibrate.ExtractRuleAudit.Tests/Kalibrate.ExtractRuleAudit.Tests.csproj
+4	0	Kalibrate.ExtractRuleAudit.Tests/app.config
+1	1	Kalibrate.ExtractRuleAudit.Tests/packages.config
+2	2	Kalibrate.ExtractRuleAudit/Kalibrate.ExtractRuleAudit.csproj
+4	0	Kalibrate.ExtractRuleAudit/app.config
+1	1	Kalibrate.ExtractRuleAudit/packages.config
+2	2	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+4	0	Kalibrate.ModelUpdate/app.config
+1	1	Kalibrate.ModelUpdate/packages.config
+4	0	ModelUpdateTestHarness/App.config
+4	0	OptimisationTest/App.config
+4	0	Parameterisation Test Harness/App.config
+5	1	PetesTestHarness/App.config
+4	0	Test Harness/App.config
+4	0	Test Harness2/App.config
+
+--fbcdd58--2024-12-20--andyr-kalibrate--KPR-698: Upgrade BatchApp to net8
+32	2	Batch.sln
+7	0	KSS.PriceNet.BatchAppLibrary/KSS.PriceNet.BatchAppLibrary.csproj
+11	0	KSS.PriceNet.BatchAppWeb/BatchWorker.cs
+17	0	KSS.PriceNet.BatchAppWeb/KSS.PriceNet.BatchAppWeb.csproj
+6	0	KSS.PriceNet.BatchAppWeb/KSS.PriceNet.BatchAppWeb.http
+16	0	KSS.PriceNet.BatchAppWeb/Program.cs
+41	0	KSS.PriceNet.BatchAppWeb/Properties/launchSettings.json
+8	0	KSS.PriceNet.BatchAppWeb/appsettings.Development.json
+9	0	KSS.PriceNet.BatchAppWeb/appsettings.json
+
+--17dfa9c--2024-08-22--andyr-kalibrate--KPR-698: Upgrade BatchApp
+1	1	KSS.PriceNet.BatchApp/App.config
+2	2	KSS.PriceNet.BatchApp/BatchWorker.cs
+182	641	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+0	116	KSS.PriceNet.BatchApp/packages.config
+
+--55054b2--2024-08-12--andyr-kalibrate--KPR-698: Added PNConfigurationProvider to read app settings from different sources
+1	7	DisasterAndRecoveryCSV/Program.cs
+19	2	DisasterAndRecoveryCSV/app.config
+1	7	DisasterAndRecoveryXml/Program.cs
+19	2	DisasterAndRecoveryXml/app.config
+19	2	KSS.PriceNet.ArchiveTruncate/app.config
+19	2	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+19	2	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+23	7	KSS.PriceNet.Batch.ConsoleApplication/App.config
+19	2	KSS.PriceNet.Batch.CostAggregation/app.config
+19	2	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+19	2	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+19	2	KSS.PriceNet.Batch.Download/app.config
+19	2	KSS.PriceNet.Batch.EntityModel/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+19	2	KSS.PriceNet.Batch.Export.Auditing/app.config
+19	2	KSS.PriceNet.Batch.Export.Formatter/app.config
+19	2	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+8	39	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+19	2	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+19	2	KSS.PriceNet.Batch.Export.Notes/app.config
+19	2	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+19	2	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+19	2	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+19	2	KSS.PriceNet.Batch.Export.Transform/app.config
+19	2	KSS.PriceNet.Batch.ExportEntity/app.config
+19	2	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+19	2	KSS.PriceNet.Batch.GPCUpdates/app.config
+19	2	KSS.PriceNet.Batch.IDAL/app.config
+11	14	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+20	4	KSS.PriceNet.Batch.Import/app.config
+19	2	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+19	2	KSS.PriceNet.Batch.Licensing/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+19	2	KSS.PriceNet.Batch.PRDEventProcess/app.config
+7	7	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+19	2	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+19	2	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+19	2	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+19	2	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+19	2	KSS.PriceNet.Batch.Refinement/app.config
+19	2	KSS.PriceNet.Batch.Rescaling/app.config
+19	2	KSS.PriceNet.Batch.SQLServerDAL/app.config
+32	18	KSS.PriceNet.Batch.Service/App.config
+19	2	KSS.PriceNet.Batch.StrategyInitialise/app.config
+19	2	KSS.PriceNet.Batch.TimeZones/app.config
+19	2	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+19	2	KSS.PriceNet.Batch.Transports.EMail/app.config
+19	2	KSS.PriceNet.Batch.Transports.FTP/app.config
+19	2	KSS.PriceNet.Batch.Transports.Fax/app.config
+19	2	KSS.PriceNet.Batch.Transports.File/app.config
+19	2	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+19	2	KSS.PriceNet.Batch.Transports.SMS/app.config
+19	2	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+19	2	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+19	2	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	2	KSS.PriceNet.Batch/Batch.cs
+19	2	KSS.PriceNet.Batch/app.config
+62	58	KSS.PriceNet.BatchApp/App.config
+12	53	KSS.PriceNet.ExportUtility/Export.cs
+23	6	KSS.PriceNet.ExportUtility/app.config
+19	2	KSS.PriceNet.Optimisation/app.config
+19	2	KSS.PriceNet.Parameterisation.BLL/app.config
+19	2	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+19	2	KSS.PriceNet.PriceGeneration.BLL/app.config
+19	2	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+19	2	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+19	2	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+19	2	KSS.PriceNet.PriceGeneration.IDAL/app.config
+19	2	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+19	2	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+19	2	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+25	9	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+19	2	KSS.PriceNet.ProcessMonitor.BLL/app.config
+19	2	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.Authentication/Authenticator.cs
+1	1	KSS.PriceNet.Shared.Authentication/AuthenticatorNonStatic.cs
+2	2	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+2	2	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+2	2	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+19	2	KSS.PriceNet.Shared.Authentication/app.config
+57	1	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+38	0	KSS.PriceNet.Shared.Common/PNConfiguration.cs
+164	0	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+0	33	KSS.PriceNet.Shared.Common/TenantConfigWrapper.cs
+19	2	KSS.PriceNet.Shared.Common/app.config
+18	0	KSS.PriceNet.Shared.Common/packages.config
+19	2	KSS.PriceNet.Shared.Contracts.Aral/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COCO/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+19	2	KSS.PriceNet.Shared.Contracts.CPG/app.config
+19	2	KSS.PriceNet.Shared.Contracts.DTW/app.config
+19	2	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+19	2	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+19	2	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+19	2	KSS.PriceNet.Shared.Contracts.SOE/app.config
+19	2	KSS.PriceNet.Shared.Contracts.Utils/app.config
+1	1	KSS.PriceNet.Shared.DALFactory/DataAccess.cs
+19	2	KSS.PriceNet.Shared.DALFactory/app.config
+19	2	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+19	2	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+19	2	KSS.PriceNet.Shared.EntityModel/app.config
+19	2	KSS.PriceNet.Shared.Interfaces/app.config
+6	6	KSS.PriceNet.SqlConnection/SQLUtil.cs
+4	6	KSS.PriceNet.SqlConnection/SqlConnService.cs
+16	4	KSS.PriceNet.SqlConnection/app.config
+19	2	Kalibrate.ExtractRuleAudit.Tests/app.config
+8	8	Kalibrate.ExtractRuleAudit/SqlDal.cs
+19	2	Kalibrate.ExtractRuleAudit/app.config
+4	0	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+0	42	Kalibrate.ModelUpdate/Program.cs
+24	23	Kalibrate.ModelUpdate/SqlDal.cs
+19	2	Kalibrate.ModelUpdate/app.config
+20	5	ModelUpdateTestHarness/App.config
+23	6	OptimisationTest/App.config
+21	4	Parameterisation Test Harness/App.config
+22	7	PetesTestHarness/App.config
+5	8	PetesTestHarness/Program.cs
+30	15	Test Harness/App.config
+1	1	Test Harness/Form1.cs
+31	16	Test Harness2/App.config
+1	1	Test Harness2/Form1.cs
+
+--bc70f21--2025-05-14--christopherchalmers--KPR-1415, SYS-10215: application-pool-handling (#114)
+123	0	choco/tools/IIS-Functions/IIS-Functions.psm1
+2	17	choco/tools/chocolateyinstall.ps1
+
+--c77a1f8--2025-05-12--Pete Wild--DD-5454
+258	16	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+
+--936a5bf--2025-05-06--Pete Wild--Revert "DD-5472" (#112)
+10	89	KSS.PriceNet.Batch.Transports.WebAPI/Sender.cs
+
+--dc265d7--2025-05-02--Pete Wild--DD-5472 (#111)
+89	10	KSS.PriceNet.Batch.Transports.WebAPI/Sender.cs
+
+--871a273--2025-04-22--joehcleung--DD-5425 - Own Price XML files going into Rejected Folder (#110)
+5	2	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+
+--06a0587--2025-04-15--David Pendray--Revert "Docker build Update azure-pipelines.yml (#102)"
+20	18	Dockerfile
+2	24	azure-pipelines.yml
+
+--4494772--2025-04-15--David Pendray--Revert "KPR-1268: TenantControlJson (#101)"
+18	102	choco/tools/chocolateyinstall.ps1
+
+--d5b933b--2025-04-14--David Pendray--DD-5385: Fix AlternativeMainMarker error when deleting own site (#104)
+5	0	KSS.PriceNet.Shared.EntityModel/BeforeDeleteHandler.cs
+
+--7910e98--2025-04-14--Pete Wild--DD-5476 (#109)
+12	1	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--7c95c71--2025-04-14--joehcleung--DD-5476 - Margin rule adjusting prices as expected but not removing the failed validation flag to allow automation (#108)
+2	4	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--33a97f9--2025-04-08--joehcleung--DD-5463 - Margin rule checking but not adjusting (#107)
+9	13	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--c4184f6--2025-04-07--joehcleung--DD-5463 - Margin rule checking but not adjusting (#106)
+6	8	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--ccb77da--2025-03-31--joehcleung--DD-5463 - Margin rule checking but not adjusting (#105)
+8	2	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--7d6f69d--2025-04-08--joehcleung--DD-5463 - Margin rule checking but not adjusting (#107)
+9	13	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--618a0d7--2025-04-07--joehcleung--DD-5463 - Margin rule checking but not adjusting (#106)
+6	8	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--09cf872--2025-03-31--joehcleung--DD-5463 - Margin rule checking but not adjusting (#105)
+8	2	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--e1f9979--2025-03-27--David Pendray--Revert "Docker build Update azure-pipelines.yml (#102)"
+20	18	Dockerfile
+2	24	azure-pipelines.yml
+
+--5c843b3--2025-03-27--David Pendray--Revert "KPR-1268: TenantControlJson (#101)"
+18	102	choco/tools/chocolateyinstall.ps1
+
+--f397c7f--2025-03-06--joehcleung--KPR-1290 - Create new 'Margin Amendment' Product Rule (#103)
+2	0	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+1	0	KSS.PriceNet.PriceGeneration.RulesLibrary/KSS.PriceNet.PriceGeneration.RulesLibrary.csproj
+167	0	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_MarginAmendment.cs
+
+--2fa7320--2025-02-13--christopherchalmers--KPR-1268: TenantControlJson (#101)
+102	18	choco/tools/chocolateyinstall.ps1
+
+--de17502--2025-02-05--iamandymcinnes--Docker build Update azure-pipelines.yml (#102)
+18	20	Dockerfile
+24	2	azure-pipelines.yml
+
+--16380fe--2025-01-21--David Pendray--KPR-1269: Updated submodule and tidy old production_identity.p12 (#100)
+1	1	pricenet-alerts
+-	-	production_identity.p12
+
+--faf0574--2025-01-09--andyr-kalibrate--KPR-1255: Added error code for duplicate rec price impact record (#98)
+1	0	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+
+--1a9a3c9--2024-12-12--andyr-kalibrate--KPR-1211: Add Translations for price impact price requests (#97)
+1	0	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+
+--1a71556--2024-12-12--andyr-kalibrate--KPR-1213: Updated logic to ensure current price used if no rec price … (#96)
+35	24	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_PriceImpactPrice.cs
+
+--74ecfcc--2024-12-10--andyr-kalibrate--KPR-1213: Add Price Impact generation rule (#95)
+5	0	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+121	0	KSS.PriceNet.PriceGeneration.DataFunctions/GetPriceImpactRecommendedPrices.cs
+1	0	KSS.PriceNet.PriceGeneration.DataFunctions/KSS.PriceNet.PriceGeneration.DataFunctions.csproj
+1	0	KSS.PriceNet.PriceGeneration.DataStructures/KSS.PriceNet.PriceGeneration.DataStructures.csproj
+9	0	KSS.PriceNet.PriceGeneration.DataStructures/OwnProduct.cs
+150	0	KSS.PriceNet.PriceGeneration.DataStructures/PriceImpactRecommendedPrice.cs
+7	0	KSS.PriceNet.PriceGeneration.IDAL/IPriceGenerationDAL.cs
+1	0	KSS.PriceNet.PriceGeneration.RulesLibrary/KSS.PriceNet.PriceGeneration.RulesLibrary.csproj
+75	0	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_PriceImpactPrice.cs
+5	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/PriceGenerationDAL.cs
+
+--5da003d--2024-11-18--christopherchalmers--Sys 7911 deploy services stopped (#94)
+145	4	choco/tools/winservice.ps1
+
+--048a68a--2024-10-29--andyr-kalibrate--KPR-1180: Handle nvarchar(MAX) column type for data import + new error code (#93)
+3	1	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+1	0	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+
+--b61abb7--2024-10-22--iamandymcinnes--Update azure-pipelines.yml for Azure Pipelines
+3	3	azure-pipelines.yml
+
+--01c3613--2024-09-05--Pete Wild--Kpr 158 (#92)
+1	1	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+2	0	KSS.PriceNet.PriceGeneration.DataFunctions/MaintainMarginValues.cs
+24	1	KSS.PriceNet.PriceGeneration.DataStructures/DayCost.cs
+10	8	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_MaintainMargin.cs
+
+--e855d42--2024-09-04--Pete Wild--KPR-158 (#91)
+10	0	KSS.PriceNet.Globalisation/PriceNetResources.en-US.resx
+1	0	KSS.PriceNet.PriceGeneration.DataFunctions/KSS.PriceNet.PriceGeneration.DataFunctions.csproj
+112	0	KSS.PriceNet.PriceGeneration.DataFunctions/MaintainMarginValues.cs
+124	0	KSS.PriceNet.PriceGeneration.DataStructures/DayCost.cs
+1	0	KSS.PriceNet.PriceGeneration.DataStructures/KSS.PriceNet.PriceGeneration.DataStructures.csproj
+9	0	KSS.PriceNet.PriceGeneration.DataStructures/OwnProduct.cs
+7	0	KSS.PriceNet.PriceGeneration.IDAL/IPriceGenerationDAL.cs
+1	0	KSS.PriceNet.PriceGeneration.RulesLibrary/KSS.PriceNet.PriceGeneration.RulesLibrary.csproj
+95	0	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_MaintainMargin.cs
+5	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/PriceGenerationDAL.cs
+
+--d09cb9d--2024-08-28--andyr-kalibrate--Revert "KPR-698: Added PNConfigurationProvider to read app settings f… (#90)
+7	1	DisasterAndRecoveryCSV/Program.cs
+2	19	DisasterAndRecoveryCSV/app.config
+7	1	DisasterAndRecoveryXml/Program.cs
+2	19	DisasterAndRecoveryXml/app.config
+2	19	KSS.PriceNet.ArchiveTruncate/app.config
+2	19	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+2	19	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+7	23	KSS.PriceNet.Batch.ConsoleApplication/App.config
+2	19	KSS.PriceNet.Batch.CostAggregation/app.config
+2	19	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+2	19	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+2	19	KSS.PriceNet.Batch.Download/app.config
+2	19	KSS.PriceNet.Batch.EntityModel/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+2	19	KSS.PriceNet.Batch.Export.Auditing/app.config
+2	19	KSS.PriceNet.Batch.Export.Formatter/app.config
+2	19	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+39	8	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+2	19	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+2	19	KSS.PriceNet.Batch.Export.Notes/app.config
+2	19	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+2	19	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+2	19	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+2	19	KSS.PriceNet.Batch.Export.Transform/app.config
+2	19	KSS.PriceNet.Batch.ExportEntity/app.config
+2	19	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+2	19	KSS.PriceNet.Batch.GPCUpdates/app.config
+2	19	KSS.PriceNet.Batch.IDAL/app.config
+14	11	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+4	20	KSS.PriceNet.Batch.Import/app.config
+2	19	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+2	19	KSS.PriceNet.Batch.Licensing/app.config
+2	19	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+2	19	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+2	19	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+2	19	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+2	19	KSS.PriceNet.Batch.PRDEventProcess/app.config
+7	7	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+2	19	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+2	19	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+2	19	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+2	19	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+2	19	KSS.PriceNet.Batch.Refinement/app.config
+2	19	KSS.PriceNet.Batch.Rescaling/app.config
+2	19	KSS.PriceNet.Batch.SQLServerDAL/app.config
+18	32	KSS.PriceNet.Batch.Service/App.config
+2	19	KSS.PriceNet.Batch.StrategyInitialise/app.config
+2	19	KSS.PriceNet.Batch.TimeZones/app.config
+2	19	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+2	19	KSS.PriceNet.Batch.Transports.EMail/app.config
+2	19	KSS.PriceNet.Batch.Transports.FTP/app.config
+2	19	KSS.PriceNet.Batch.Transports.Fax/app.config
+2	19	KSS.PriceNet.Batch.Transports.File/app.config
+2	19	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+2	19	KSS.PriceNet.Batch.Transports.SMS/app.config
+2	19	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+2	19	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+2	19	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	2	KSS.PriceNet.Batch/Batch.cs
+2	19	KSS.PriceNet.Batch/app.config
+58	62	KSS.PriceNet.BatchApp/App.config
+53	12	KSS.PriceNet.ExportUtility/Export.cs
+6	23	KSS.PriceNet.ExportUtility/app.config
+2	19	KSS.PriceNet.Optimisation/app.config
+2	19	KSS.PriceNet.Parameterisation.BLL/app.config
+2	19	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+2	19	KSS.PriceNet.PriceGeneration.BLL/app.config
+2	19	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+2	19	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+2	19	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+2	19	KSS.PriceNet.PriceGeneration.IDAL/app.config
+2	19	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+2	19	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+2	19	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+9	25	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+2	19	KSS.PriceNet.ProcessMonitor.BLL/app.config
+2	19	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.Authentication/Authenticator.cs
+1	1	KSS.PriceNet.Shared.Authentication/AuthenticatorNonStatic.cs
+2	2	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+2	2	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+2	2	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+2	19	KSS.PriceNet.Shared.Authentication/app.config
+1	57	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+0	38	KSS.PriceNet.Shared.Common/PNConfiguration.cs
+0	164	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+33	0	KSS.PriceNet.Shared.Common/TenantConfigWrapper.cs
+2	19	KSS.PriceNet.Shared.Common/app.config
+0	18	KSS.PriceNet.Shared.Common/packages.config
+2	19	KSS.PriceNet.Shared.Contracts.Aral/app.config
+2	19	KSS.PriceNet.Shared.Contracts.COCO/app.config
+2	19	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+2	19	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+2	19	KSS.PriceNet.Shared.Contracts.CPG/app.config
+2	19	KSS.PriceNet.Shared.Contracts.DTW/app.config
+2	19	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+2	19	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+2	19	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+2	19	KSS.PriceNet.Shared.Contracts.SOE/app.config
+2	19	KSS.PriceNet.Shared.Contracts.Utils/app.config
+1	1	KSS.PriceNet.Shared.DALFactory/DataAccess.cs
+2	19	KSS.PriceNet.Shared.DALFactory/app.config
+2	19	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+2	19	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+2	19	KSS.PriceNet.Shared.EntityModel/app.config
+2	19	KSS.PriceNet.Shared.Interfaces/app.config
+6	6	KSS.PriceNet.SqlConnection/SQLUtil.cs
+6	4	KSS.PriceNet.SqlConnection/SqlConnService.cs
+4	16	KSS.PriceNet.SqlConnection/app.config
+2	19	Kalibrate.ExtractRuleAudit.Tests/app.config
+8	8	Kalibrate.ExtractRuleAudit/SqlDal.cs
+2	19	Kalibrate.ExtractRuleAudit/app.config
+0	4	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+42	0	Kalibrate.ModelUpdate/Program.cs
+23	24	Kalibrate.ModelUpdate/SqlDal.cs
+2	19	Kalibrate.ModelUpdate/app.config
+5	20	ModelUpdateTestHarness/App.config
+6	23	OptimisationTest/App.config
+4	21	Parameterisation Test Harness/App.config
+7	22	PetesTestHarness/App.config
+8	5	PetesTestHarness/Program.cs
+15	30	Test Harness/App.config
+1	1	Test Harness/Form1.cs
+16	31	Test Harness2/App.config
+1	1	Test Harness2/Form1.cs
+
+--4c04bdc--2024-08-27--andyr-kalibrate--KPR-698: Added PNConfigurationProvider to read app settings from alte… (#88)
+1	7	DisasterAndRecoveryCSV/Program.cs
+19	2	DisasterAndRecoveryCSV/app.config
+1	7	DisasterAndRecoveryXml/Program.cs
+19	2	DisasterAndRecoveryXml/app.config
+19	2	KSS.PriceNet.ArchiveTruncate/app.config
+19	2	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+19	2	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+23	7	KSS.PriceNet.Batch.ConsoleApplication/App.config
+19	2	KSS.PriceNet.Batch.CostAggregation/app.config
+19	2	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+19	2	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+19	2	KSS.PriceNet.Batch.Download/app.config
+19	2	KSS.PriceNet.Batch.EntityModel/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+19	2	KSS.PriceNet.Batch.Export.Auditing/app.config
+19	2	KSS.PriceNet.Batch.Export.Formatter/app.config
+19	2	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+8	39	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+19	2	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+19	2	KSS.PriceNet.Batch.Export.Notes/app.config
+19	2	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+19	2	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+19	2	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+19	2	KSS.PriceNet.Batch.Export.Transform/app.config
+19	2	KSS.PriceNet.Batch.ExportEntity/app.config
+19	2	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+19	2	KSS.PriceNet.Batch.GPCUpdates/app.config
+19	2	KSS.PriceNet.Batch.IDAL/app.config
+11	14	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+20	4	KSS.PriceNet.Batch.Import/app.config
+19	2	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+19	2	KSS.PriceNet.Batch.Licensing/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+19	2	KSS.PriceNet.Batch.PRDEventProcess/app.config
+7	7	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+19	2	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+19	2	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+19	2	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+19	2	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+19	2	KSS.PriceNet.Batch.Refinement/app.config
+19	2	KSS.PriceNet.Batch.Rescaling/app.config
+19	2	KSS.PriceNet.Batch.SQLServerDAL/app.config
+32	18	KSS.PriceNet.Batch.Service/App.config
+19	2	KSS.PriceNet.Batch.StrategyInitialise/app.config
+19	2	KSS.PriceNet.Batch.TimeZones/app.config
+19	2	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+19	2	KSS.PriceNet.Batch.Transports.EMail/app.config
+19	2	KSS.PriceNet.Batch.Transports.FTP/app.config
+19	2	KSS.PriceNet.Batch.Transports.Fax/app.config
+19	2	KSS.PriceNet.Batch.Transports.File/app.config
+19	2	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+19	2	KSS.PriceNet.Batch.Transports.SMS/app.config
+19	2	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+19	2	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+19	2	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	2	KSS.PriceNet.Batch/Batch.cs
+19	2	KSS.PriceNet.Batch/app.config
+62	58	KSS.PriceNet.BatchApp/App.config
+12	53	KSS.PriceNet.ExportUtility/Export.cs
+23	6	KSS.PriceNet.ExportUtility/app.config
+19	2	KSS.PriceNet.Optimisation/app.config
+19	2	KSS.PriceNet.Parameterisation.BLL/app.config
+19	2	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+19	2	KSS.PriceNet.PriceGeneration.BLL/app.config
+19	2	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+19	2	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+19	2	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+19	2	KSS.PriceNet.PriceGeneration.IDAL/app.config
+19	2	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+19	2	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+19	2	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+25	9	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+19	2	KSS.PriceNet.ProcessMonitor.BLL/app.config
+19	2	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.Authentication/Authenticator.cs
+1	1	KSS.PriceNet.Shared.Authentication/AuthenticatorNonStatic.cs
+2	2	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+2	2	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+2	2	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+19	2	KSS.PriceNet.Shared.Authentication/app.config
+57	1	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+38	0	KSS.PriceNet.Shared.Common/PNConfiguration.cs
+164	0	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+0	33	KSS.PriceNet.Shared.Common/TenantConfigWrapper.cs
+19	2	KSS.PriceNet.Shared.Common/app.config
+18	0	KSS.PriceNet.Shared.Common/packages.config
+19	2	KSS.PriceNet.Shared.Contracts.Aral/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COCO/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+19	2	KSS.PriceNet.Shared.Contracts.CPG/app.config
+19	2	KSS.PriceNet.Shared.Contracts.DTW/app.config
+19	2	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+19	2	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+19	2	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+19	2	KSS.PriceNet.Shared.Contracts.SOE/app.config
+19	2	KSS.PriceNet.Shared.Contracts.Utils/app.config
+1	1	KSS.PriceNet.Shared.DALFactory/DataAccess.cs
+19	2	KSS.PriceNet.Shared.DALFactory/app.config
+19	2	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+19	2	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+19	2	KSS.PriceNet.Shared.EntityModel/app.config
+19	2	KSS.PriceNet.Shared.Interfaces/app.config
+6	6	KSS.PriceNet.SqlConnection/SQLUtil.cs
+4	6	KSS.PriceNet.SqlConnection/SqlConnService.cs
+16	4	KSS.PriceNet.SqlConnection/app.config
+19	2	Kalibrate.ExtractRuleAudit.Tests/app.config
+8	8	Kalibrate.ExtractRuleAudit/SqlDal.cs
+19	2	Kalibrate.ExtractRuleAudit/app.config
+4	0	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+0	42	Kalibrate.ModelUpdate/Program.cs
+24	23	Kalibrate.ModelUpdate/SqlDal.cs
+19	2	Kalibrate.ModelUpdate/app.config
+20	5	ModelUpdateTestHarness/App.config
+23	6	OptimisationTest/App.config
+21	4	Parameterisation Test Harness/App.config
+22	7	PetesTestHarness/App.config
+5	8	PetesTestHarness/Program.cs
+30	15	Test Harness/App.config
+1	1	Test Harness/Form1.cs
+31	16	Test Harness2/App.config
+1	1	Test Harness2/Form1.cs
+
+--1d9bbfe--2024-08-22--andyr-kalibrate--KPR-698: Upgrade BatchApp
+1	1	KSS.PriceNet.BatchApp/App.config
+2	2	KSS.PriceNet.BatchApp/BatchWorker.cs
+182	641	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+0	116	KSS.PriceNet.BatchApp/packages.config
+
+--033f931--2024-08-23--David Pendray--Revert "KPR-993 (#86)"
+3	4	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceGenerationPreprocessing.cs
+
+--f67748b--2024-08-23--David Pendray--Revert "Kpr 993 (#87)"
+4	12	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceGenerationPreprocessing.cs
+
+--bdb812b--2024-08-22--andyr-kalibrate--KPR-698: Update test harness config projects
+1	0	KSS.PriceNet.Shared.Common/PNConfiguration.cs
+2	1	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+5	8	PetesTestHarness/Program.cs
+1	1	Test Harness/Form1.cs
+1	1	Test Harness2/Form1.cs
+
+--f7281e3--2024-08-14--andyr-kalibrate--KPR-698: Remove remaining references to ConfigurationManager
+0	6	DisasterAndRecoveryCSV/Program.cs
+0	6	DisasterAndRecoveryXml/Program.cs
+3	34	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+10	51	KSS.PriceNet.ExportUtility/Export.cs
+91	53	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+0	42	Kalibrate.ModelUpdate/Program.cs
+
+--3dd35ae--2024-08-12--andyr-kalibrate--KPR-698: Added PNConfigurationProvider to read app settings from alternate source
+1	1	DisasterAndRecoveryCSV/Program.cs
+19	2	DisasterAndRecoveryCSV/app.config
+1	1	DisasterAndRecoveryXml/Program.cs
+19	2	DisasterAndRecoveryXml/app.config
+19	2	KSS.PriceNet.ArchiveTruncate/app.config
+19	2	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+19	2	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+23	7	KSS.PriceNet.Batch.ConsoleApplication/App.config
+19	2	KSS.PriceNet.Batch.CostAggregation/app.config
+19	2	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+19	2	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+19	2	KSS.PriceNet.Batch.Download/app.config
+19	2	KSS.PriceNet.Batch.EntityModel/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+19	2	KSS.PriceNet.Batch.Export.Auditing/app.config
+19	2	KSS.PriceNet.Batch.Export.Formatter/app.config
+19	2	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+5	5	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+19	2	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+19	2	KSS.PriceNet.Batch.Export.Notes/app.config
+19	2	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+19	2	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+19	2	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+19	2	KSS.PriceNet.Batch.Export.Transform/app.config
+19	2	KSS.PriceNet.Batch.ExportEntity/app.config
+19	2	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+19	2	KSS.PriceNet.Batch.GPCUpdates/app.config
+19	2	KSS.PriceNet.Batch.IDAL/app.config
+11	14	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+20	4	KSS.PriceNet.Batch.Import/app.config
+19	2	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+19	2	KSS.PriceNet.Batch.Licensing/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+19	2	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+19	2	KSS.PriceNet.Batch.PRDEventProcess/app.config
+7	7	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+19	2	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+19	2	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+19	2	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+19	2	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+19	2	KSS.PriceNet.Batch.Refinement/app.config
+19	2	KSS.PriceNet.Batch.Rescaling/app.config
+19	2	KSS.PriceNet.Batch.SQLServerDAL/app.config
+32	18	KSS.PriceNet.Batch.Service/App.config
+19	2	KSS.PriceNet.Batch.StrategyInitialise/app.config
+19	2	KSS.PriceNet.Batch.TimeZones/app.config
+19	2	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+19	2	KSS.PriceNet.Batch.Transports.EMail/app.config
+19	2	KSS.PriceNet.Batch.Transports.FTP/app.config
+19	2	KSS.PriceNet.Batch.Transports.Fax/app.config
+19	2	KSS.PriceNet.Batch.Transports.File/app.config
+19	2	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+19	2	KSS.PriceNet.Batch.Transports.SMS/app.config
+19	2	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+19	2	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+19	2	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	2	KSS.PriceNet.Batch/Batch.cs
+19	2	KSS.PriceNet.Batch/app.config
+62	58	KSS.PriceNet.BatchApp/App.config
+3	3	KSS.PriceNet.ExportUtility/Export.cs
+23	6	KSS.PriceNet.ExportUtility/app.config
+19	2	KSS.PriceNet.Optimisation/app.config
+19	2	KSS.PriceNet.Parameterisation.BLL/app.config
+19	2	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+19	2	KSS.PriceNet.PriceGeneration.BLL/app.config
+19	2	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+19	2	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+19	2	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+19	2	KSS.PriceNet.PriceGeneration.IDAL/app.config
+19	2	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+19	2	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+19	2	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+25	9	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+19	2	KSS.PriceNet.ProcessMonitor.BLL/app.config
+19	2	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.Authentication/Authenticator.cs
+1	1	KSS.PriceNet.Shared.Authentication/AuthenticatorNonStatic.cs
+2	2	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+2	2	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+2	2	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+19	2	KSS.PriceNet.Shared.Authentication/app.config
+57	1	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+37	0	KSS.PriceNet.Shared.Common/PNConfiguration.cs
+125	0	KSS.PriceNet.Shared.Common/PNConfigurationProvider.cs
+0	33	KSS.PriceNet.Shared.Common/TenantConfigWrapper.cs
+19	2	KSS.PriceNet.Shared.Common/app.config
+18	0	KSS.PriceNet.Shared.Common/packages.config
+19	2	KSS.PriceNet.Shared.Contracts.Aral/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COCO/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+19	2	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+19	2	KSS.PriceNet.Shared.Contracts.CPG/app.config
+19	2	KSS.PriceNet.Shared.Contracts.DTW/app.config
+19	2	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+19	2	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+19	2	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+19	2	KSS.PriceNet.Shared.Contracts.SOE/app.config
+19	2	KSS.PriceNet.Shared.Contracts.Utils/app.config
+1	1	KSS.PriceNet.Shared.DALFactory/DataAccess.cs
+19	2	KSS.PriceNet.Shared.DALFactory/app.config
+19	2	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+19	2	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+19	2	KSS.PriceNet.Shared.EntityModel/app.config
+19	2	KSS.PriceNet.Shared.Interfaces/app.config
+6	6	KSS.PriceNet.SqlConnection/SQLUtil.cs
+4	6	KSS.PriceNet.SqlConnection/SqlConnService.cs
+16	4	KSS.PriceNet.SqlConnection/app.config
+19	2	Kalibrate.ExtractRuleAudit.Tests/app.config
+8	8	Kalibrate.ExtractRuleAudit/SqlDal.cs
+19	2	Kalibrate.ExtractRuleAudit/app.config
+4	0	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+24	23	Kalibrate.ModelUpdate/SqlDal.cs
+19	2	Kalibrate.ModelUpdate/app.config
+35	4	ModelUpdateTestHarness/App.config
+23	6	OptimisationTest/App.config
+21	4	Parameterisation Test Harness/App.config
+37	6	PetesTestHarness/App.config
+45	14	Test Harness/App.config
+46	15	Test Harness2/App.config
+
+--e89133a--2024-08-15--Pete Wild--KPR-1105 (#89)
+11	2	KSS.PriceNet.Batch.PRDEventProcess/PRDEventProcessHandler.cs
+7	1	KSS.PriceNet.Batch.PRDEventProcess/Process.cs
+5	4	KSS.PriceNet.Shared.EntityModel/Event.cs
+5	4	Test Harness2/Form1.cs
+
+--26d7e04--2024-08-08--Pete Wild--Kpr 993 (#87)
+12	4	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceGenerationPreprocessing.cs
+
+--7029fc1--2024-08-07--Pete Wild--KPR-993 (#86)
+4	3	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceGenerationPreprocessing.cs
+
+--33c737d--2024-06-06--David Pendray--Fix trigger
+1	1	azure-pipelines.yml
+
+--120c86a--2024-06-06--David Pendray--Amends for release branches (#85)
+5	4	azure-pipelines.yml
+
+--c5d7bf1--2024-06-03--David Pendray--DD-5144: Updated pricenet-alerts submodule (#84)
+1	1	pricenet-alerts
+
+--b2cae2d--2024-04-11--Pete Wild--KPR-159 (#83)
+6	3	KSS.PriceNet.Batch.PRDEventProcess/Process.cs
+
+--f8562ea--2024-04-11--David Pendray--Fix PR builds by allowing more steps to run
+3	3	azure-pipelines.yml
+
+--734761d--2024-04-11--David Pendray--Stop building docker image as it fails
+0	22	azure-pipelines.yml
+
+--2d0c17c--2024-01-25--Pete Wild--KPR-674: DTA Add Current Cost effective date/times to data item (#82)
+1	0	kCalculate/DataStructures.cs
+13	0	kCalculate/Formula.cs
+1	1	kCalculate/kCalculate.csproj
+4	4	kCalculateTest/Form1.cs
+
+--5182c0e--2024-01-10--David Pendray--Include trigger choco packer template No need to pass name of custom script (we find conventionally)
+7	13	azure-pipelines.yml
+
+--95074b1--2024-01-10--David Pendray--Switch install script to use service.zip now
+6	6	choco/tools/chocolateyinstall.ps1
+
+--ffe2976--2024-01-10--David Pendray--Amend to match previous choco with tools/tools Will have to look into whether this is truly needed but easiest to comply for now
+12	0	azure-pipelines.yml
+4	4	choco/custom-choco.sh
+
+--12c0506--2024-01-09--KALIBRATE\McInnesA--Add artifact url output
+8	0	azure-pipelines.yml
+
+--68d4be6--2024-01-08--KALIBRATE\McInnesA--cleanup on aisle 3
+0	126	Jenkinsfile
+0	16	restores.ps1
+0	5	runTests.ps1
+
+--b9bd833--2024-01-08--KALIBRATE\McInnesA--bongo bingo
+2	2	azure-pipelines.yml
+4	1	choco/excludelist.txt
+
+--5e2bcb8--2024-01-08--KALIBRATE\McInnesA--casing
+1	2	choco/excludelist.txt
+
+--95e06cb--2024-01-08--KALIBRATE\McInnesA--linux case
+0	7	choco/ExcludeList.txt
+7	0	choco/excludelist.txt
+
+--d50d119--2024-01-08--KALIBRATE\McInnesA--Fix custom script
+2	2	azure-pipelines.yml
+1	1	choco/custom-choco.sh
+
+--d45a2b1--2024-01-08--iamandymcinnes--KPR-725 - choco tweaks (#81)
+2	2	azure-pipelines.yml
+0	33	choco/CreateChoco.ps1
+
+--b2c01b6--2024-01-08--iamandymcinnes--KPR-725 - New pipeline (#80)
+-	-	Choco/$SYSDIR/MSVCR71.DLL
+-	-	Choco/$SYSDIR/libguide40.dll
+-	-	Choco/$SYSDIR/libimalloc.dll
+-	-	Choco/$SYSDIR/mkl_def.dll
+-	-	Choco/$SYSDIR/mkl_ias.dll
+-	-	Choco/$SYSDIR/mkl_lapack.dll
+-	-	Choco/$SYSDIR/mkl_mc.dll
+-	-	Choco/$SYSDIR/mkl_p3.dll
+-	-	Choco/$SYSDIR/mkl_p4.dll
+-	-	Choco/$SYSDIR/mkl_p4m.dll
+-	-	Choco/$SYSDIR/mkl_p4n.dll
+-	-	Choco/$SYSDIR/mkl_p4p.dll
+-	-	Choco/$SYSDIR/mkl_vml_def.dll
+-	-	Choco/$SYSDIR/mkl_vml_mc.dll
+-	-	Choco/$SYSDIR/mkl_vml_p3.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4m.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4n.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4p.dll
+0	33	Choco/CreateChoco.ps1
+0	7	Choco/ExcludeList.txt
+0	31	Choco/pricenetbatch.nuspec
+0	124	Choco/tools/IIS-Functions/IIS-Functions.psd1
+0	169	Choco/tools/IIS-Functions/IIS-Functions.psm1
+0	24	Choco/tools/KSS.PriceNet.Batch.Import.exe.config
+0	24	Choco/tools/Kalibrate.ModelUpdate.exe.config
+0	11	Choco/tools/LICENSE.txt
+0	13	Choco/tools/VERIFICATION.txt
+0	9	Choco/tools/chocolateybeforemodify.ps1
+0	162	Choco/tools/chocolateyinstall.ps1
+0	77	Choco/tools/chocolateyuninstall.ps1
+0	103	Choco/tools/datachannels.ps1
+0	85	Choco/tools/winservice.ps1
+1	1	Dockerfile
+2	2	Jenkinsfile
+232	31	azure-pipelines.yml
+-	-	choco/$SYSDIR/MSVCR71.DLL
+-	-	choco/$SYSDIR/libguide40.dll
+-	-	choco/$SYSDIR/libimalloc.dll
+-	-	choco/$SYSDIR/mkl_def.dll
+-	-	choco/$SYSDIR/mkl_ias.dll
+-	-	choco/$SYSDIR/mkl_lapack.dll
+-	-	choco/$SYSDIR/mkl_mc.dll
+-	-	choco/$SYSDIR/mkl_p3.dll
+-	-	choco/$SYSDIR/mkl_p4.dll
+-	-	choco/$SYSDIR/mkl_p4m.dll
+-	-	choco/$SYSDIR/mkl_p4n.dll
+-	-	choco/$SYSDIR/mkl_p4p.dll
+-	-	choco/$SYSDIR/mkl_vml_def.dll
+-	-	choco/$SYSDIR/mkl_vml_mc.dll
+-	-	choco/$SYSDIR/mkl_vml_p3.dll
+-	-	choco/$SYSDIR/mkl_vml_p4.dll
+-	-	choco/$SYSDIR/mkl_vml_p4m.dll
+-	-	choco/$SYSDIR/mkl_vml_p4n.dll
+-	-	choco/$SYSDIR/mkl_vml_p4p.dll
+33	0	choco/CreateChoco.ps1
+7	0	choco/ExcludeList.txt
+13	0	choco/custom-choco.sh
+31	0	choco/pricenetbatch.nuspec
+124	0	choco/tools/IIS-Functions/IIS-Functions.psd1
+169	0	choco/tools/IIS-Functions/IIS-Functions.psm1
+24	0	choco/tools/KSS.PriceNet.Batch.Import.exe.config
+24	0	choco/tools/Kalibrate.ModelUpdate.exe.config
+11	0	choco/tools/LICENSE.txt
+13	0	choco/tools/VERIFICATION.txt
+9	0	choco/tools/chocolateybeforemodify.ps1
+162	0	choco/tools/chocolateyinstall.ps1
+77	0	choco/tools/chocolateyuninstall.ps1
+103	0	choco/tools/datachannels.ps1
+85	0	choco/tools/winservice.ps1
+
+--be873f8--2024-01-08--joehcleung--DD-4877- Batch Processing can 'freeze' after Calculates own product volatility completes successfully (#79)
+13	3	KSS.PriceNet.Batch/Batch.cs
+
+--0e1b848--2023-11-23--joehcleung--KPR-666 - Add InStock property to exported Connect JSON (#78)
+8	3	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+
+--0973cc8--2023-11-22--David Pendray--DD-4934: Fix not deploying with correct cert
+1	0	Choco/CreateChoco.ps1
+-	-	production_identity.p12
+
+--bfaa264--2023-11-21--David Pendray--Update Jenkinsfile to remove git commands
+0	2	Jenkinsfile
+
+--a52849e--2023-11-21--David Pendray--Jenkinsfile: Add explicit submodule init and update
+2	0	Jenkinsfile
+
+--cf8ace2--2023-11-21--David Pendray--README: Include instructions on pricenet-alerts submodule
+14	0	README.md
+
+--a094c81--2023-11-21--David Pendray--DD-4934: Update pricenet-alerts submodule
+1	1	pricenet-alerts
+
+--2cd3b6c--2023-11-16--joehcleung--KPR-663 - Add new transport channel for Notes to POS (#77)
+8	0	KSS.PriceNet.Batch.Export.Formatter/IClassFormatter.cs
+2	0	KSS.PriceNet.Batch.Export.Formatter/KSS.PriceNet.Batch.Export.Formatter.csproj
+145	0	KSS.PriceNet.Batch.Export.Formatter/NotesJSON.cs
+35	2	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+
+--dc098b2--2023-11-03--joehcleung--Fix/DD-4748 - A number of batch steps do not log a starting or end time in the Process Monitor (#76)
+36	0	KSS.PriceNet.Batch/Batch.cs
+
+--2abd0a6--2023-10-18--Pete Wild--DD-4863 (#75)
+2	2	KSS.PriceNet.Batch.PRDEventProcess/PRDEventProcessHandler.cs
+
+--8b1eb64--2023-10-10--Kanwaljeet Singh--KPR-508_Batch (#74)
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_MatchAverageCompetitorPrice .cs
+
+--52c580a--2023-10-06--Pete Wild--DD-4860 (#73)
+3	9	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+
+--eb14287--2023-09-11--joehcleung--KPR-632 - new data member ConnectVariantType (card/cash) (#69)
+5	0	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+
+--2e39491--2023-10-06--Pete Wild--DD-4860 (#73)
+3	9	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+
+--3bb36c3--2023-10-04--Kanwaljeet Singh--KPR-508: New rule parameter added - MaxSurveyAge (#71)
+1	15	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_Validation_DealerHasTrustedSource.cs
+50	29	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_MatchAverageCompetitorPrice .cs
+13	0	KSS.PriceNet.PriceGeneration.RulesLibrary/RuleHelper.cs
+
+--883e0e5--2023-10-04--David Pendray--KPR-651: Install alerts service last so rest of the install completes (#72)
+3	3	Choco/tools/chocolateyinstall.ps1
+
+--cce142b--2023-10-03--joehcleung--DD-4832 - TOG - Unexpected end of file while parsing Name has occurred. (#70)
+13	13	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+
+--3a3461c--2023-09-11--joehcleung--KPR-632 - new data member ConnectVariantType (card/cash) (#69)
+5	0	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+
+--4ab73d5--2023-08-29--joehcleung--KPR-579 - new .txt file and tab delimited format for Western Australia (#68)
+4	1	KSS.PriceNet.ExportUtility/Export.cs
+
+--e0d26fe--2023-08-09--joehcleung--DD-4755 - TOG - 3.0 - Unexpected end of file while parsing Name has occurred. (#67)
+19	1	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+
+--0a77901--2023-08-09--joehcleung--Fix/DD-4755 - TOG - 3.0 - Unexpected end of file while parsing Name has occurred. (#66)
+11	4	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+
+--9c3777d--2023-08-04--Pete Wild--DD-4361 - Fixing issue related to incorrect message queue response handling (#65)
+1	1	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+1	2	KSS.PriceNet.Batch.Transports.WebAPI/Sender.cs
+
+--8417453--2023-08-03--David Pendray--More build fixing
+1	2	Jenkinsfile
+
+--ff5f8a5--2023-08-03--David Pendray--Try to fix build
+3	0	Jenkinsfile
+
+--6ee492f--2023-08-02--Pete Wild--Dd 4361 (#64)
+1	1	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+378	374	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+
+--11cf127--2023-07-11--RachelEvans30--DD-4361 (#63)
+1	1	KSS.PriceNet.Batch.IDAL/ITransportHandlerDAL.cs
+3	1	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+9	2	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+3	21	KSS.PriceNet.Batch.Transports.WebAPI/Sender.cs
+
+--6329933--2023-06-16--RachelEvans30--DD-4361: Ensuring we catch all errors during export and setting a ret… (#62)
+0	1	KSS.PriceNet.Batch.Export.ProposedPrices/Export.cs
+22	3	KSS.PriceNet.Batch.Transports.WebAPI/Sender.cs
+
+--6b9309f--2023-05-18--ShafeeqMansoor--KPR-564: Making the VariantCode and IsPrimary as permanent properties to the PriceItem regardless of whether or not PNConfig flag  "PriceVariantsEnabled" is ON
+29	41	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+
+--26199a3--2023-05-15--Shafeeq Mansoor--KPR-560: PromotionXml setup for Price Variants (#60)
+0	1	KSS.PriceNet.Batch.Export.PreProcessing/KSS.PriceNet.Batch.Export.PreProcessing.csproj
+0	8	KSS.PriceNet.Batch.Export.PreProcessing/PreprocessingHandler.cs
+0	20	KSS.PriceNet.Batch.Export.PreProcessing/PromotionalPricing.cs
+0	5	KSS.PriceNet.Batch.IDAL/IPreprocessingDAL.cs
+0	8	KSS.PriceNet.Batch.SQLServerDAL/PreProcessingDAL.cs
+14	35	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--690680b--2023-04-25--David Pendray--Chore: Only deploy to int on develop branch
+2	4	Jenkinsfile
+
+--b821bda--2023-04-18--David Pendray--KPR-552: Support letting export utility set filename extension (#59)
+8	0	KSS.PriceNet.ExportUtility/DataChannelSettings.cs
+5	3	KSS.PriceNet.ExportUtility/Export.cs
+
+--2db8b2e--2023-04-14--David Pendray--Chore: Correct path for archiveArtifacts
+1	1	Jenkinsfile
+
+--e101015--2023-04-14--David Pendray--Chore: Don't checkout pricenet-alerts Using submodule now
+0	12	Jenkinsfile
+
+--0127aec--2023-04-14--David Pendray--Chore: Switch from tree to ls Don't care it's not recursive
+1	1	Jenkinsfile
+
+--405e58e--2023-04-14--David Pendray--Add tree call to see what gets checked out
+1	0	Jenkinsfile
+
+--ecc1b20--2023-04-14--David Pendray--Add pricenet-alerts as submodule
+3	0	.gitmodules
+1	0	pricenet-alerts
+
+--868fef7--2023-04-14--David Pendray--Chore: Archive the choco file on jenkins for ease of debugging
+1	0	Jenkinsfile
+
+--fdd168a--2023-04-14--Shafeeq Mansoor--Merge pull request #58 from KalibrateTechnologies/KPR-531
+--18a206b--2023-04-13--David Pendray--TestHarness: Add UncheckAll button
+15	0	Test Harness2/Extensions.cs
+28	14	Test Harness2/Form1.Designer.cs
+5	0	Test Harness2/Form1.cs
+
+--a58bcd5--2023-04-13--David Pendray--BatchTestHarness: Add to makefile and change a few things behind a flag Adds "make runTestHarness" command which builds and runs test harness It runs with flag that changes it so: 1. Execute button is preselected (can run with Enter) 2. Checking a step means it will run even if disabled in DB 3. All enabled steps are checked and parent's are checked and expanded Build is always slowish but for now, better that it will definitely get built
+5	1	Makefile
+1	0	Test Harness2/BatchTestHarness.csproj
+23	0	Test Harness2/Extensions.cs
+17	3	Test Harness2/Form1.cs
+5	1	Test Harness2/Program.cs
+
+--d9ff2b0--2023-04-12--ShafeeqMansoor--KPR-531: Implementing the variant product prices export via JSON formatter for Connect - The toggle: PriceVariantsEnabled (PNConfig) determines whether the price variants (and the new JSON message properties) are included or not when pushing prices to Connect
+157	22	KSS.PriceNet.Batch.Export.Formatter/ProposedPricesJSON.cs
+9	0	KSS.PriceNet.Batch.Export.ProposedPrices/Export.cs
+4	0	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--aa18f72--2023-04-12--ShafeeqMansoor--KPR-531: Implementing a new pre-process step for variant product pricing and making it the last export step. - The sproc called in this step uses the new PNExportProcessingDetail table as agreed with @PeteWild for collating the (inflight) ProposedPrices from the PNExportProcessing table and export-approved prices from PNProposedPrice table
+1	0	KSS.PriceNet.Batch.Export.PreProcessing/KSS.PriceNet.Batch.Export.PreProcessing.csproj
+8	0	KSS.PriceNet.Batch.Export.PreProcessing/PreprocessingHandler.cs
+20	0	KSS.PriceNet.Batch.Export.PreProcessing/VariantProductPricing.cs
+5	0	KSS.PriceNet.Batch.IDAL/IPreprocessingDAL.cs
+8	0	KSS.PriceNet.Batch.SQLServerDAL/PreProcessingDAL.cs
+
+--6e34c5e--2023-04-06--Shafeeq Mansoor--Merge pull request #57 from KalibrateTechnologies/DD-4525
+--d55a8f5--2023-04-06--David Pendray--Chore: Put Version Number in build description
+7	0	Jenkinsfile
+
+--68f56ab--2023-03-29--Shafeeq Mansoor--DD-4525: Handling DBNull  for RecurringPeriod
+2	2	KSS.PriceNet.Batch.PRDEventProcess/PRDEventProcessHandler.cs
+
+--f00f502--2023-03-24--David Pendray--Add CODEOWNERS
+1	0	CODEOWNERS
+
+--0fe4418--2023-03-17--Pete Wild--DD-4506 - Check to stop bad prices going into optimiser (#56)
+8	1	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_PriceGen_Optimisation.cs
+15	1	KSS.PriceNet.PriceGeneration.RulesLibrary/RuleHelper.cs
+8	0	KSS.PriceNet.PriceGeneration.RulesLibrary/Site_PriceGen_Optimisation.cs
+
+--2f9e3d0--2023-03-09--Pete Wild--DD-4488 - Removed dubious sort (#55)
+1	4	KSS.PriceNet.Batch.PRDEventProcess/Process.cs
+
+--c01663d--2022-11-17--ParkerG-Kalibrate--Merge pull request #54 from KalibrateTechnologies/feature/KPR-165
+--a030947--2022-11-17--ParkerG-Kalibrate--KPR-165 Ensure CancelledTime is nullable on Event.cs.
+3	3	KSS.PriceNet.Shared.EntityModel/Event.cs
+
+--e45caf3--2022-11-16--ParkerG-Kalibrate--Merge pull request #53 from KalibrateTechnologies/feature/KPR-165
+--fdea91a--2022-11-16--ParkerG-Kalibrate--KPR-165 Retain cancelled time on recurring events.
+13	0	KSS.PriceNet.Batch.PRDEventProcess/PRDEventProcessHandler.cs
+1	0	KSS.PriceNet.Batch.PRDEventProcess/Process.cs
+10	2	KSS.PriceNet.Shared.EntityModel/Event.cs
+
+--c9bbcc9--2022-11-15--Dave McKerral--Delete build.yml
+0	52	.github/workflows/build.yml
+
+--b9cb0e0--2022-11-14--ParkerG-Kalibrate--KPR-165 Cancelled indicator needed when recurring events.
+4	0	KSS.PriceNet.Batch.PRDEventProcess/PRDEventProcessHandler.cs
+1	0	KSS.PriceNet.Batch.PRDEventProcess/Process.cs
+10	2	KSS.PriceNet.Shared.EntityModel/Event.cs
+
+--ae7f9c5--2022-10-17--joehcleung--Merge pull request #52 from KalibrateTechnologies/DD-4134
+--3fe9b00--2022-10-14--joehcleung--DD-4134 - to set Kind to Unspecified for ConverTime function
+1	10	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--89b0aba--2022-10-13--joehcleung--DD-4134 - update for cross check time zone from KssCultureInfo
+10	4	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--99fedf5--2022-10-11--joehcleung--DD-4134 - return the setting offset to zero if the current timezone is utc  & To resolve convertion exception issue The conversion could not be completed because the supplied DateTime did not have the Kind property set correctly.
+3	3	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--d7a8438--2022-09-27--joehcleung--Merge pull request #51 from KalibrateTechnologies/DD-3954
+--a390b43--2022-09-27--Pete Wild--DD-4197 (#49)
+11	1	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--cc54328--2022-09-27--Andy Heath--Merge pull request #48 from KalibrateTechnologies/DD-4104
+--2a10faf--2022-09-27--joehcleung--DD-3954 - revert the DD-4180 code chnage
+2	11	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--9a3bf92--2022-09-27--joehcleung--DD-3954 - revert the change to the block "ProposedPricesJSON"
+2	2	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+
+--ecac033--2022-09-27--joehcleung--Merge pull request #47 from KalibrateTechnologies/DD-4134
+--7779fdf--2022-09-22--joehcleung--DD-3954 - to resolve XML string export issue on TransportHandler.Send
+19	11	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+
+--6cf3787--2022-09-20--joehcleung--DD-4180 - change for resolve "Invalid column name 'Discount'"
+11	2	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--7ba8368--2022-09-14--Andy Heath--DD-4104 - Add missing Linq reference
+1	0	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_PriceGen_GeneralPriceChange.cs
+
+--346c02d--2022-09-14--Andy Heath--DD-4104 - Set undone GPC price to GPC StartTime plus 1 minute
+18	2	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_PriceGen_GeneralPriceChange.cs
+
+--c0b1b34--2022-09-08--joehcleung--DD-4134 - update for return zero offset when the SystemTimeZone is UTC
+5	2	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--4da324d--2022-09-08--joehcleung--DD-4134 - resolve DateTime conversion by function SpecifyKind
+1	1	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--fe7b1dd--2022-09-01--Michael Watson--copy the auzre pipelines yaml file
+33	0	docker/azure-pipelines.yml
+
+--1ba99b6--2022-08-09--ParkerG-Kalibrate--Merge pull request #46 from KalibrateTechnologies/feature/KPR-165
+--82abd5b--2022-08-04--ParkerG-Kalibrate--KPR-165 AssignToInactive required for new event occurrences.
+4	0	KSS.PriceNet.Batch.PRDEventProcess/PRDEventProcessHandler.cs
+1	0	KSS.PriceNet.Batch.PRDEventProcess/Process.cs
+
+--18f7cde--2022-05-06--Shafeeq Mansoor--Merge pull request #45 from KalibrateTechnologies/KPR-111
+--402f5c7--2022-05-05--ShafeeqMansoor--KPR-111: Adding logic to compare the CompetitorProductUID of the price-request-value against the TriggeringDataSource's ProductUID in order to enable price generation
+18	3	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceGenerationPreprocessing.cs
+
+--9b047f2--2022-05-05--ShafeeqMansoor--KPR-111: Adding new column to the TriggeringDataSource entity in the xsd schema and auto-generating code
+61	18	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceRequestData.Designer.cs
+70	88	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceRequestData.xsd
+
+--41e82b1--2022-05-05--Andy Heath--Merge pull request #44 from KalibrateTechnologies/DD-3934
+--25fff0d--2022-05-05--Andy Heath--DD-3934 - Fixed ApprovePriceExport flag being updated after Connect export
+1	4	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+
+--a4c0fc1--2022-04-14--iamandymcinnes--DD-3682 - Removed redundant assembly bindings (#42)
+0	8	DisasterAndRecoveryCSV/app.config
+0	8	DisasterAndRecoveryXml/app.config
+0	8	KSS.PriceNet.ArchiveTruncate/app.config
+0	8	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+0	8	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+0	8	KSS.PriceNet.Batch.ConsoleApplication/App.config
+0	8	KSS.PriceNet.Batch.CostAggregation/app.config
+0	8	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+0	8	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+0	8	KSS.PriceNet.Batch.Download/app.config
+0	8	KSS.PriceNet.Batch.EntityModel/app.config
+0	8	KSS.PriceNet.Batch.Export.Auditing/app.config
+0	12	KSS.PriceNet.Batch.Export.Formatter/app.config
+0	12	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+0	12	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+0	12	KSS.PriceNet.Batch.Export.Notes/app.config
+0	8	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+0	12	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+0	12	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+0	8	KSS.PriceNet.Batch.Export.Transform/app.config
+0	8	KSS.PriceNet.Batch.ExportEntity/app.config
+0	8	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+0	8	KSS.PriceNet.Batch.GPCUpdates/app.config
+0	8	KSS.PriceNet.Batch.IDAL/app.config
+0	12	KSS.PriceNet.Batch.Import/app.config
+0	8	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+0	8	KSS.PriceNet.Batch.Licensing/app.config
+0	8	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+0	8	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+0	8	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+0	8	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+0	8	KSS.PriceNet.Batch.PRDEventProcess/app.config
+0	8	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+0	8	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+0	8	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+0	8	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+0	8	KSS.PriceNet.Batch.Refinement/app.config
+0	8	KSS.PriceNet.Batch.Rescaling/app.config
+0	8	KSS.PriceNet.Batch.SQLServerDAL/app.config
+0	10	KSS.PriceNet.Batch.Service/App.config
+0	8	KSS.PriceNet.Batch.StrategyInitialise/app.config
+0	8	KSS.PriceNet.Batch.TimeZones/app.config
+0	12	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+0	12	KSS.PriceNet.Batch.Transports.EMail/app.config
+0	12	KSS.PriceNet.Batch.Transports.FTP/app.config
+0	12	KSS.PriceNet.Batch.Transports.Fax/app.config
+0	12	KSS.PriceNet.Batch.Transports.File/app.config
+0	12	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+0	12	KSS.PriceNet.Batch.Transports.SMS/app.config
+0	12	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+0	12	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+0	8	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+0	8	KSS.PriceNet.Batch/app.config
+0	8	KSS.PriceNet.BatchApp/App.config
+0	8	KSS.PriceNet.ExportUtility/app.config
+0	8	KSS.PriceNet.Optimisation/app.config
+0	8	KSS.PriceNet.Parameterisation.BLL/app.config
+0	8	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+0	8	KSS.PriceNet.PriceGeneration.BLL/app.config
+0	8	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+0	8	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+0	8	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+0	8	KSS.PriceNet.PriceGeneration.IDAL/app.config
+0	8	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+0	8	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+0	8	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+0	8	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+0	8	KSS.PriceNet.ProcessMonitor.BLL/app.config
+0	8	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+0	8	KSS.PriceNet.Shared.Authentication/app.config
+0	8	KSS.PriceNet.Shared.Common/app.config
+0	8	KSS.PriceNet.Shared.Contracts.Aral/app.config
+0	8	KSS.PriceNet.Shared.Contracts.COCO/app.config
+0	8	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+0	8	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+0	8	KSS.PriceNet.Shared.Contracts.CPG/app.config
+0	8	KSS.PriceNet.Shared.Contracts.DTW/app.config
+0	8	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+0	8	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+0	8	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+0	8	KSS.PriceNet.Shared.Contracts.SOE/app.config
+0	8	KSS.PriceNet.Shared.Contracts.Utils/app.config
+0	8	KSS.PriceNet.Shared.DALFactory/app.config
+0	8	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+0	8	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+0	8	KSS.PriceNet.Shared.EntityModel/app.config
+0	8	KSS.PriceNet.Shared.Interfaces/app.config
+0	4	KSS.PriceNet.SqlConnection/app.config
+0	8	Kalibrate.ExtractRuleAudit.Tests/app.config
+0	8	Kalibrate.ExtractRuleAudit/app.config
+0	8	ModelUpdateTestHarness/App.config
+0	8	OptimisationTest/App.config
+0	8	Parameterisation Test Harness/App.config
+0	8	PetesTestHarness/App.config
+0	8	Test Harness/App.config
+0	12	Test Harness2/App.config
+
+--811eb81--2022-04-01--Pete Wild--DD-3682 (#41)
+1	1	DisasterAndRecoveryCSV/DisasterAndRecoveryCSV.csproj
+4	4	DisasterAndRecoveryCSV/app.config
+2	2	DisasterAndRecoveryCSV/packages.config
+1	1	DisasterAndRecoveryXml/DisasterAndRecoveryXml.csproj
+4	4	DisasterAndRecoveryXml/app.config
+2	2	DisasterAndRecoveryXml/packages.config
+2	4	Jenkinsfile
+1	1	KSS.PriceNet.ArchiveTruncate/KSS.PriceNet.ArchiveTruncate.csproj
+3	3	KSS.PriceNet.ArchiveTruncate/app.config
+1	1	KSS.PriceNet.Batch.ArchiveTruncate/KSS.PriceNet.Batch.ArchiveTruncate.csproj
+3	3	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+1	1	KSS.PriceNet.Batch.ClosedRestrictedStrategy/KSS.PriceNet.Batch.ClosedRestrictedStrategy.csproj
+3	3	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+4	4	KSS.PriceNet.Batch.ConsoleApplication/App.config
+1	1	KSS.PriceNet.Batch.ConsoleApplication/KSS.PriceNet.Batch.ConsoleApplication.csproj
+1	1	KSS.PriceNet.Batch.CostAggregation/KSS.PriceNet.Batch.CostAggregation.csproj
+3	3	KSS.PriceNet.Batch.CostAggregation/app.config
+1	1	KSS.PriceNet.Batch.DealerPriceCalculation/KSS.PriceNet.Batch.DealerPriceCalculation.csproj
+3	3	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+1	1	KSS.PriceNet.Batch.DeleteExportedFiles/KSS.PriceNet.Batch.DeleteExportedFiles.csproj
+3	3	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+1	1	KSS.PriceNet.Batch.Download/KSS.PriceNet.Batch.Download.csproj
+3	3	KSS.PriceNet.Batch.Download/app.config
+1	1	KSS.PriceNet.Batch.Engine/KSS.PriceNet.Batch.Engine.csproj
+1	1	KSS.PriceNet.Batch.EntityModel/KSS.PriceNet.Batch.EntityModel.csproj
+3	3	KSS.PriceNet.Batch.EntityModel/app.config
+1	1	KSS.PriceNet.Batch.Export.Auditing/KSS.PriceNet.Batch.Export.Auditing.csproj
+3	3	KSS.PriceNet.Batch.Export.Auditing/app.config
+1	1	KSS.PriceNet.Batch.Export.Formatter/KSS.PriceNet.Batch.Export.Formatter.csproj
+6	6	KSS.PriceNet.Batch.Export.Formatter/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummary/KSS.PriceNet.Batch.Export.ModelSummary.csproj
+6	6	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/KSS.PriceNet.Batch.Export.ModelSummaryRequester.csproj
+6	6	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+1	1	KSS.PriceNet.Batch.Export.Notes/KSS.PriceNet.Batch.Export.Notes.csproj
+6	6	KSS.PriceNet.Batch.Export.Notes/app.config
+1	1	KSS.PriceNet.Batch.Export.PostProcessing/KSS.PriceNet.Batch.Export.PostProcessing.csproj
+3	3	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+1	1	KSS.PriceNet.Batch.Export.PreProcessing/KSS.PriceNet.Batch.Export.PreProcessing.csproj
+6	6	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+1	1	KSS.PriceNet.Batch.Export.ProposedPrices/KSS.PriceNet.Batch.Export.ProposedPrices.csproj
+6	6	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+1	1	KSS.PriceNet.Batch.Export.Transform/KSS.PriceNet.Batch.Export.Transform.csproj
+15	15	KSS.PriceNet.Batch.Export.Transform/RadiantTemplate.cs
+3	3	KSS.PriceNet.Batch.Export.Transform/app.config
+1	1	KSS.PriceNet.Batch.ExportEntity/KSS.PriceNet.Batch.ExportEntity.csproj
+3	3	KSS.PriceNet.Batch.ExportEntity/app.config
+1	1	KSS.PriceNet.Batch.GPCRulesMonitor/KSS.PriceNet.Batch.GPCRulesMonitor.csproj
+3	3	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+1	1	KSS.PriceNet.Batch.GPCUpdates/KSS.PriceNet.Batch.GPCUpdates.csproj
+3	3	KSS.PriceNet.Batch.GPCUpdates/app.config
+1	1	KSS.PriceNet.Batch.IDAL/KSS.PriceNet.Batch.IDAL.csproj
+3	3	KSS.PriceNet.Batch.IDAL/app.config
+1	1	KSS.PriceNet.Batch.IStep/KSS.PriceNet.Batch.IStep.csproj
+1	1	KSS.PriceNet.Batch.Import/KSS.PriceNet.Batch.Import.csproj
+8	8	KSS.PriceNet.Batch.Import/app.config
+1	1	KSS.PriceNet.Batch.LeadFollowPRCreation/KSS.PriceNet.Batch.LeadFollowPRCreation.csproj
+3	3	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+1	1	KSS.PriceNet.Batch.Licensing/KSS.PriceNet.Batch.Licensing.csproj
+3	3	KSS.PriceNet.Batch.Licensing/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.BLL/KSS.PriceNet.Batch.ModelUpdate.BLL.csproj
+3	3	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.DataStructures/KSS.PriceNet.Batch.ModelUpdate.DataStructures.csproj
+3	3	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.IDAL/KSS.PriceNet.Batch.ModelUpdate.IDAL.csproj
+3	3	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+1	1	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL.csproj
+3	3	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Batch.PRDEventProcess/KSS.PriceNet.Batch.PRDEventProcess.csproj
+3	3	KSS.PriceNet.Batch.PRDEventProcess/app.config
+1	1	KSS.PriceNet.Batch.PriceGenerationControl/KSS.PriceNet.Batch.PriceGenerationControl.csproj
+4	4	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+2	2	KSS.PriceNet.Batch.PriceGenerationControl/packages.config
+1	1	KSS.PriceNet.Batch.PriceGenerationPreprocessing/KSS.PriceNet.Batch.PriceGenerationPreprocessing.csproj
+3	3	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+1	1	KSS.PriceNet.Batch.PriceRequestValidation.Tests/KSS.PriceNet.Batch.PriceRequestValidation.Tests.csproj
+3	3	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+1	1	KSS.PriceNet.Batch.PriceRequestValidation/KSS.PriceNet.Batch.PriceRequestValidation.csproj
+3	3	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+1	1	KSS.PriceNet.Batch.Refinement/KSS.PriceNet.Batch.Refinement.BLL.csproj
+3	3	KSS.PriceNet.Batch.Refinement/app.config
+1	1	KSS.PriceNet.Batch.Rescaling/KSS.PriceNet.Batch.Rescaling.BLL.csproj
+3	3	KSS.PriceNet.Batch.Rescaling/app.config
+1	1	KSS.PriceNet.Batch.SQLServerDAL/KSS.PriceNet.Batch.SQLServerDAL.csproj
+3	3	KSS.PriceNet.Batch.SQLServerDAL/app.config
+22	22	KSS.PriceNet.Batch.Service/App.config
+1	1	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+1	1	KSS.PriceNet.Batch.StrategyInitialise/KSS.PriceNet.Batch.StrategyInitialise.csproj
+3	3	KSS.PriceNet.Batch.StrategyInitialise/app.config
+1	1	KSS.PriceNet.Batch.TimeZones/KSS.PriceNet.Batch.TimeZones.csproj
+3	3	KSS.PriceNet.Batch.TimeZones/app.config
+1	1	KSS.PriceNet.Batch.Transports.CommonTransport/KSS.PriceNet.Batch.Transports.CommonTransport.csproj
+6	6	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+1	1	KSS.PriceNet.Batch.Transports.EMail/KSS.PriceNet.Batch.Transports.EMail.csproj
+6	6	KSS.PriceNet.Batch.Transports.EMail/app.config
+1	1	KSS.PriceNet.Batch.Transports.FTP/KSS.PriceNet.Batch.Transports.FTP.csproj
+6	6	KSS.PriceNet.Batch.Transports.FTP/app.config
+1	1	KSS.PriceNet.Batch.Transports.Fax/KSS.PriceNet.Batch.Transports.Fax.csproj
+6	6	KSS.PriceNet.Batch.Transports.Fax/app.config
+1	1	KSS.PriceNet.Batch.Transports.File/KSS.PriceNet.Batch.Transports.File.csproj
+6	6	KSS.PriceNet.Batch.Transports.File/app.config
+1	1	KSS.PriceNet.Batch.Transports.MSMQ/KSS.PriceNet.Batch.Transports.MSMQ.csproj
+6	6	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+1	1	KSS.PriceNet.Batch.Transports.SMS/KSS.PriceNet.Batch.Transports.SMS.csproj
+6	6	KSS.PriceNet.Batch.Transports.SMS/app.config
+1	1	KSS.PriceNet.Batch.Transports.TransportHandler/KSS.PriceNet.Batch.Transports.csproj
+6	6	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+1	1	KSS.PriceNet.Batch.Transports.WebAPI/KSS.PriceNet.Batch.Transports.WebAPI.csproj
+6	6	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+1	1	KSS.PriceNet.Batch.WaitingRoomBattle/KSS.PriceNet.Batch.WaitingRoomBattle.csproj
+3	3	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+1	1	KSS.PriceNet.Batch/KSS.PriceNet.Batch.csproj
+3	3	KSS.PriceNet.Batch/app.config
+63	64	KSS.PriceNet.BatchApp/App.config
+2	1	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+1	1	KSS.PriceNet.ExportUtility/KSS.PriceNet.ExportUtility.csproj
+3	3	KSS.PriceNet.ExportUtility/app.config
+5	2	KSS.PriceNet.Globalisation/KSS.PriceNet.Globalisation.csproj
+8	2	KSS.PriceNet.Globalisation/PriceNetMailResources.Designer.cs
+21	3	KSS.PriceNet.Globalisation/PriceNetResources.Designer.cs
+1	1	KSS.PriceNet.Optimisation/KSS.PriceNet.Optimisation.x64.csproj
+3	3	KSS.PriceNet.Optimisation/app.config
+1	1	KSS.PriceNet.Parameterisation.BLL/KSS.PriceNet.Parameterisation.BLL.x64.csproj
+3	3	KSS.PriceNet.Parameterisation.BLL/app.config
+1	1	KSS.PriceNet.Parameterisation.IDAL/KSS.PriceNet.Parameterisation.IDAL.csproj
+1	1	KSS.PriceNet.Parameterisation.SQLServerDAL/KSS.PriceNet.Parameterisation.SQLServerDAL.csproj
+3	3	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+1	1	KSS.PriceNet.PriceGeneration.BLL/KSS.PriceNet.PriceGeneration.BLL.csproj
+3	3	KSS.PriceNet.PriceGeneration.BLL/app.config
+1	1	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/KSS.PriceNet.PriceGeneration.BattleRulesLibrary.csproj
+3	3	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+1	1	KSS.PriceNet.PriceGeneration.DataFunctions/KSS.PriceNet.PriceGeneration.DataFunctions.csproj
+3	3	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+1	1	KSS.PriceNet.PriceGeneration.DataStructures/KSS.PriceNet.PriceGeneration.DataStructures.csproj
+3	3	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+1	1	KSS.PriceNet.PriceGeneration.IDAL/KSS.PriceNet.PriceGeneration.IDAL.csproj
+3	3	KSS.PriceNet.PriceGeneration.IDAL/app.config
+1	1	KSS.PriceNet.PriceGeneration.PriceBattle/KSS.PriceNet.PriceGeneration.PriceBattle.csproj
+3	3	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/KSS.PriceNet.PriceGeneration.RulesLibrary.csproj
+12	2	KSS.PriceNet.PriceGeneration.RulesLibrary/RuleHelper.cs
+3	3	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+1	1	KSS.PriceNet.PriceGeneration.SQLServerDAL/KSS.PriceNet.PriceGeneration.SQLServerDAL.csproj
+3	3	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+3	3	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+1	1	KSS.PriceNet.PriceGeneration.UnitTests/KSS.PriceNet.PriceGeneration.UnitTests.csproj
+1	1	KSS.PriceNet.ProcessMonitor.BLL/KSS.PriceNet.ProcessMonitor.BLL.csproj
+3	3	KSS.PriceNet.ProcessMonitor.BLL/app.config
+1	1	KSS.PriceNet.ProcessMonitor.IDAL/KSS.PriceNet.ProcessMonitor.IDAL.csproj
+1	1	KSS.PriceNet.ProcessMonitor.SQLServerDAL/KSS.PriceNet.ProcessMonitor.SQLServerDAL.csproj
+3	3	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+5	2	KSS.PriceNet.Shared.Authentication.Application/KSS.PriceNet.Shared.Authentication.Application.csproj
+5	2	KSS.PriceNet.Shared.Authentication.IDAL/KSS.PriceNet.Shared.Authentication.IDAL.csproj
+1	1	KSS.PriceNet.Shared.Authentication/KSS.PriceNet.Shared.Authentication.csproj
+3	3	KSS.PriceNet.Shared.Authentication/app.config
+1	1	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+3	3	KSS.PriceNet.Shared.Common/app.config
+5	2	KSS.PriceNet.Shared.Communication/KSS.PriceNet.Shared.Communication.csproj
+1	1	KSS.PriceNet.Shared.Contracts.Aral/KSS.PriceNet.Shared.Contracts.Aral.csproj
+3	3	KSS.PriceNet.Shared.Contracts.Aral/app.config
+1	1	KSS.PriceNet.Shared.Contracts.COCO/KSS.PriceNet.Shared.Contracts.COCO.csproj
+3	3	KSS.PriceNet.Shared.Contracts.COCO/app.config
+1	1	KSS.PriceNet.Shared.Contracts.COSTPLUS/KSS.PriceNet.Shared.Contracts.COSTPLUS.csproj
+3	3	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+1	1	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA.csproj
+3	3	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+1	1	KSS.PriceNet.Shared.Contracts.CPG/KSS.PriceNet.Shared.Contracts.CPG.csproj
+3	3	KSS.PriceNet.Shared.Contracts.CPG/app.config
+1	1	KSS.PriceNet.Shared.Contracts.DTW/KSS.PriceNet.Shared.Contracts.DTW.csproj
+3	3	KSS.PriceNet.Shared.Contracts.DTW/app.config
+1	1	KSS.PriceNet.Shared.Contracts.DealerTradeArea/KSS.PriceNet.Shared.Contracts.DealerTradeArea.csproj
+3	3	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+1	1	KSS.PriceNet.Shared.Contracts.MARGINFIXED/KSS.PriceNet.Shared.Contracts.MARGINFIXED.csproj
+3	3	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+1	1	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/KSS.PriceNet.Shared.Contracts.MARGINVARIABLE.csproj
+3	3	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+1	1	KSS.PriceNet.Shared.Contracts.SOE/KSS.PriceNet.Shared.Contracts.SOE.csproj
+3	3	KSS.PriceNet.Shared.Contracts.SOE/app.config
+1	1	KSS.PriceNet.Shared.Contracts.Utils/KSS.PriceNet.Shared.Contracts.Utils.csproj
+3	3	KSS.PriceNet.Shared.Contracts.Utils/app.config
+1	1	KSS.PriceNet.Shared.DALFactory/KSS.PriceNet.Shared.DALFactory.csproj
+3	3	KSS.PriceNet.Shared.DALFactory/app.config
+3	3	KSS.PriceNet.Shared.DALFactory/packages.config
+1	1	KSS.PriceNet.Shared.EntityModel.BLL/KSS.PriceNet.Shared.EntityModel.BLL.csproj
+3	3	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+5	2	KSS.PriceNet.Shared.EntityModel.IDAL/KSS.PriceNet.Shared.EntityModel.IDAL.csproj
+1	1	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/KSS.PriceNet.Shared.EntityModel.SQLServerDAL.csproj
+3	3	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Shared.EntityModel/KSS.PriceNet.Shared.EntityModel.csproj
+3	3	KSS.PriceNet.Shared.EntityModel/app.config
+5	2	KSS.PriceNet.Shared.ExtensionMethods/KSS.PriceNet.Shared.ExtensionMethods.csproj
+1	1	KSS.PriceNet.Shared.Interfaces/KSS.PriceNet.Shared.Interfaces.csproj
+3	3	KSS.PriceNet.Shared.Interfaces/app.config
+1	1	KSS.PriceNet.SqlConnection/KSS.PriceNet.SqlConnectionService.csproj
+6	6	KSS.PriceNet.SqlConnection/app.config
+2	2	KSS.PriceNet.SqlConnection/packages.config
+5	2	KSS.PriceNet.XMLSecurityProvider/KSS.PriceNet.XMLSecurityProvider.csproj
+2	1	Kalibrate.ExtractRuleAudit.Tests/Kalibrate.ExtractRuleAudit.Tests.csproj
+4	4	Kalibrate.ExtractRuleAudit.Tests/app.config
+3	3	Kalibrate.ExtractRuleAudit/Kalibrate.ExtractRuleAudit.csproj
+3	3	Kalibrate.ExtractRuleAudit/app.config
+1	1	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+1	1	Kalibrate.ModelUpdate/app.config
+3	3	ModelUpdateTestHarness/App.config
+1	1	ModelUpdateTestHarness/ModelUpdateTestHarness.csproj
+3	3	OptimisationTest/App.config
+1	1	OptimisationTest/OptimisationTest.csproj
+3	3	Parameterisation Test Harness/App.config
+1	1	Parameterisation Test Harness/Parameterisation Test Harness.csproj
+3	3	PetesTestHarness/App.config
+1	1	PetesTestHarness/PetesTestHarness.csproj
+17	18	Test Harness/App.config
+1	1	Test Harness/BatchStepTestHarness.csproj
+20	21	Test Harness2/App.config
+1	1	Test Harness2/BatchTestHarness.csproj
+1	1	azure-pipelines.yml
+4	2	kCalculate/kCalculate.csproj
+4	6	kCalculateTest/App.config
+2	2	kCalculateTest/Properties/Resources.Designer.cs
+2	2	kCalculateTest/Properties/Settings.Designer.cs
+4	2	kCalculateTest/kCalculateTest.csproj
+4	2	kCalculateUnitTests/kCalculateUnitTests.csproj
+1	1	kCalculateUnitTests/packages.config
+
+--0f8ddf3--2022-01-26--Pete Wild--DD-3675 - Updated the rules to ignore cross effects (#40)
+301	330	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_PriceAmend_BelowLowestCompetitor.cs
+301	330	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_BelowLowestCompetitor.cs
+366	379	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_LowestCompetitorWithDelta.cs
+160	169	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_MatchLowestWithOffset.cs
+
+--c8c209a--2022-01-26--Pete Wild--FRI-8 Initial Check-in
+1562	1547	Batch.sln
+35	23	PetesTestHarness/App.config
+133	132	PetesTestHarness/PetesTestHarness.csproj
+2	2	PetesTestHarness/Program.cs
+27	0	ScienceDataExtractor/App.config
+118	0	ScienceDataExtractor/Form1.Designer.cs
+50	0	ScienceDataExtractor/Form1.cs
+123	0	ScienceDataExtractor/Form1.resx
+22	0	ScienceDataExtractor/Program.cs
+63	0	ScienceDataExtractor/Properties/Resources.Designer.cs
+117	0	ScienceDataExtractor/Properties/Resources.resx
+26	0	ScienceDataExtractor/Properties/Settings.Designer.cs
+7	0	ScienceDataExtractor/Properties/Settings.settings
+130	0	ScienceDataExtractor/ScienceDataExtractor.csproj
+
+--240e06c--2022-01-05--Pete Wild--Kpr 24 (#39)
+249	247	KSS.PriceNet.Batch.CostAggregation/Aggregate.cs
+
+--54cdf63--2021-12-17--Pete Wild--KPR-24 - Aggregated Cost Recalculation (#38)
+247	231	KSS.PriceNet.Batch.CostAggregation/Aggregate.cs
+10	0	kCalculate/DataStructures.cs
+
+--4fd91b9--2021-12-16--Pete Wild--FRI-8 Changes to PriceGenerator.cs to begin to extract forecast data
+5889	5832	KSS.PriceNet.PriceGeneration.BLL/PriceGenerator.cs
+
+--34cfde5--2021-11-29--Dave McKerral--Set dev version to 3.5
+1	1	Jenkinsfile
+
+--4813047--2021-10-14--markwkal--Create build.yml
+52	0	.github/workflows/build.yml
+
+--5a27e78--2021-10-07--Andy Heath--Merge pull request #37 from KalibrateTechnologies/feature/DD-3403
+--686793f--2021-10-01--LeszekKalibrate--DD-3403 - Fix Cast error when exporting Proposed Prices and active ProposedPricesJSON in PNExportChannelTransport table.
+4	4	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+
+--77e05e2--2021-07-14--iamandymcinnes--DD-3219 - Updated a couple of stray connection strings with JET in (#35)
+1	1	Choco/tools/KSS.PriceNet.Batch.Import.exe.config
+1	1	Choco/tools/Kalibrate.ModelUpdate.exe.config
+
+--73c7ad0--2021-07-01--Pete Wild--Dd 3229 (#34)
+2	7	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+2	2	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+
+--91c82a0--2021-06-29--Pete Wild--Dd 3229 (#33)
+2	2	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--a7b8ed9--2021-06-29--Pete Wild--Dd 3229 (#32)
+1	2	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--063426b--2021-06-25--Pete Wild--Dd 3229 (#31)
+50	50	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+
+--65374b4--2021-06-17--ParkerG-Kalibrate--Merge pull request #30 from KalibrateTechnologies/fix/DD-3162
+--9819b5f--2021-06-17--ParkerG-Kalibrate--DD-3162 Correct project reference.
+4	4	KSS.PriceNet.Batch.Export.PreProcessing/KSS.PriceNet.Batch.Export.PreProcessing.csproj
+
+--d42ad6d--2021-06-17--ParkerG-Kalibrate--DD-3162 - Avoid successive price effective times within one minute.
+4	0	KSS.PriceNet.Batch.Export.PreProcessing/KSS.PriceNet.Batch.Export.PreProcessing.csproj
+24	2	KSS.PriceNet.Batch.Export.PreProcessing/MoveEffectiveTime.cs
+
+--85fc5f5--2021-06-08--ParkerG-Kalibrate--Revert "DD-3162 Prevent successive price effective times within one minute."
+1	1	KSS.PriceNet.PriceGeneration.DataStructures/ProposedPrice.cs
+
+--28ec9e3--2021-06-04--Pete Wild--KCONX-1579 - Update to proposed prices when connect data is sent, to stop it being picked up again (#28)
+34	26	KSS.PriceNet.Batch.IDAL/ITransportHandlerDAL.cs
+33	15	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+34	0	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+2	0	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+
+--5425369--2021-05-27--ParkerG-Kalibrate--Merge pull request #27 from KalibrateTechnologies/fix/DD-3162
+--9935b18--2021-05-27--ParkerG-Kalibrate--DD-3162 Prevent successive price effective times within one minute.
+1	1	KSS.PriceNet.PriceGeneration.DataStructures/ProposedPrice.cs
+
+--83c0d1b--2021-05-26--LeszekKalibrate--Merge pull request #26 from KalibrateTechnologies/feature/DD-3143_Timezones
+--e22d349--2021-05-19--LeszekKalibrate--DD-3143 - Update TimeZones BaseUtcOffset
+58	0	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--c7d60e7--2021-05-24--LeszekKalibrate--Merge pull request #25 from KalibrateTechnologies/feature/DD-3143_RevertChanges
+--c5a0cb2--2021-05-24--LeszekKalibrate--Revert "DD-3143 - Update TimeZones BaseUtcOffset"
+0	58	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--37e67cc--2021-05-21--Pete Wild--Merge pull request #24 from KalibrateTechnologies/KCONX-1579
+--3d39aee--2021-05-20--Pete Wild--KCONX-1579
+69	26	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+29	9	KSS.PriceNet.Batch.Transports.TransportHandler/TransportHandler.cs
+
+--018302f--2021-05-19--LeszekKalibrate--Merge pull request #23 from KalibrateTechnologies/feature/DD-3143_Timezones
+--2b4be33--2021-05-19--LeszekKalibrate--DD-3143 - Update TimeZones BaseUtcOffset
+58	0	KSS.PriceNet.Batch.TimeZones/Process.cs
+
+--6646759--2021-04-11--Dave McKerral--Set develop to 3.4
+1	1	Jenkinsfile
+
+--a913b66--2021-03-22--ParkerG-Kalibrate--Merge pull request #22 from KalibrateTechnologies/fix/DD-2936
+--0dc2a2e--2021-03-22--ParkerG-Kalibrate--DD-2936 Amend auditing of PROR.
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_PriceGen_PromotionPricing.cs
+
+--c0552c2--2021-03-18--ParkerG-Kalibrate--DD-2936 Promotion end price restore.
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/ProductGroup_PriceGen_PromotionPricing.cs
+
+--0ee3fee--2021-02-10--Pete Wild--Merge pull request #21 from KalibrateTechnologies/DD-2786
+--c3a2b5f--2021-02-10--Pete Wild--DD-2786 - Fixing bath issues related to TenantConfig.NetFramework.SDK and also fixing the extract rule audit time range
+0	1	DisasterAndRecoveryCSV/packages.config
+0	1	DisasterAndRecoveryXml/packages.config
+0	1	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+0	1	KSS.PriceNet.Batch.Export.Auditing/packages.config
+0	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/packages.config
+0	1	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+0	1	KSS.PriceNet.Batch.Import/packages.config
+0	1	KSS.PriceNet.Batch.PriceGenerationControl/packages.config
+113	113	KSS.PriceNet.Batch.Service/BatchService.cs
+265	261	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+0	1	KSS.PriceNet.Batch/Batch.cs
+0	1	KSS.PriceNet.Batch/packages.config
+0	1	KSS.PriceNet.ExportUtility/Export.cs
+0	1	KSS.PriceNet.ExportUtility/packages.config
+1	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+0	1	KSS.PriceNet.ProcessMonitor.BLL/packages.config
+0	1	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+0	1	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+0	1	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+0	1	KSS.PriceNet.Shared.Authentication/packages.config
+0	7	KSS.PriceNet.Shared.Common/TenantConfigWrapper.cs
+0	1	KSS.PriceNet.Shared.Common/packages.config
+0	1	KSS.PriceNet.Shared.DALFactory/packages.config
+0	1	KSS.PriceNet.SqlConnection/packages.config
+4	3	Kalibrate.ExtractRuleAudit/Program.cs
+0	1	Kalibrate.ExtractRuleAudit/packages.config
+0	1	Kalibrate.ModelUpdate/packages.config
+380	372	Test Harness2/BatchTestHarness.csproj
+
+--9edf3f6--2021-02-01--Pete Wild--Merge pull request #20 from KalibrateTechnologies/DD-2786
+--dfbe429--2021-02-01--Pete Wild--DD-2786 - correcting the logic
+1	1	Kalibrate.ExtractRuleAudit/Program.cs
+
+--7fb8eb0--2021-01-29--Pete Wild--DD-2786
+60	53	Kalibrate.ExtractRuleAudit/ISqlDal.cs
+126	125	Kalibrate.ExtractRuleAudit/Kalibrate.ExtractRuleAudit.csproj
+279	274	Kalibrate.ExtractRuleAudit/Processor.cs
+37	34	Kalibrate.ExtractRuleAudit/Program.cs
+10	10	Kalibrate.ExtractRuleAudit/SqlDal.cs
+
+--c86f22c--2020-11-23--Pete Wild--Merge pull request #19 from KalibrateTechnologies/DD-2433
+--426e7c5--2020-11-23--Pete Wild--DD-2433 - Removing SQL commands to nullify records so the stored procedure can handle it instead
+616	649	KSS.PriceNet.Shared.EntityModel/BeforeDeleteHandler.cs
+
+--7ea820c--2020-11-23--davidsmithkalibrate--DD-2499 - Corrected Connection String concatenation (#18)
+3	1	Choco/tools/chocolateyinstall.ps1
+
+--3c2155d--2020-11-16--davidsmithkalibrate--DD-2700 - Replace config using key="ServiceName" value="PriceNet Batch" (#17)
+2	2	Choco/tools/chocolateyinstall.ps1
+
+--2397cd7--2020-11-12--Jon Cain--DD-2677 Update System.Net.Http NuGet reference in app.configs to 4.2.0.0 to standardise on latest (#16)
+1	1	DisasterAndRecoveryCSV/app.config
+1	1	DisasterAndRecoveryXml/app.config
+2	2	KSS.PriceNet.ArchiveTruncate/app.config
+2	2	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+2	2	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+3	27	KSS.PriceNet.Batch.ConsoleApplication/App.config
+2	2	KSS.PriceNet.Batch.CostAggregation/app.config
+2	2	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+2	2	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+2	2	KSS.PriceNet.Batch.Download/app.config
+2	2	KSS.PriceNet.Batch.EntityModel/app.config
+2	2	KSS.PriceNet.Batch.Export.Auditing/app.config
+1	1	KSS.PriceNet.Batch.Export.Formatter/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+1	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+1	1	KSS.PriceNet.Batch.Export.Notes/app.config
+2	2	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+1	1	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+1	1	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+2	2	KSS.PriceNet.Batch.Export.Transform/app.config
+2	2	KSS.PriceNet.Batch.ExportEntity/app.config
+2	2	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+2	2	KSS.PriceNet.Batch.GPCUpdates/app.config
+2	2	KSS.PriceNet.Batch.IDAL/app.config
+3	3	KSS.PriceNet.Batch.Import/app.config
+2	2	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+2	2	KSS.PriceNet.Batch.Licensing/app.config
+2	2	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+2	2	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+2	2	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+2	2	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+2	2	KSS.PriceNet.Batch.PRDEventProcess/app.config
+1	1	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+2	2	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+2	2	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+2	2	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+2	2	KSS.PriceNet.Batch.Refinement/app.config
+2	2	KSS.PriceNet.Batch.Rescaling/app.config
+2	2	KSS.PriceNet.Batch.SQLServerDAL/app.config
+1	1	KSS.PriceNet.Batch.Service/App.config
+2	2	KSS.PriceNet.Batch.StrategyInitialise/app.config
+2	2	KSS.PriceNet.Batch.TimeZones/app.config
+1	1	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+1	1	KSS.PriceNet.Batch.Transports.EMail/app.config
+1	1	KSS.PriceNet.Batch.Transports.FTP/app.config
+1	1	KSS.PriceNet.Batch.Transports.Fax/app.config
+1	1	KSS.PriceNet.Batch.Transports.File/app.config
+1	1	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+1	1	KSS.PriceNet.Batch.Transports.SMS/app.config
+1	1	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+1	1	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+2	2	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	2	KSS.PriceNet.Batch/app.config
+2	2	KSS.PriceNet.ExportUtility/app.config
+2	2	KSS.PriceNet.Optimisation/app.config
+2	2	KSS.PriceNet.Parameterisation.BLL/app.config
+2	2	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+2	2	KSS.PriceNet.PriceGeneration.BLL/app.config
+2	2	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+2	2	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+2	2	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+2	2	KSS.PriceNet.PriceGeneration.IDAL/app.config
+2	2	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+2	2	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+2	2	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+2	2	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	2	KSS.PriceNet.ProcessMonitor.BLL/app.config
+2	2	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+2	2	KSS.PriceNet.Shared.Authentication/app.config
+2	2	KSS.PriceNet.Shared.Common/app.config
+2	2	KSS.PriceNet.Shared.Contracts.Aral/app.config
+2	2	KSS.PriceNet.Shared.Contracts.COCO/app.config
+2	2	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+2	2	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+2	2	KSS.PriceNet.Shared.Contracts.CPG/app.config
+2	2	KSS.PriceNet.Shared.Contracts.DTW/app.config
+2	2	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+2	2	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+2	2	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+2	2	KSS.PriceNet.Shared.Contracts.SOE/app.config
+2	2	KSS.PriceNet.Shared.Contracts.Utils/app.config
+2	2	KSS.PriceNet.Shared.DALFactory/app.config
+2	2	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+2	2	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+2	2	KSS.PriceNet.Shared.EntityModel/app.config
+2	2	KSS.PriceNet.Shared.Interfaces/app.config
+1	1	KSS.PriceNet.SqlConnection/app.config
+1	1	Kalibrate.ExtractRuleAudit.Tests/app.config
+2	2	Kalibrate.ExtractRuleAudit/app.config
+2	2	ModelUpdateTestHarness/App.config
+2	2	OptimisationTest/App.config
+2	2	Parameterisation Test Harness/App.config
+2	2	PetesTestHarness/App.config
+1	1	Test Harness/App.config
+1	1	Test Harness2/App.config
+
+--26623aa--2020-11-11--Jon Cain--DD-2677 Update Newtonsoft JSON NuGet on all projects within solution to standardise versioning (#14)
+2	3	KSS.PriceNet.Batch.Export.Formatter/KSS.PriceNet.Batch.Export.Formatter.csproj
+5	1	KSS.PriceNet.Batch.Export.Formatter/app.config
+1	1	KSS.PriceNet.Batch.Export.Formatter/packages.config
+5	1	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+5	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+5	1	KSS.PriceNet.Batch.Export.Notes/app.config
+5	1	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+5	1	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+1	1	KSS.PriceNet.Batch.Import/app.config
+1	1	KSS.PriceNet.Batch.Service/App.config
+5	1	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+5	1	KSS.PriceNet.Batch.Transports.EMail/app.config
+5	1	KSS.PriceNet.Batch.Transports.FTP/app.config
+5	1	KSS.PriceNet.Batch.Transports.Fax/app.config
+5	1	KSS.PriceNet.Batch.Transports.File/app.config
+5	1	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+5	1	KSS.PriceNet.Batch.Transports.SMS/app.config
+5	1	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+2	2	KSS.PriceNet.Batch.Transports.WebAPI/KSS.PriceNet.Batch.Transports.WebAPI.csproj
+5	1	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+1	1	KSS.PriceNet.Batch.Transports.WebAPI/packages.config
+1	1	KSS.PriceNet.BatchApp/App.config
+2	2	KSS.PriceNet.BatchApp/KSS.PriceNet.BatchApp.csproj
+1	1	KSS.PriceNet.BatchApp/packages.config
+2	1	KSS.PriceNet.Shared.Authentication.SSO/KSS.PriceNet.Shared.Authentication.SSO.csproj
+1	1	KSS.PriceNet.Shared.Authentication.SSO/packages.config
+11	2	Test Harness/App.config
+1	1	Test Harness2/App.config
+
+--61bee17--2020-11-10--NicholasThurgoland--DD-2499v3 - Fix string concat (#13)
+4	4	Choco/tools/chocolateyinstall.ps1
+
+--f4ffb10--2020-11-10--NicholasThurgoland--DD-2499v2 - Remove line continuation (#12)
+4	4	Choco/tools/chocolateyinstall.ps1
+
+--f83188e--2020-11-10--NicholasThurgoland--DD-2499 - Added extra params for the connection string (#11)
+11	8	Choco/tools/chocolateyinstall.ps1
+
+--b0bc33c--2020-11-05--davidsmithkalibrate--Merge pull request #10 from KalibrateTechnologies/DD-2650
+--98480eb--2020-11-05--David Smith--DD-2650 - removed the spacing around the config replace for the PN Alerts Service Name
+2	2	Choco/tools/chocolateyinstall.ps1
+
+--1d5f75d--2020-10-19--NicholasThurgoland--DD-2569 - fix tenant config reading (#8)
+4	0	KSS.PriceNet.Batch.DealerPriceCalculation/KSS.PriceNet.Batch.DealerPriceCalculation.csproj
+1	1	KSS.PriceNet.Batch.DealerPriceCalculation/Process.cs
+1	1	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+4	3	KSS.PriceNet.Batch.Export.ModelSummaryRequester/KSS.PriceNet.Batch.Export.ModelSummaryRequester.csproj
+6	6	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+9	9	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+4	0	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL.csproj
+1	0	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/ModelUpdate.cs
+4	0	KSS.PriceNet.Batch.PriceGenerationPreprocessing/KSS.PriceNet.Batch.PriceGenerationPreprocessing.csproj
+1	0	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceGenerationPreprocessing.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/ArchiveTruncateDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/AuditingDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/BatchDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/ClosedRestrictedDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/CommonTransportDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/CostAggregationDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/DealerPriceCalculationDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/DeleteExportedFilesDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/ExportEntityDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/ExportUtilityDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/GPCRulesMonitorDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/GPCUpdatesDAL.cs
+1	0	KSS.PriceNet.Batch.SQLServerDAL/ImportDAL.cs
+4	0	KSS.PriceNet.Batch.SQLServerDAL/KSS.PriceNet.Batch.SQLServerDAL.csproj
+1	1	KSS.PriceNet.Batch.SQLServerDAL/LeadFollowPRCreationDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/LicensingDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/ModelSummaryDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/NoteExportDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/PRDEventProcessDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/PerformanceAuditDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/PostProcessingDAL.cs
+1	0	KSS.PriceNet.Batch.SQLServerDAL/PreProcessingDAL.cs
+1	0	KSS.PriceNet.Batch.SQLServerDAL/PriceGenerationPreprocessingDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/PriceRequestValidationDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/ProposedPriceExportDAL.cs
+1	0	KSS.PriceNet.Batch.SQLServerDAL/RefinementDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/RescalingDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/StrategyInitialiseDAL.cs
+1	1	KSS.PriceNet.Batch.SQLServerDAL/TransportHandlerDAL.cs
+1	0	KSS.PriceNet.Batch.Service/App.config
+8	7	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+4	0	KSS.PriceNet.Batch.TimeZones/KSS.PriceNet.Batch.TimeZones.csproj
+1	0	KSS.PriceNet.Batch.TimeZones/Process.cs
+2	2	KSS.PriceNet.Batch/Batch.cs
+3	3	KSS.PriceNet.ExportUtility/Export.cs
+4	0	KSS.PriceNet.Parameterisation.SQLServerDAL/KSS.PriceNet.Parameterisation.SQLServerDAL.csproj
+1	0	KSS.PriceNet.Parameterisation.SQLServerDAL/Parameterisation.cs
+4	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/KSS.PriceNet.PriceGeneration.SQLServerDAL.csproj
+1	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/PriceGenerationDAL.cs
+4	0	KSS.PriceNet.PriceGeneration.UnitTests/KSS.PriceNet.PriceGeneration.UnitTests.csproj
+1	0	KSS.PriceNet.PriceGeneration.UnitTests/PriceGenerationDALTest.cs
+2	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+4	0	KSS.PriceNet.ProcessMonitor.SQLServerDAL/KSS.PriceNet.ProcessMonitor.SQLServerDAL.csproj
+1	0	KSS.PriceNet.ProcessMonitor.SQLServerDAL/ProcessMonitorDAL.cs
+3	3	KSS.PriceNet.Shared.Authentication/Authenticator.cs
+3	3	KSS.PriceNet.Shared.Authentication/AuthenticatorNonStatic.cs
+2	2	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+2	2	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+2	2	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+1	9	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+0	1032	KSS.PriceNet.Shared.Common/SQLUtil.cs
+0	411	KSS.PriceNet.Shared.Common/SQLUtilBase.cs
+0	290	KSS.PriceNet.Shared.Common/SQLUtilWrapper.cs
+40	0	KSS.PriceNet.Shared.Common/TenantConfigWrapper.cs
+2	3	KSS.PriceNet.Shared.DALFactory/DataAccess.cs
+11	5	KSS.PriceNet.Shared.DALFactory/KSS.PriceNet.Shared.DALFactory.csproj
+4	4	KSS.PriceNet.Shared.DALFactory/app.config
+1	0	KSS.PriceNet.Shared.EntityModel.BLL/EntityNameValueHandlerBase.cs
+4	0	KSS.PriceNet.Shared.EntityModel.BLL/KSS.PriceNet.Shared.EntityModel.BLL.csproj
+1	0	KSS.PriceNet.Shared.EntityModel.BLL/PriceRequestSourceHandler.cs
+1	0	KSS.PriceNet.Shared.EntityModel.BLL/StrategyMatrixHandler.cs
+1	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/ConfigDAL.cs
+1	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/ContractValuePreReqDAL.cs
+1	1	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/DatabaseDAL.cs
+1	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/DeleteEntityDAL.cs
+1	1	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/EntityModel.cs
+1	1	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/GlobalProductGroupDAL.cs
+4	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/KSS.PriceNet.Shared.EntityModel.SQLServerDAL.csproj
+1	1	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/PredefinedNotesDAL.cs
+10	4	KSS.PriceNet.SqlConnection/KSS.PriceNet.SqlConnectionService.csproj
+1032	0	KSS.PriceNet.SqlConnection/SQLUtil.cs
+411	0	KSS.PriceNet.SqlConnection/SQLUtilBase.cs
+290	0	KSS.PriceNet.SqlConnection/SQLUtilWrapper.cs
+4	4	KSS.PriceNet.SqlConnection/SqlConnService.cs
+4	0	Test Harness/BatchStepTestHarness.csproj
+1	0	Test Harness/Form1.cs
+5	4	Test Harness2/App.config
+4	0	Test Harness2/BatchTestHarness.csproj
+1	0	Test Harness2/Form1.cs
+
+--c0c102d--2020-10-16--NicholasThurgoland--Added missing config settings (#7)
+21	10	KSS.PriceNet.Batch.Import/app.config
+23	17	KSS.PriceNet.Batch.Service/App.config
+2	0	KSS.PriceNet.BatchApp/App.config
+19	2	Test Harness2/App.config
+
+--48b04b9--2020-10-13--ParkerG-Kalibrate--Merge pull request #5 from KalibrateTechnologies/fix/DD-2470-Batch
+--8523fb2--2020-10-13--ParkerG-Kalibrate--DD-2470-Batch - Ensure Batch Service starts and resolve some (not all) of the runtime errors.
+121	133	KSS.PriceNet.Batch.Import/DataChannels.Designer.cs
+1	1	KSS.PriceNet.Batch.Import/KSS.PriceNet.Batch.Import.csproj
+62	68	KSS.PriceNet.Batch.Import/Results.Designer.cs
+4	4	KSS.PriceNet.Batch.Import/app.config
+7	0	KSS.PriceNet.Batch.PriceGenerationControl/KSS.PriceNet.Batch.PriceGenerationControl.csproj
+1	0	KSS.PriceNet.Batch.Service/App.config
+121	0	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+1	1	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+1	1	Kalibrate.ModelUpdate/app.config
+
+--155c4a4--2020-10-02--iamandymcinnes--DD-2470 - Allow all configs (#4)
+1	5	Choco/ExcludeList.txt
+
+--5951dc1--2020-10-01--iamandymcinnes--DD-2470 - Updated to use SQLCommandTimeout config value on querymultiple (#3)
+2	1	.gitignore
+0	11	Batch.sln
+-	-	Choco/$SYSDIR/MSVCR71.DLL
+-	-	Choco/$SYSDIR/libguide40.dll
+-	-	Choco/$SYSDIR/libimalloc.dll
+-	-	Choco/$SYSDIR/mkl_def.dll
+-	-	Choco/$SYSDIR/mkl_ias.dll
+-	-	Choco/$SYSDIR/mkl_lapack.dll
+-	-	Choco/$SYSDIR/mkl_mc.dll
+-	-	Choco/$SYSDIR/mkl_p3.dll
+-	-	Choco/$SYSDIR/mkl_p4.dll
+-	-	Choco/$SYSDIR/mkl_p4m.dll
+-	-	Choco/$SYSDIR/mkl_p4n.dll
+-	-	Choco/$SYSDIR/mkl_p4p.dll
+-	-	Choco/$SYSDIR/mkl_vml_def.dll
+-	-	Choco/$SYSDIR/mkl_vml_mc.dll
+-	-	Choco/$SYSDIR/mkl_vml_p3.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4m.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4n.dll
+-	-	Choco/$SYSDIR/mkl_vml_p4p.dll
+32	0	Choco/CreateChoco.ps1
+11	0	Choco/ExcludeList.txt
+31	0	Choco/pricenetbatch.nuspec
+124	0	Choco/tools/IIS-Functions/IIS-Functions.psd1
+169	0	Choco/tools/IIS-Functions/IIS-Functions.psm1
+24	0	Choco/tools/KSS.PriceNet.Batch.Import.exe.config
+24	0	Choco/tools/Kalibrate.ModelUpdate.exe.config
+11	0	Choco/tools/LICENSE.txt
+13	0	Choco/tools/VERIFICATION.txt
+9	0	Choco/tools/chocolateybeforemodify.ps1
+157	0	Choco/tools/chocolateyinstall.ps1
+77	0	Choco/tools/chocolateyuninstall.ps1
+103	0	Choco/tools/datachannels.ps1
+85	0	Choco/tools/winservice.ps1
+131	0	Jenkinsfile
+7	0	KSS.PriceNet.SqlConnection/KSS.PriceNet.SqlConnectionService.csproj
+-	-	KSS.PriceNet.SqlConnection/PriceNet.snk
+2	1	Kalibrate.ModelUpdate/SqlDal.cs
+1	0	Test Harness/App.config
+1	0	Test Harness2/App.config
+
+--ea5c5a8--2020-08-18--davidsmithkalibrate--COD-120 update docker file name in pipeline
+1	1	azure-pipelines.yml
+
+--ddc027d--2020-08-18--David Smith--COD-120 - update docker image base to aspnet
+1	1	Dockerfile
+
+--51a2cf9--2020-08-18--davidsmithkalibrate--COD-120 - updated docker repository
+21	17	azure-pipelines.yml
+
+--e5dd358--2020-08-18--ParkerG-Kalibrate--Merge pull request #1 from KalibrateTechnologies/feature/KP-2543
+--c079f89--2020-08-18--davidsmithkalibrate--COD-120 - Changed vm image for pipeline
+1	1	azure-pipelines.yml
+
+--08017cf--2020-08-18--davidsmithkalibrate--Merge pull request #2 from KalibrateTechnologies/COD-120-TENANT-SDK
+--a7cb399--2020-08-18--David Smith--COD-120 - use sinle azure pipelines file, removed docker ignore
+0	11	.dockerignore
+0	64	azure-pipelines-code.yml
+53	39	azure-pipelines.yml
+
+--dbef606--2020-08-18--David Smith--COD-120 - remove bin ignore for docker
+1	1	.dockerignore
+
+--bb3587d--2020-08-18--David Smith--COD-120 - Updated Build pipeline
+17	0	Batch.sln
+52	2	DisasterAndRecoveryCSV/DisasterAndRecoveryCSV.csproj
+2	2	DisasterAndRecoveryCSV/Program.cs
+2	2	DisasterAndRecoveryCSV/app.config
+15	0	DisasterAndRecoveryCSV/packages.config
+52	2	DisasterAndRecoveryXml/DisasterAndRecoveryXml.csproj
+2	2	DisasterAndRecoveryXml/Program.cs
+2	2	DisasterAndRecoveryXml/app.config
+15	0	DisasterAndRecoveryXml/packages.config
+18	35	Dockerfile
+4	2	KSS.PriceNet.ArchiveTruncate/KSS.PriceNet.ArchiveTruncate.csproj
+4	4	KSS.PriceNet.ArchiveTruncate/app.config
+4	2	KSS.PriceNet.Batch.ArchiveTruncate/KSS.PriceNet.Batch.ArchiveTruncate.csproj
+4	4	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+5	2	KSS.PriceNet.Batch.ClosedRestrictedStrategy/KSS.PriceNet.Batch.ClosedRestrictedStrategy.csproj
+4	4	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+10	11	KSS.PriceNet.Batch.ConsoleApplication/App.config
+4	2	KSS.PriceNet.Batch.ConsoleApplication/KSS.PriceNet.Batch.ConsoleApplication.csproj
+0	1	KSS.PriceNet.Batch.ConsoleApplication/packages.config
+5	2	KSS.PriceNet.Batch.CostAggregation/KSS.PriceNet.Batch.CostAggregation.csproj
+4	4	KSS.PriceNet.Batch.CostAggregation/app.config
+145	145	KSS.PriceNet.Batch.DealerPriceCalculation/CalculationResults.Designer.cs
+218	218	KSS.PriceNet.Batch.DealerPriceCalculation/DtaPriceData.Designer.cs
+4	1	KSS.PriceNet.Batch.DealerPriceCalculation/KSS.PriceNet.Batch.DealerPriceCalculation.csproj
+4	4	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+3	1	KSS.PriceNet.Batch.DeleteExportedFiles/KSS.PriceNet.Batch.DeleteExportedFiles.csproj
+4	4	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+4	2	KSS.PriceNet.Batch.Download/KSS.PriceNet.Batch.Download.csproj
+4	4	KSS.PriceNet.Batch.Download/app.config
+4	2	KSS.PriceNet.Batch.Engine/KSS.PriceNet.Batch.Engine.csproj
+5	2	KSS.PriceNet.Batch.EntityModel/KSS.PriceNet.Batch.EntityModel.csproj
+4	4	KSS.PriceNet.Batch.EntityModel/app.config
+5	2	KSS.PriceNet.Batch.Export.Auditing/KSS.PriceNet.Batch.Export.Auditing.csproj
+4	4	KSS.PriceNet.Batch.Export.Auditing/app.config
+3	3	KSS.PriceNet.Batch.Export.Auditing/packages.config
+5	2	KSS.PriceNet.Batch.Export.PostProcessing/KSS.PriceNet.Batch.Export.PostProcessing.csproj
+4	4	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+5	2	KSS.PriceNet.Batch.Export.Transform/KSS.PriceNet.Batch.Export.Transform.csproj
+28	18	KSS.PriceNet.Batch.Export.Transform/RadiantTemplate.cs
+4	4	KSS.PriceNet.Batch.Export.Transform/app.config
+5	2	KSS.PriceNet.Batch.ExportEntity/KSS.PriceNet.Batch.ExportEntity.csproj
+4	4	KSS.PriceNet.Batch.ExportEntity/app.config
+3	3	KSS.PriceNet.Batch.ExportEntity/packages.config
+5	2	KSS.PriceNet.Batch.GPCRulesMonitor/KSS.PriceNet.Batch.GPCRulesMonitor.csproj
+4	4	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+5	2	KSS.PriceNet.Batch.GPCUpdates/KSS.PriceNet.Batch.GPCUpdates.csproj
+4	4	KSS.PriceNet.Batch.GPCUpdates/app.config
+5	2	KSS.PriceNet.Batch.IDAL/KSS.PriceNet.Batch.IDAL.csproj
+4	4	KSS.PriceNet.Batch.IDAL/app.config
+5	2	KSS.PriceNet.Batch.IStep/KSS.PriceNet.Batch.IStep.csproj
+5	2	KSS.PriceNet.Batch.LeadFollowPRCreation/KSS.PriceNet.Batch.LeadFollowPRCreation.csproj
+4	4	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+5	2	KSS.PriceNet.Batch.Licensing/KSS.PriceNet.Batch.Licensing.csproj
+4	4	KSS.PriceNet.Batch.Licensing/app.config
+5	2	KSS.PriceNet.Batch.ModelUpdate.BLL/KSS.PriceNet.Batch.ModelUpdate.BLL.csproj
+4	4	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+5	2	KSS.PriceNet.Batch.ModelUpdate.DataStructures/KSS.PriceNet.Batch.ModelUpdate.DataStructures.csproj
+4	4	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+5	2	KSS.PriceNet.Batch.ModelUpdate.IDAL/KSS.PriceNet.Batch.ModelUpdate.IDAL.csproj
+4	4	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+5	2	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL.csproj
+4	4	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+5	2	KSS.PriceNet.Batch.PRDEventProcess/KSS.PriceNet.Batch.PRDEventProcess.csproj
+4	4	KSS.PriceNet.Batch.PRDEventProcess/app.config
+38	18	KSS.PriceNet.Batch.PriceGenerationControl/KSS.PriceNet.Batch.PriceGenerationControl.csproj
+75	66	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+2	2	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+11	4	KSS.PriceNet.Batch.PriceGenerationControl/packages.config
+5	2	KSS.PriceNet.Batch.PriceGenerationPreprocessing/KSS.PriceNet.Batch.PriceGenerationPreprocessing.csproj
+320	320	KSS.PriceNet.Batch.PriceGenerationPreprocessing/PriceRequestData.Designer.cs
+4	4	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+3	1	KSS.PriceNet.Batch.PriceRequestValidation.Tests/KSS.PriceNet.Batch.PriceRequestValidation.Tests.csproj
+4	4	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+1	1	KSS.PriceNet.Batch.PriceRequestValidation.Tests/packages.config
+5	2	KSS.PriceNet.Batch.PriceRequestValidation/KSS.PriceNet.Batch.PriceRequestValidation.csproj
+4	4	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+5	2	KSS.PriceNet.Batch.Refinement/KSS.PriceNet.Batch.Refinement.BLL.csproj
+4	4	KSS.PriceNet.Batch.Refinement/app.config
+5	2	KSS.PriceNet.Batch.Rescaling/KSS.PriceNet.Batch.Rescaling.BLL.csproj
+4	4	KSS.PriceNet.Batch.Rescaling/app.config
+5	2	KSS.PriceNet.Batch.SQLServerDAL/KSS.PriceNet.Batch.SQLServerDAL.csproj
+4	4	KSS.PriceNet.Batch.SQLServerDAL/app.config
+17	18	KSS.PriceNet.Batch.Service/App.config
+5	2	KSS.PriceNet.Batch.Service/KSS.PriceNet.Batch.Service.csproj
+5	2	KSS.PriceNet.Batch.StrategyInitialise/KSS.PriceNet.Batch.StrategyInitialise.csproj
+4	4	KSS.PriceNet.Batch.StrategyInitialise/app.config
+5	2	KSS.PriceNet.Batch.TimeZones/KSS.PriceNet.Batch.TimeZones.csproj
+4	4	KSS.PriceNet.Batch.TimeZones/app.config
+5	2	KSS.PriceNet.Batch.WaitingRoomBattle/KSS.PriceNet.Batch.WaitingRoomBattle.csproj
+4	4	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+5	2	KSS.PriceNet.Batch/KSS.PriceNet.Batch.csproj
+4	4	KSS.PriceNet.Batch/app.config
+3	3	KSS.PriceNet.Batch/packages.config
+6	2	KSS.PriceNet.ExportUtility/KSS.PriceNet.ExportUtility.csproj
+8	8	KSS.PriceNet.ExportUtility/app.config
+3	3	KSS.PriceNet.ExportUtility/packages.config
+5	2	KSS.PriceNet.Optimisation/KSS.PriceNet.Optimisation.x64.csproj
+4	4	KSS.PriceNet.Optimisation/app.config
+5	2	KSS.PriceNet.Parameterisation.BLL/KSS.PriceNet.Parameterisation.BLL.x64.csproj
+4	4	KSS.PriceNet.Parameterisation.BLL/app.config
+5	2	KSS.PriceNet.Parameterisation.IDAL/KSS.PriceNet.Parameterisation.IDAL.csproj
+5	2	KSS.PriceNet.Parameterisation.SQLServerDAL/KSS.PriceNet.Parameterisation.SQLServerDAL.csproj
+4	4	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+5	2	KSS.PriceNet.PriceGeneration.BLL/KSS.PriceNet.PriceGeneration.BLL.csproj
+4	4	KSS.PriceNet.PriceGeneration.BLL/app.config
+5	2	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/KSS.PriceNet.PriceGeneration.BattleRulesLibrary.csproj
+4	4	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+5	2	KSS.PriceNet.PriceGeneration.DataFunctions/KSS.PriceNet.PriceGeneration.DataFunctions.csproj
+4	4	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+5	2	KSS.PriceNet.PriceGeneration.DataStructures/KSS.PriceNet.PriceGeneration.DataStructures.csproj
+4	4	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+5	2	KSS.PriceNet.PriceGeneration.IDAL/KSS.PriceNet.PriceGeneration.IDAL.csproj
+4	4	KSS.PriceNet.PriceGeneration.IDAL/app.config
+5	2	KSS.PriceNet.PriceGeneration.PriceBattle/KSS.PriceNet.PriceGeneration.PriceBattle.csproj
+4	4	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+5	2	KSS.PriceNet.PriceGeneration.RulesLibrary/KSS.PriceNet.PriceGeneration.RulesLibrary.csproj
+4	4	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+5	2	KSS.PriceNet.PriceGeneration.SQLServerDAL/KSS.PriceNet.PriceGeneration.SQLServerDAL.csproj
+4	4	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+11	11	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+5	2	KSS.PriceNet.PriceGeneration.UnitTests/KSS.PriceNet.PriceGeneration.UnitTests.csproj
+1	1	KSS.PriceNet.PriceGeneration.UnitTests/packages.config
+5	2	KSS.PriceNet.ProcessMonitor.BLL/KSS.PriceNet.ProcessMonitor.BLL.csproj
+4	4	KSS.PriceNet.ProcessMonitor.BLL/app.config
+3	3	KSS.PriceNet.ProcessMonitor.BLL/packages.config
+5	2	KSS.PriceNet.ProcessMonitor.IDAL/KSS.PriceNet.ProcessMonitor.IDAL.csproj
+5	2	KSS.PriceNet.ProcessMonitor.SQLServerDAL/KSS.PriceNet.ProcessMonitor.SQLServerDAL.csproj
+4	4	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+5	2	KSS.PriceNet.Shared.Authentication/KSS.PriceNet.Shared.Authentication.csproj
+4	4	KSS.PriceNet.Shared.Authentication/app.config
+3	3	KSS.PriceNet.Shared.Authentication/packages.config
+11	3	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+8	6	KSS.PriceNet.Shared.Common/SQLUtil.cs
+4	4	KSS.PriceNet.Shared.Common/app.config
+3	3	KSS.PriceNet.Shared.Common/packages.config
+5	2	KSS.PriceNet.Shared.Contracts.Aral/KSS.PriceNet.Shared.Contracts.Aral.csproj
+4	4	KSS.PriceNet.Shared.Contracts.Aral/app.config
+5	2	KSS.PriceNet.Shared.Contracts.COCO/KSS.PriceNet.Shared.Contracts.COCO.csproj
+4	4	KSS.PriceNet.Shared.Contracts.COCO/app.config
+5	2	KSS.PriceNet.Shared.Contracts.COSTPLUS/KSS.PriceNet.Shared.Contracts.COSTPLUS.csproj
+4	4	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+5	2	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA.csproj
+4	4	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+5	2	KSS.PriceNet.Shared.Contracts.CPG/KSS.PriceNet.Shared.Contracts.CPG.csproj
+4	4	KSS.PriceNet.Shared.Contracts.CPG/app.config
+5	2	KSS.PriceNet.Shared.Contracts.DTW/KSS.PriceNet.Shared.Contracts.DTW.csproj
+4	4	KSS.PriceNet.Shared.Contracts.DTW/app.config
+5	2	KSS.PriceNet.Shared.Contracts.DealerTradeArea/KSS.PriceNet.Shared.Contracts.DealerTradeArea.csproj
+4	4	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+4	2	KSS.PriceNet.Shared.Contracts.MARGINFIXED/KSS.PriceNet.Shared.Contracts.MARGINFIXED.csproj
+4	4	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+5	2	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/KSS.PriceNet.Shared.Contracts.MARGINVARIABLE.csproj
+4	4	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+5	2	KSS.PriceNet.Shared.Contracts.SOE/KSS.PriceNet.Shared.Contracts.SOE.csproj
+4	4	KSS.PriceNet.Shared.Contracts.SOE/app.config
+5	2	KSS.PriceNet.Shared.Contracts.Utils/KSS.PriceNet.Shared.Contracts.Utils.csproj
+4	4	KSS.PriceNet.Shared.Contracts.Utils/app.config
+68	68	KSS.PriceNet.Shared.EntityModel.BLL/EntitiesToDelete.Designer.cs
+5	2	KSS.PriceNet.Shared.EntityModel.BLL/KSS.PriceNet.Shared.EntityModel.BLL.csproj
+4	4	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+5	2	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/KSS.PriceNet.Shared.EntityModel.SQLServerDAL.csproj
+4	4	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+5	2	KSS.PriceNet.Shared.EntityModel/KSS.PriceNet.Shared.EntityModel.csproj
+4	4	KSS.PriceNet.Shared.EntityModel/app.config
+5	2	KSS.PriceNet.Shared.Interfaces/KSS.PriceNet.Shared.Interfaces.csproj
+4	4	KSS.PriceNet.Shared.Interfaces/app.config
+101	0	KSS.PriceNet.SqlConnection/KSS.PriceNet.SqlConnectionService.csproj
+36	0	KSS.PriceNet.SqlConnection/Properties/AssemblyInfo.cs
+41	0	KSS.PriceNet.SqlConnection/SqlConnService.cs
+15	0	KSS.PriceNet.SqlConnection/app.config
+15	0	KSS.PriceNet.SqlConnection/packages.config
+20	0	Kalibrate.ExtractRuleAudit.Tests/Kalibrate.ExtractRuleAudit.Tests.csproj
+11	0	Kalibrate.ExtractRuleAudit.Tests/app.config
+5	0	Kalibrate.ExtractRuleAudit.Tests/packages.config
+6	0	Kalibrate.ExtractRuleAudit/Kalibrate.ExtractRuleAudit.csproj
+9	10	Kalibrate.ExtractRuleAudit/SqlDal.cs
+11	0	Kalibrate.ExtractRuleAudit/app.config
+7	1	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+23	24	Kalibrate.ModelUpdate/SqlDal.cs
+33	24	Kalibrate.ModelUpdate/SqlScripts.Designer.cs
+3	0	Kalibrate.ModelUpdate/app.config
+7	8	ModelUpdateTestHarness/App.config
+4	2	ModelUpdateTestHarness/ModelUpdateTestHarness.csproj
+8	8	OptimisationTest/App.config
+5	1	OptimisationTest/OptimisationTest.csproj
+6	6	Parameterisation Test Harness/App.config
+5	1	Parameterisation Test Harness/Parameterisation Test Harness.csproj
+9	10	PetesTestHarness/App.config
+4	2	PetesTestHarness/PetesTestHarness.csproj
+29	2	azure-pipelines-code.yml
+2	1	restores.ps1
+
+--8b34588--2020-08-17--David Smith--COD-120 - Replaced connectionstring and appsettings to run through tenant config
+2	2	KSS.PriceNet.Batch.Export.Auditing/AuditLogger.cs
+33	0	KSS.PriceNet.Batch.Export.Auditing/KSS.PriceNet.Batch.Export.Auditing.csproj
+8	0	KSS.PriceNet.Batch.Export.Auditing/packages.config
+4	4	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+10	9	KSS.PriceNet.Batch.Import/ImportDataFiles.cs
+18	2	KSS.PriceNet.Batch.Import/KSS.PriceNet.Batch.Import.csproj
+5	1	KSS.PriceNet.Batch.Import/packages.config
+2	2	KSS.PriceNet.ExportUtility/Export.cs
+1	0	KSS.PriceNet.Parameterisation.BLL/KSS.PriceNet.Parameterisation.BLL.x64.csproj
+11	0	KSS.PriceNet.Parameterisation.BLL/app.config
+33	0	KSS.PriceNet.ProcessMonitor.BLL/KSS.PriceNet.ProcessMonitor.BLL.csproj
+3	2	KSS.PriceNet.ProcessMonitor.BLL/ProcessMonitorHandler.cs
+8	0	KSS.PriceNet.ProcessMonitor.BLL/packages.config
+2	1	KSS.PriceNet.Shared.Authentication/Authenticator.cs
+2	1	KSS.PriceNet.Shared.Authentication/AuthenticatorNonStatic.cs
+33	0	KSS.PriceNet.Shared.Authentication/KSS.PriceNet.Shared.Authentication.csproj
+3	2	KSS.PriceNet.Shared.Authentication/KSSUserHelper.cs
+3	2	KSS.PriceNet.Shared.Authentication/WebSealAuthenticator.cs
+3	2	KSS.PriceNet.Shared.Authentication/XmlAuthenticator.cs
+8	0	KSS.PriceNet.Shared.Authentication/packages.config
+2	1	KSS.PriceNet.Shared.DALFactory/DataAccess.cs
+34	0	KSS.PriceNet.Shared.DALFactory/KSS.PriceNet.Shared.DALFactory.csproj
+11	0	KSS.PriceNet.Shared.DALFactory/app.config
+8	0	KSS.PriceNet.Shared.DALFactory/packages.config
+11	3	Parameterisation Test Harness/App.config
+
+--19ce2ff--2020-08-14--ParkerG-Kalibrate--KP-2543 Increase range for prices, costs, discounts, offsets, margins etc to -9999 - 9999.
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/ContrainedPriceRounder.cs
+2	2	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_CompanyMarginLessThanXOrGreaterThanY.cs
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceAmend_DealerMarginLessThanXOrGreaterThanY.cs
+5	5	KSS.PriceNet.PriceGeneration.RulesLibrary/Product_PriceGen_DealerPricing.cs
+1	1	KSS.PriceNet.PriceGeneration.RulesLibrary/RuleHelper.cs
+1	1	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/ImpliedDealerMargin.cs
+1	1	KSS.PriceNet.Shared.EntityModel/BeforeInsertHandler.cs
+
+--026b14c--2020-08-12--David Smith--COD-120 - replaced all pn connection string with tenant config
+20	0	KSS.PriceNet.Batch.Export.ModelSummaryRequester/KSS.PriceNet.Batch.Export.ModelSummaryRequester.csproj
+2	1	KSS.PriceNet.Batch.Export.ModelSummaryRequester/Program.cs
+8	0	KSS.PriceNet.Batch.Export.ModelSummaryRequester/packages.config
+30	0	KSS.PriceNet.Batch.ExportEntity/KSS.PriceNet.Batch.ExportEntity.csproj
+7	0	KSS.PriceNet.Batch.ExportEntity/packages.config
+33	0	KSS.PriceNet.Batch.PriceGenerationControl/KSS.PriceNet.Batch.PriceGenerationControl.csproj
+7	11	KSS.PriceNet.Batch.PriceGenerationControl/PriceGenerationControl.cs
+8	0	KSS.PriceNet.Batch.PriceGenerationControl/packages.config
+1	2	KSS.PriceNet.Batch/Batch.cs
+2	1	KSS.PriceNet.ExportUtility/Export.cs
+33	0	KSS.PriceNet.ExportUtility/KSS.PriceNet.ExportUtility.csproj
+8	0	KSS.PriceNet.ExportUtility/packages.config
+0	1	KSS.PriceNet.Shared.Common/SQLUtil.cs
+19	0	Kalibrate.ExtractRuleAudit/Kalibrate.ExtractRuleAudit.csproj
+2	2	Kalibrate.ExtractRuleAudit/SqlDal.cs
+5	1	Kalibrate.ExtractRuleAudit/packages.config
+19	0	Kalibrate.ModelUpdate/Kalibrate.ModelUpdate.csproj
+2	1	Kalibrate.ModelUpdate/SqlDal.cs
+5	1	Kalibrate.ModelUpdate/packages.config
+
+--05de46b--2020-08-12--David Smith--COD-120 - started to add tenant config sdk
+3	0	DisasterAndRecoveryCSV/DisasterAndRecoveryCSV.csproj
+11	0	DisasterAndRecoveryCSV/app.config
+3	0	DisasterAndRecoveryXml/DisasterAndRecoveryXml.csproj
+11	0	DisasterAndRecoveryXml/app.config
+3	0	KSS.PriceNet.ArchiveTruncate/KSS.PriceNet.ArchiveTruncate.csproj
+11	0	KSS.PriceNet.ArchiveTruncate/app.config
+3	0	KSS.PriceNet.Batch.ArchiveTruncate/KSS.PriceNet.Batch.ArchiveTruncate.csproj
+11	0	KSS.PriceNet.Batch.ArchiveTruncate/app.config
+3	0	KSS.PriceNet.Batch.ClosedRestrictedStrategy/KSS.PriceNet.Batch.ClosedRestrictedStrategy.csproj
+11	0	KSS.PriceNet.Batch.ClosedRestrictedStrategy/app.config
+23	0	KSS.PriceNet.Batch.ConsoleApplication/App.config
+3	0	KSS.PriceNet.Batch.CostAggregation/KSS.PriceNet.Batch.CostAggregation.csproj
+11	0	KSS.PriceNet.Batch.CostAggregation/app.config
+1	0	KSS.PriceNet.Batch.DealerPriceCalculation/KSS.PriceNet.Batch.DealerPriceCalculation.csproj
+11	0	KSS.PriceNet.Batch.DealerPriceCalculation/app.config
+1	0	KSS.PriceNet.Batch.DeleteExportedFiles/KSS.PriceNet.Batch.DeleteExportedFiles.csproj
+11	0	KSS.PriceNet.Batch.DeleteExportedFiles/app.config
+3	0	KSS.PriceNet.Batch.Download/KSS.PriceNet.Batch.Download.csproj
+11	0	KSS.PriceNet.Batch.Download/app.config
+3	0	KSS.PriceNet.Batch.EntityModel/KSS.PriceNet.Batch.EntityModel.csproj
+11	0	KSS.PriceNet.Batch.EntityModel/app.config
+1	0	KSS.PriceNet.Batch.Export.Auditing/KSS.PriceNet.Batch.Export.Auditing.csproj
+11	0	KSS.PriceNet.Batch.Export.Auditing/app.config
+1	0	KSS.PriceNet.Batch.Export.Formatter/KSS.PriceNet.Batch.Export.Formatter.csproj
+11	0	KSS.PriceNet.Batch.Export.Formatter/app.config
+1	0	KSS.PriceNet.Batch.Export.ModelSummary/KSS.PriceNet.Batch.Export.ModelSummary.csproj
+11	0	KSS.PriceNet.Batch.Export.ModelSummary/app.config
+1	0	KSS.PriceNet.Batch.Export.ModelSummaryRequester/KSS.PriceNet.Batch.Export.ModelSummaryRequester.csproj
+11	0	KSS.PriceNet.Batch.Export.ModelSummaryRequester/app.config
+3	0	KSS.PriceNet.Batch.Export.Notes/KSS.PriceNet.Batch.Export.Notes.csproj
+11	0	KSS.PriceNet.Batch.Export.Notes/app.config
+3	0	KSS.PriceNet.Batch.Export.PostProcessing/KSS.PriceNet.Batch.Export.PostProcessing.csproj
+11	0	KSS.PriceNet.Batch.Export.PostProcessing/app.config
+3	0	KSS.PriceNet.Batch.Export.PreProcessing/KSS.PriceNet.Batch.Export.PreProcessing.csproj
+11	0	KSS.PriceNet.Batch.Export.PreProcessing/app.config
+3	0	KSS.PriceNet.Batch.Export.ProposedPrices/KSS.PriceNet.Batch.Export.ProposedPrices.csproj
+11	0	KSS.PriceNet.Batch.Export.ProposedPrices/app.config
+1	0	KSS.PriceNet.Batch.Export.Transform/KSS.PriceNet.Batch.Export.Transform.csproj
+11	0	KSS.PriceNet.Batch.Export.Transform/app.config
+1	0	KSS.PriceNet.Batch.ExportEntity/KSS.PriceNet.Batch.ExportEntity.csproj
+11	0	KSS.PriceNet.Batch.ExportEntity/app.config
+3	0	KSS.PriceNet.Batch.GPCRulesMonitor/KSS.PriceNet.Batch.GPCRulesMonitor.csproj
+11	0	KSS.PriceNet.Batch.GPCRulesMonitor/app.config
+3	0	KSS.PriceNet.Batch.GPCUpdates/KSS.PriceNet.Batch.GPCUpdates.csproj
+11	0	KSS.PriceNet.Batch.GPCUpdates/app.config
+1	0	KSS.PriceNet.Batch.IDAL/KSS.PriceNet.Batch.IDAL.csproj
+11	0	KSS.PriceNet.Batch.IDAL/app.config
+1	0	KSS.PriceNet.Batch.Import/KSS.PriceNet.Batch.Import.csproj
+11	0	KSS.PriceNet.Batch.Import/app.config
+3	0	KSS.PriceNet.Batch.LeadFollowPRCreation/KSS.PriceNet.Batch.LeadFollowPRCreation.csproj
+11	0	KSS.PriceNet.Batch.LeadFollowPRCreation/app.config
+3	0	KSS.PriceNet.Batch.Licensing/KSS.PriceNet.Batch.Licensing.csproj
+11	0	KSS.PriceNet.Batch.Licensing/app.config
+1	0	KSS.PriceNet.Batch.ModelUpdate.BLL/KSS.PriceNet.Batch.ModelUpdate.BLL.csproj
+11	0	KSS.PriceNet.Batch.ModelUpdate.BLL/app.config
+3	0	KSS.PriceNet.Batch.ModelUpdate.DataStructures/KSS.PriceNet.Batch.ModelUpdate.DataStructures.csproj
+11	0	KSS.PriceNet.Batch.ModelUpdate.DataStructures/app.config
+3	0	KSS.PriceNet.Batch.ModelUpdate.IDAL/KSS.PriceNet.Batch.ModelUpdate.IDAL.csproj
+11	0	KSS.PriceNet.Batch.ModelUpdate.IDAL/app.config
+3	0	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL.csproj
+11	0	KSS.PriceNet.Batch.ModelUpdate.SQLServerDAL/app.config
+3	0	KSS.PriceNet.Batch.PRDEventProcess/KSS.PriceNet.Batch.PRDEventProcess.csproj
+11	0	KSS.PriceNet.Batch.PRDEventProcess/app.config
+3	0	KSS.PriceNet.Batch.PriceGenerationControl/KSS.PriceNet.Batch.PriceGenerationControl.csproj
+11	0	KSS.PriceNet.Batch.PriceGenerationControl/app.config
+1	0	KSS.PriceNet.Batch.PriceGenerationPreprocessing/KSS.PriceNet.Batch.PriceGenerationPreprocessing.csproj
+11	0	KSS.PriceNet.Batch.PriceGenerationPreprocessing/app.config
+10	0	KSS.PriceNet.Batch.PriceRequestValidation.Tests/KSS.PriceNet.Batch.PriceRequestValidation.Tests.csproj
+11	0	KSS.PriceNet.Batch.PriceRequestValidation.Tests/app.config
+2	0	KSS.PriceNet.Batch.PriceRequestValidation.Tests/packages.config
+1	0	KSS.PriceNet.Batch.PriceRequestValidation/KSS.PriceNet.Batch.PriceRequestValidation.csproj
+11	0	KSS.PriceNet.Batch.PriceRequestValidation/app.config
+1	0	KSS.PriceNet.Batch.Refinement/KSS.PriceNet.Batch.Refinement.BLL.csproj
+11	0	KSS.PriceNet.Batch.Refinement/app.config
+1	0	KSS.PriceNet.Batch.Rescaling/KSS.PriceNet.Batch.Rescaling.BLL.csproj
+11	0	KSS.PriceNet.Batch.Rescaling/app.config
+1	0	KSS.PriceNet.Batch.SQLServerDAL/KSS.PriceNet.Batch.SQLServerDAL.csproj
+11	0	KSS.PriceNet.Batch.SQLServerDAL/app.config
+7	1	KSS.PriceNet.Batch.Service/App.config
+3	0	KSS.PriceNet.Batch.StrategyInitialise/KSS.PriceNet.Batch.StrategyInitialise.csproj
+11	0	KSS.PriceNet.Batch.StrategyInitialise/app.config
+1	0	KSS.PriceNet.Batch.TimeZones/KSS.PriceNet.Batch.TimeZones.csproj
+11	0	KSS.PriceNet.Batch.TimeZones/app.config
+3	0	KSS.PriceNet.Batch.Transports.CommonTransport/KSS.PriceNet.Batch.Transports.CommonTransport.csproj
+11	0	KSS.PriceNet.Batch.Transports.CommonTransport/app.config
+3	0	KSS.PriceNet.Batch.Transports.EMail/KSS.PriceNet.Batch.Transports.EMail.csproj
+11	0	KSS.PriceNet.Batch.Transports.EMail/app.config
+1	0	KSS.PriceNet.Batch.Transports.FTP/KSS.PriceNet.Batch.Transports.FTP.csproj
+11	0	KSS.PriceNet.Batch.Transports.FTP/app.config
+3	0	KSS.PriceNet.Batch.Transports.Fax/KSS.PriceNet.Batch.Transports.Fax.csproj
+11	0	KSS.PriceNet.Batch.Transports.Fax/app.config
+3	0	KSS.PriceNet.Batch.Transports.File/KSS.PriceNet.Batch.Transports.File.csproj
+11	0	KSS.PriceNet.Batch.Transports.File/app.config
+3	0	KSS.PriceNet.Batch.Transports.MSMQ/KSS.PriceNet.Batch.Transports.MSMQ.csproj
+11	0	KSS.PriceNet.Batch.Transports.MSMQ/app.config
+3	0	KSS.PriceNet.Batch.Transports.SMS/KSS.PriceNet.Batch.Transports.SMS.csproj
+11	0	KSS.PriceNet.Batch.Transports.SMS/app.config
+1	0	KSS.PriceNet.Batch.Transports.TransportHandler/KSS.PriceNet.Batch.Transports.csproj
+11	0	KSS.PriceNet.Batch.Transports.TransportHandler/app.config
+1	0	KSS.PriceNet.Batch.Transports.WebAPI/KSS.PriceNet.Batch.Transports.WebAPI.csproj
+11	0	KSS.PriceNet.Batch.Transports.WebAPI/app.config
+1	0	KSS.PriceNet.Batch.WaitingRoomBattle/KSS.PriceNet.Batch.WaitingRoomBattle.csproj
+11	0	KSS.PriceNet.Batch.WaitingRoomBattle/app.config
+2	1	KSS.PriceNet.Batch/Batch.cs
+34	0	KSS.PriceNet.Batch/KSS.PriceNet.Batch.csproj
+11	0	KSS.PriceNet.Batch/app.config
+8	0	KSS.PriceNet.Batch/packages.config
+8	0	KSS.PriceNet.BatchApp/App.config
+3	0	KSS.PriceNet.ExportUtility/KSS.PriceNet.ExportUtility.csproj
+13	5	KSS.PriceNet.ExportUtility/app.config
+1	0	KSS.PriceNet.Optimisation/KSS.PriceNet.Optimisation.x64.csproj
+11	0	KSS.PriceNet.Optimisation/app.config
+1	0	KSS.PriceNet.Parameterisation.SQLServerDAL/KSS.PriceNet.Parameterisation.SQLServerDAL.csproj
+11	0	KSS.PriceNet.Parameterisation.SQLServerDAL/app.config
+1	0	KSS.PriceNet.PriceGeneration.BLL/KSS.PriceNet.PriceGeneration.BLL.csproj
+11	0	KSS.PriceNet.PriceGeneration.BLL/app.config
+1	0	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/KSS.PriceNet.PriceGeneration.BattleRulesLibrary.csproj
+11	0	KSS.PriceNet.PriceGeneration.BattleRulesLibrary/app.config
+1	0	KSS.PriceNet.PriceGeneration.DataFunctions/KSS.PriceNet.PriceGeneration.DataFunctions.csproj
+11	0	KSS.PriceNet.PriceGeneration.DataFunctions/app.config
+1	0	KSS.PriceNet.PriceGeneration.DataStructures/KSS.PriceNet.PriceGeneration.DataStructures.csproj
+11	0	KSS.PriceNet.PriceGeneration.DataStructures/app.config
+1	0	KSS.PriceNet.PriceGeneration.IDAL/KSS.PriceNet.PriceGeneration.IDAL.csproj
+11	0	KSS.PriceNet.PriceGeneration.IDAL/app.config
+1	0	KSS.PriceNet.PriceGeneration.PriceBattle/KSS.PriceNet.PriceGeneration.PriceBattle.csproj
+11	0	KSS.PriceNet.PriceGeneration.PriceBattle/app.config
+1	0	KSS.PriceNet.PriceGeneration.RulesLibrary/KSS.PriceNet.PriceGeneration.RulesLibrary.csproj
+11	0	KSS.PriceNet.PriceGeneration.RulesLibrary/app.config
+1	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/KSS.PriceNet.PriceGeneration.SQLServerDAL.csproj
+11	0	KSS.PriceNet.PriceGeneration.SQLServerDAL/app.config
+18	9	KSS.PriceNet.PriceGeneration.UnitTests/App.config
+2	0	KSS.PriceNet.PriceGeneration.UnitTests/KSS.PriceNet.PriceGeneration.UnitTests.csproj
+2	0	KSS.PriceNet.PriceGeneration.UnitTests/packages.config
+1	0	KSS.PriceNet.ProcessMonitor.BLL/KSS.PriceNet.ProcessMonitor.BLL.csproj
+11	0	KSS.PriceNet.ProcessMonitor.BLL/app.config
+1	0	KSS.PriceNet.ProcessMonitor.SQLServerDAL/KSS.PriceNet.ProcessMonitor.SQLServerDAL.csproj
+11	0	KSS.PriceNet.ProcessMonitor.SQLServerDAL/app.config
+1	0	KSS.PriceNet.Shared.Authentication/KSS.PriceNet.Shared.Authentication.csproj
+11	0	KSS.PriceNet.Shared.Authentication/app.config
+34	0	KSS.PriceNet.Shared.Common/KSS.PriceNet.Shared.Common.csproj
+4	3	KSS.PriceNet.Shared.Common/SQLUtil.cs
+11	0	KSS.PriceNet.Shared.Common/app.config
+8	0	KSS.PriceNet.Shared.Common/packages.config
+3	0	KSS.PriceNet.Shared.Contracts.Aral/KSS.PriceNet.Shared.Contracts.Aral.csproj
+11	0	KSS.PriceNet.Shared.Contracts.Aral/app.config
+1	0	KSS.PriceNet.Shared.Contracts.COCO/KSS.PriceNet.Shared.Contracts.COCO.csproj
+11	0	KSS.PriceNet.Shared.Contracts.COCO/app.config
+1	0	KSS.PriceNet.Shared.Contracts.COSTPLUS/KSS.PriceNet.Shared.Contracts.COSTPLUS.csproj
+11	0	KSS.PriceNet.Shared.Contracts.COSTPLUS/app.config
+3	0	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA.csproj
+11	0	KSS.PriceNet.Shared.Contracts.COSTPLUSEXTRA/app.config
+3	0	KSS.PriceNet.Shared.Contracts.CPG/KSS.PriceNet.Shared.Contracts.CPG.csproj
+11	0	KSS.PriceNet.Shared.Contracts.CPG/app.config
+1	0	KSS.PriceNet.Shared.Contracts.DTW/KSS.PriceNet.Shared.Contracts.DTW.csproj
+11	0	KSS.PriceNet.Shared.Contracts.DTW/app.config
+1	0	KSS.PriceNet.Shared.Contracts.DealerTradeArea/KSS.PriceNet.Shared.Contracts.DealerTradeArea.csproj
+11	0	KSS.PriceNet.Shared.Contracts.DealerTradeArea/app.config
+1	0	KSS.PriceNet.Shared.Contracts.MARGINFIXED/KSS.PriceNet.Shared.Contracts.MARGINFIXED.csproj
+11	0	KSS.PriceNet.Shared.Contracts.MARGINFIXED/app.config
+1	0	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/KSS.PriceNet.Shared.Contracts.MARGINVARIABLE.csproj
+11	0	KSS.PriceNet.Shared.Contracts.MARGINVARIABLE/app.config
+1	0	KSS.PriceNet.Shared.Contracts.SOE/KSS.PriceNet.Shared.Contracts.SOE.csproj
+11	0	KSS.PriceNet.Shared.Contracts.SOE/app.config
+1	0	KSS.PriceNet.Shared.Contracts.Utils/KSS.PriceNet.Shared.Contracts.Utils.csproj
+11	0	KSS.PriceNet.Shared.Contracts.Utils/app.config
+1	0	KSS.PriceNet.Shared.EntityModel.BLL/KSS.PriceNet.Shared.EntityModel.BLL.csproj
+11	0	KSS.PriceNet.Shared.EntityModel.BLL/app.config
+1	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/KSS.PriceNet.Shared.EntityModel.SQLServerDAL.csproj
+11	0	KSS.PriceNet.Shared.EntityModel.SQLServerDAL/app.config
+1	0	KSS.PriceNet.Shared.EntityModel/KSS.PriceNet.Shared.EntityModel.csproj
+11	0	KSS.PriceNet.Shared.EntityModel/app.config
+1	0	KSS.PriceNet.Shared.Interfaces/KSS.PriceNet.Shared.Interfaces.csproj
+11	0	KSS.PriceNet.Shared.Interfaces/app.config
+5	0	Kalibrate.ExtractRuleAudit.Tests/Kalibrate.ExtractRuleAudit.Tests.csproj
+3	0	Kalibrate.ExtractRuleAudit.Tests/packages.config
+11	3	ModelUpdateTestHarness/App.config
+13	5	OptimisationTest/App.config
+11	3	PetesTestHarness/App.config
+37	0	azure-pipelines-code.yml
+2	0	kCalculateUnitTests/kCalculateUnitTests.csproj
+2	0	kCalculateUnitTests/packages.config

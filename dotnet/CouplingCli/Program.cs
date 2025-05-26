@@ -5,17 +5,19 @@ using File = LogParser.Git.File;
 
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Extracting logfiles and running analysis");
-if (args.Length != 3)
+if (args.Length < 3)
     throw new ArgumentException(
         "need to pass a path to a git repo as first argument. Second is YYYY-MM-DD format, third is output folder");
 
 var path = ExpandPath(args[0]);
 var date = args[1];
 var output = ExpandPath(args[2]);
+var ignoreMask = args[3];
 
 Console.WriteLine(path);
 Console.WriteLine(date);
 Console.WriteLine(output);
+Console.WriteLine($"ignoring: {ignoreMask}");
 
 var gitLogScript =$"build_git_log.sh {path} {date} {output}";
 RunBashScript(gitLogScript);
@@ -25,7 +27,7 @@ RunBashScript(gitFileListScript);
 
 var gitLog = System.IO.File.ReadAllText($"{output}/logfile.log");
 
-var blocks = BlockParser.GetBlocks(gitLog);
+var blocks = BlockParser.GetBlocks(gitLog, ignoreMask);
 
 var ages = ActiveFileIdentificationAnalysis.Analyse(blocks, new GetTodayAdapter());
 System.IO.File.WriteAllText($"{output}/age.csv", ages.ToCsv());
@@ -40,7 +42,7 @@ var hotSpots = ActivityHotSpotAnalysis.Analyse(blocks);
 System.IO.File.WriteAllText($"{output}/hotspot.csv", hotSpots.ToCsv());
 
 var coupling = CouplingAnalysis.Analyse(blocks);
-System.IO.File.WriteAllText($"{output}/coupling.csv", coupling.ToCsv(10,33));
+System.IO.File.WriteAllText($"{output}/coupling.csv", coupling.ToCsv(1,33));
 return 0;
 
 static string ExpandPath(string path)
